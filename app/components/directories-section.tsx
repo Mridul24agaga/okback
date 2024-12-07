@@ -24,20 +24,16 @@ export function DirectoriesSection() {
     <section className="w-full py-16">
       <div className="container mx-auto px-4 md:px-8 lg:px-12">
         <div className="text-center mb-12">
-          <span className="text-[#4ADE80] text-sm font-medium mb-2 block">
-            # Where We List You
+          <span className="text-[#00CED1] text-sm font-medium mb-2 block">
+            Where We List You
           </span>
           <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">
             We handpick 100 most relevant directories for you
           </h2>
           <p className="text-gray-400 max-w-2xl mx-auto mb-8">
-            10,000+ quality sites, directories, and forums across niches—updated daily.
+            1000+ quality sites, directories, and forums across niches—updated daily.
           </p>
-          <p className="text-gray-400 max-w-3xl mx-auto">
-            After you fill out an onboarding form and state your main objective, we pick relevant
-            directories and websites for you. Either focusing on domain rating boost, or potential click
-            traffic or both.
-          </p>
+         
         </div>
 
         <div className="max-w-2xl mx-auto mb-12">

@@ -4,7 +4,7 @@ import React, { useState, useEffect } from "react"
 import Link from "next/link"
 import Image from "next/image"
 import { ArrowRight, ChevronRight } from 'lucide-react'
-import { motion, AnimatePresence } from "framer-motion"
+import { motion, AnimatePresence, MotionProps } from "framer-motion"
 import { DirectoriesSection } from "@/app/components/directories-section"
 
 const words = ["Startups", "Founders", "Innovators", "Entrepreneurs"]
@@ -24,6 +24,10 @@ const containerVariants = {
   }
 }
 
+type MotionDivProps = MotionProps & React.HTMLAttributes<HTMLDivElement>
+
+const MotionDiv: React.FC<MotionDivProps> = motion.div
+
 export default function Hero() {
   const [currentWord, setCurrentWord] = useState(0)
 
@@ -35,14 +39,14 @@ export default function Hero() {
   }, [])
 
   return (
-    <motion.div 
+    <MotionDiv 
       initial="initial"
       animate="animate"
       variants={containerVariants}
       className="min-h-screen bg-[#0A0A0A] bg-[radial-gradient(circle_at_center,rgba(0,206,209,0.15),rgba(0,0,0,0)_50%)]"
     >
       {/* Header */}
-      <motion.header 
+      <MotionDiv 
         variants={fadeInUpVariants}
         className="container mx-auto px-4 py-4 sm:py-6 border-b border-gray-800"
       >
@@ -61,21 +65,24 @@ export default function Hero() {
               href="#" 
               className="text-gray-400 hover:text-white transition-colors text-sm sm:text-base font-bold"
             >
-              Pricing
+              Blogs
             </Link>
-            <button className="px-3 py-1 sm:px-4 sm:py-2 text-sm sm:text-base rounded-md bg-[#00CED1] text-black hover:bg-[#00CED1]/90 transition-colors font-bold">
-              Try Now
-            </button>
+            <Link 
+              href="/submit"
+              className="px-3 py-1 sm:px-4 sm:py-2 text-sm sm:text-base rounded-md bg-[#00CED1] text-black hover:bg-[#00CED1]/90 transition-colors font-bold inline-block"
+            >
+              Submit Tool
+            </Link>
           </div>
         </div>
-      </motion.header>
+      </MotionDiv>
 
       {/* Hero Section */}
-      <motion.main 
+      <MotionDiv 
         variants={fadeInUpVariants}
         className="container mx-auto px-4 flex flex-col items-center justify-center min-h-[calc(100vh-80px)] text-center pt-4 sm:pt-8 pb-8 sm:pb-16 md:pb-32"
       >
-        <motion.div 
+        <MotionDiv 
           variants={fadeInUpVariants}
           className="w-full flex justify-center mb-6 sm:mb-8"
         >
@@ -83,7 +90,7 @@ export default function Hero() {
             href="#"
             className="group inline-flex items-center gap-2 rounded-full bg-black/40 hover:bg-black/60 border border-gray-800 px-3 py-1 sm:px-4 sm:py-2 transition-colors"
           >
-            <span className="inline-flex items-center justify-center rounded-full bg-[#4ADE80] px-2 py-0.5 text-xs font-semibold text-black">
+            <span className="inline-flex items-center justify-center rounded-full bg-[#00CED1] px-2 py-0.5 text-xs font-semibold text-black">
               NEW
             </span>
             <span className="text-xs sm:text-sm text-gray-200">
@@ -91,8 +98,8 @@ export default function Hero() {
             </span>
             <ChevronRight className="h-3 w-3 sm:h-4 sm:w-4 text-gray-400 group-hover:text-white transition-colors" />
           </Link>
-        </motion.div>
-        <motion.div 
+        </MotionDiv>
+        <MotionDiv 
           variants={fadeInUpVariants}
           className="space-y-6 sm:space-y-8 max-w-4xl mb-8 sm:mb-12"
         >
@@ -101,7 +108,7 @@ export default function Hero() {
             <span className="text-[#00CED1] relative inline-block">
               <div className="relative overflow-hidden inline-block">
                 <AnimatePresence mode="wait">
-                  <motion.div
+                  <MotionDiv
                     key={currentWord}
                     initial={{ opacity: 0, y: "100%" }}
                     animate={{ opacity: 1, y: 0 }}
@@ -110,9 +117,9 @@ export default function Hero() {
                     className="inline-block"
                   >
                     {words[currentWord]}
-                  </motion.div>
+                  </MotionDiv>
                 </AnimatePresence>
-                <motion.div
+                <MotionDiv
                   initial={{ scaleY: 0 }}
                   animate={{ scaleY: 1 }}
                   transition={{ duration: 0.5, ease: [0.41, 0.01, 0.56, 1] }}
@@ -123,16 +130,16 @@ export default function Hero() {
               <span className="absolute bottom-0 left-0 w-full h-2 bg-[#00CED1] opacity-50 rounded"></span>
             </span>
           </h1>
-          <motion.p 
+          <MotionDiv 
             variants={fadeInUpVariants}
             className="text-gray-400 text-sm sm:text-base md:text-lg lg:text-xl max-w-2xl mx-auto"
           >
             Join our exclusive waitlist for early access to our curated database of launch platforms, directories, marketplaces, newsletters, and communities - all in one place.
-          </motion.p>
-        </motion.div>
+          </MotionDiv>
+        </MotionDiv>
 
         {/* Form Section */}
-        <motion.div 
+        <MotionDiv 
           variants={fadeInUpVariants}
           className="mt-4 sm:mt-6 md:mt-8 w-full max-w-md space-y-4"
         >
@@ -149,8 +156,8 @@ export default function Hero() {
           <p className="text-xs sm:text-sm text-gray-500">
             Join 809 founders already on the waitlist for early access!
           </p>
-        </motion.div>
-      </motion.main>
+        </MotionDiv>
+      </MotionDiv>
 
       {/* Separator for mobile */}
       <div className="container mx-auto px-4 sm:hidden">
@@ -158,14 +165,14 @@ export default function Hero() {
       </div>
 
       {/* Directory Section */}
-      <motion.div
+      <MotionDiv
         variants={fadeInUpVariants}
       >
         <DirectoriesSection />
-      </motion.div>
+      </MotionDiv>
 
       {/* Footer */}
-      <motion.footer 
+      <MotionDiv 
         variants={fadeInUpVariants}
         className="container mx-auto px-4 py-8 text-center"
       >
@@ -179,8 +186,8 @@ export default function Hero() {
             <Link href="#" className="hover:text-white transition-colors">Email</Link>
           </div>
         </div>
-      </motion.footer>
-    </motion.div>
+      </MotionDiv>
+    </MotionDiv>
   )
 }
 
