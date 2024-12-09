@@ -6,7 +6,7 @@ import Image from "next/image"
 import { ArrowRight, ChevronRight } from 'lucide-react'
 import { motion, AnimatePresence } from "framer-motion"
 import { DirectoriesSection } from "@/app/components/directories-section"
-import  { Footer } from "@/app/components/footer"
+import { Footer } from "@/app/components/footer"
 import CuratorsSection from "./curators-section"
 import ManualListingSection from "./listing"
 import BacklinkFeatures from "./backlinkfeatures"
@@ -78,6 +78,10 @@ const BackgroundGlow = () => (
 
 export default function Hero() {
   const [currentWord, setCurrentWord] = useState(0)
+  const [email, setEmail] = useState('')
+  const [isLoading, setIsLoading] = useState(false)
+  const [message, setMessage] = useState('')
+  const [error, setError] = useState('')
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -85,6 +89,36 @@ export default function Hero() {
     }, 3000)
     return () => clearInterval(interval)
   }, [])
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault()
+    setIsLoading(true)
+    setMessage('')
+    setError('')
+
+    try {
+      const response = await fetch('/api/subscribe', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ email }),
+      })
+
+      const data = await response.json()
+
+      if (response.ok) {
+        setMessage(data.message)
+        setEmail('')
+      } else {
+        setError(data.message)
+      }
+    } catch (err) {
+      setError('An error occurred. Please try again.')
+    }
+
+    setIsLoading(false)
+  }
 
   return (
     <motion.div 
@@ -156,16 +190,25 @@ export default function Hero() {
 
           {/* Form Section */}
           <div className="mt-4 sm:mt-6 md:mt-8 w-full max-w-md space-y-4 animate-fade-in-up animation-delay-450">
-            <div className="flex flex-col sm:flex-row gap-2 sm:gap-0">
+            <form onSubmit={handleSubmit} className="flex flex-col sm:flex-row gap-2 sm:gap-0">
               <input 
                 type="email" 
                 placeholder="Enter your email" 
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
                 className="w-full sm:w-auto flex-grow px-4 py-2 bg-gray-800 border border-gray-700 rounded-md sm:rounded-r-none focus:outline-none focus:ring-2 focus:ring-[#00CED1] text-white text-sm sm:text-base"
+                required
               />
-              <button className="w-full sm:w-auto px-4 py-2 bg-[#00CED1] hover:bg-[#00FFFF] text-black font-medium rounded-md sm:rounded-l-none transition-colors flex items-center justify-center sm:justify-start text-sm sm:text-base">
-                Join Waitlist <ArrowRight className="ml-2 h-4 w-4" />
+              <button 
+                type="submit"
+                className="w-full sm:w-auto px-4 py-2 bg-[#00CED1] hover:bg-[#00FFFF] text-black font-medium rounded-md sm:rounded-l-none transition-colors flex items-center justify-center sm:justify-start text-sm sm:text-base"
+                disabled={isLoading}
+              >
+                {isLoading ? 'Joining...' : 'Join Waitlist'} <ArrowRight className="ml-2 h-4 w-4" />
               </button>
-            </div>
+            </form>
+            {message && <p className="text-sm text-green-400">{message}</p>}
+            {error && <p className="text-sm text-red-400">{error}</p>}
             <p className="text-xs sm:text-sm text-gray-500">
               Join 809 founders already on the waitlist for early access!
             </p>
