@@ -9,8 +9,8 @@ const directories = [
   { name: "Product Hunt", domainRating: 90, traffic: "32.1M", category: "SaaS", isBlurred: false },
   { name: "SaaSworthy", domainRating: 72, traffic: "256K", category: "SaaS", isBlurred: true },
   { name: "GetApp", domainRating: 88, traffic: "3.1M", category: "SaaS", isBlurred: true },
-  { name: "Software Advice", domainRating: 86, traffic: "2.8M", category: "SaaS", isBlurred: false },
-  { name: "Futurepedia", domainRating: 78, traffic: "890K", category: "AI", isBlurred: true },
+  { name: "Software Advice", domainRating: 86, traffic: "2.8M", category: "SaaS", isBlurred: true },
+  { name: "Futurepedia", domainRating: 78, traffic: "890K", category: "AI", isBlurred: false },
 ]
 
 export function DirectoriesSection() {
@@ -21,8 +21,10 @@ export function DirectoriesSection() {
   )
 
   return (
-    <section className="w-full py-16">
-      <div className="container mx-auto px-4 md:px-8 lg:px-12">
+    <section className="bg-[#0A0A0A]">
+      {/* Gradient overlay removed */}
+
+      <div className="container mx-auto px-4 md:px-8 lg:px-12 py-20">
         <div className="text-center mb-12">
           <span className="text-[#00CED1] text-sm font-medium mb-2 block">
             Where We List You
@@ -33,7 +35,6 @@ export function DirectoriesSection() {
           <p className="text-gray-400 max-w-2xl mx-auto mb-8">
             1000+ quality sites, directories, and forums across niches—updated daily.
           </p>
-         
         </div>
 
         <div className="max-w-2xl mx-auto mb-12">
@@ -41,7 +42,7 @@ export function DirectoriesSection() {
             <input
               type="search"
               placeholder="Search among 10,352 directories"
-              className="w-full px-4 py-2 bg-black/40 border border-gray-800 rounded-md text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-[#00CED1] hover:bg-black/60 transition-colors"
+              className="w-full px-4 py-2 bg-black/10 border border-[#091C1C]/50 rounded-md text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-[#00CED1]/50 hover:bg-black/20 transition-colors"
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
             />
@@ -55,7 +56,7 @@ export function DirectoriesSection() {
         </div>
 
         <div className="mt-12 text-center">
-          <button className="px-6 py-3 bg-[#00CED1] hover:bg-[#00FFFF] text-black font-medium rounded-md transition-colors">
+          <button className="px-6 py-3 bg-[#00CED1] hover:bg-[#00CED1]/90 text-black font-medium rounded-md transition-colors">
             Submit Your Directory
           </button>
           <p className="text-gray-500 text-sm mt-4">
@@ -66,4 +67,3 @@ export function DirectoriesSection() {
     </section>
   )
 }
-

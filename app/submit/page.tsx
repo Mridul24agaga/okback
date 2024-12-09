@@ -5,6 +5,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { ArrowRight } from 'lucide-react'
 import { submitDirectory } from '../actions/submit-directory'
+import  { Footer } from "@/app/components/footer"
 
 export default function SubmitDirectory() {
   const [isSubmitting, setIsSubmitting] = useState(false)
@@ -34,7 +35,7 @@ export default function SubmitDirectory() {
   }
 
   return (
-    <div className="min-h-screen bg-[#0A0A0A] bg-[radial-gradient(circle_at_center,rgba(0,206,209,0.15),rgba(0,0,0,0)_50%)]">
+    <div className="min-h-screen flex flex-col bg-[#0A0A0A] bg-[radial-gradient(circle_at_center,rgba(0,206,209,0.15),rgba(0,0,0,0)_50%)]">
       {/* Header */}
       <header className="container mx-auto px-4 py-4 sm:py-6 border-b border-gray-800">
         <div className="flex items-center justify-between">
@@ -63,7 +64,7 @@ export default function SubmitDirectory() {
         </div>
       </header>
 
-      <main className="container mx-auto px-4 sm:px-6 lg:px-8 py-12">
+      <main className="container mx-auto px-4 sm:px-6 lg:px-8 py-12 flex-grow">
         <div className="max-w-2xl mx-auto">
           <h1 className="text-4xl font-bold text-white mb-4 text-center">
             Submit Your Tool
@@ -72,8 +73,6 @@ export default function SubmitDirectory() {
             Have a suggestion for a tool we should add? Fill out the form below.
           </p>
        
-
-
           <form onSubmit={handleSubmit} className="space-y-6">
             <div>
               <label htmlFor="toolName" className="block text-white mb-2 font-bold">
@@ -161,6 +160,8 @@ export default function SubmitDirectory() {
           </form>
         </div>
       </main>
+
+      <Footer />
     </div>
   )
 }
