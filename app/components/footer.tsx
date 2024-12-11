@@ -18,7 +18,7 @@ export function Footer() {
               className="h-10 w-auto"
             />
             <p className="text-gray-600 text-base leading-relaxed max-w-sm font-semibold">
-              Our directory lists the best marketing tools that help entrepreneurs and marketers work smarter and faster.
+            Join our exclusive waitlist for early access to our curated database of launch platforms, directories, marketplaces, newsletters, and communities - all in one place.
             </p>
             <div className="flex items-center gap-4">
               <Link
