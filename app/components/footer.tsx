@@ -101,7 +101,7 @@ export function Footer() {
         {/* Copyright */}
         <div className="mt-12 pt-8">
           <p className="text-gray-600 text-base text-center font-semibold">
-            © 2024 AI Marketing Directory. All rights reserved. Licensed under MarkupX Technologies.
+            © 2024 Get More Backlinks. All rights reserved. Licensed under MarkupX Technologies.
           </p>
         </div>
       </div>
