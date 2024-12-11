@@ -13,7 +13,7 @@ import BacklinkFeatures from "./backlinkfeatures"
 import WhyChooseSection from "./whychooseus"
 import FAQSection from "./faq"
 
-const words = ["Startups", "Founders", "Innovators", "Entrepreneurs"]
+const words = ["Seo", "Backlinks", "Ratings", "Sales"]
 
 const containerVariants = {
   initial: {
@@ -168,7 +168,7 @@ export default function Hero() {
           </div>
           <div className="space-y-6 sm:space-y-8 max-w-4xl mb-8 sm:mb-12">
             <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-5xl xl:text-6xl font-bold tracking-tighter text-black animate-fade-in-up animation-delay-150 letter-spacing">
-              <span className="tracking-wide leading-tight">Marketing Database for</span>{" "}
+              <span className="tracking-wide leading-tight">List on 500+ Directories for</span>{" "}
               <span className="text-orange-500 relative inline-block">
                 <div className="relative overflow-hidden inline-block">
                   <AnimatePresence mode="wait">
