@@ -5,7 +5,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { ArrowRight } from 'lucide-react'
 import { submitDirectory } from '../actions/submit-directory'
-import  { Footer } from "@/app/components/footer"
+import { Footer } from "@/app/components/footer"
 
 export default function SubmitDirectory() {
   const [isSubmitting, setIsSubmitting] = useState(false)
@@ -35,14 +35,14 @@ export default function SubmitDirectory() {
   }
 
   return (
-    <div className="min-h-screen flex flex-col bg-[#0A0A0A] bg-[radial-gradient(circle_at_center,rgba(0,206,209,0.15),rgba(0,0,0,0)_50%)]">
+    <div className="min-h-screen flex flex-col bg-white">
       {/* Header */}
-      <header className="container mx-auto px-4 py-4 sm:py-6 border-b border-gray-800">
+      <header className="container mx-auto px-4 py-4 sm:py-6 border-b border-gray-200">
         <div className="flex items-center justify-between">
           <div className="flex items-center">
             <Link href="/">
               <Image
-                src="/getmorebacklinks.png"
+                src="/getmorepacklinks.png"
                 alt="Logo"
                 width={532}
                 height={132}
@@ -51,13 +51,7 @@ export default function SubmitDirectory() {
             </Link>
           </div>
           <div className="flex items-center gap-4">
-            <Link 
-              href="#" 
-              className="text-gray-400 hover:text-white transition-colors text-sm sm:text-base font-bold"
-            >
-              Pricing
-            </Link>
-            <button className="px-3 py-1 sm:px-4 sm:py-2 text-sm sm:text-base rounded-md bg-[#00CED1] text-black hover:bg-[#00CED1]/90 transition-colors font-bold">
+            <button className="px-3 py-1 sm:px-4 sm:py-2 text-sm sm:text-base rounded-md bg-black text-white hover:bg-orange-600 transition-colors font-bold">
               Try Now
             </button>
           </div>
@@ -66,16 +60,16 @@ export default function SubmitDirectory() {
 
       <main className="container mx-auto px-4 sm:px-6 lg:px-8 py-12 flex-grow">
         <div className="max-w-2xl mx-auto">
-          <h1 className="text-4xl font-bold text-white mb-4 text-center">
+          <h1 className="text-4xl font-bold text-black mb-4 text-center">
             Submit Your Tool
           </h1>
-          <p className="text-gray-400 text-center mb-8 font-bold">
+          <p className="text-gray-600 text-center mb-8 font-bold">
             Have a suggestion for a tool we should add? Fill out the form below.
           </p>
        
           <form onSubmit={handleSubmit} className="space-y-6">
             <div>
-              <label htmlFor="toolName" className="block text-white mb-2 font-bold">
+              <label htmlFor="toolName" className="block text-black mb-2 font-bold">
                 Tool Name <span className="text-red-500">*</span>
               </label>
               <input
@@ -83,12 +77,12 @@ export default function SubmitDirectory() {
                 id="toolName"
                 name="toolName"
                 required
-                className="w-full px-4 py-2 bg-black/40 border border-gray-800 rounded-md text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-[#00CED1] hover:bg-black/60 transition-colors"
+                className="w-full px-4 py-2 bg-white border border-gray-300 rounded-md text-black placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-orange-500 hover:bg-gray-50 transition-colors"
               />
             </div>
 
             <div>
-              <label htmlFor="toolWebsite" className="block text-white mb-2 font-bold">
+              <label htmlFor="toolWebsite" className="block text-black mb-2 font-bold">
                 Tool Website <span className="text-red-500">*</span>
               </label>
               <input
@@ -96,12 +90,12 @@ export default function SubmitDirectory() {
                 id="toolWebsite"
                 name="toolWebsite"
                 required
-                className="w-full px-4 py-2 bg-black/40 border border-gray-800 rounded-md text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-[#00CED1] hover:bg-black/60 transition-colors"
+                className="w-full px-4 py-2 bg-white border border-gray-300 rounded-md text-black placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-orange-500 hover:bg-gray-50 transition-colors"
               />
             </div>
 
             <div>
-              <label htmlFor="toolDescription" className="block text-white mb-2 font-bold">
+              <label htmlFor="toolDescription" className="block text-black mb-2 font-bold">
                 Tool Description <span className="text-red-500">*</span>
               </label>
               <textarea
@@ -109,12 +103,12 @@ export default function SubmitDirectory() {
                 name="toolDescription"
                 required
                 rows={4}
-                className="w-full px-4 py-2 bg-black/40 border border-gray-800 rounded-md text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-[#00CED1] hover:bg-black/60 transition-colors"
+                className="w-full px-4 py-2 bg-white border border-gray-300 rounded-md text-black placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-orange-500 hover:bg-gray-50 transition-colors"
               />
             </div>
 
             <div>
-              <label htmlFor="fullName" className="block text-white mb-2 font-bold">
+              <label htmlFor="fullName" className="block text-black mb-2 font-bold">
                 Your Full Name <span className="text-red-500">*</span>
               </label>
               <input
@@ -122,12 +116,12 @@ export default function SubmitDirectory() {
                 id="fullName"
                 name="fullName"
                 required
-                className="w-full px-4 py-2 bg-black/40 border border-gray-800 rounded-md text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-[#00CED1] hover:bg-black/60 transition-colors"
+                className="w-full px-4 py-2 bg-white border border-gray-300 rounded-md text-black placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-orange-500 hover:bg-gray-50 transition-colors"
               />
             </div>
 
             <div>
-              <label htmlFor="email" className="block text-white mb-2 font-bold">
+              <label htmlFor="email" className="block text-black mb-2 font-bold">
                 Your Email <span className="text-red-500">*</span>
               </label>
               <input
@@ -135,13 +129,13 @@ export default function SubmitDirectory() {
                 id="email"
                 name="email"
                 required
-                className="w-full px-4 py-2 bg-black/40 border border-gray-800 rounded-md text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-[#00CED1] hover:bg-black/60 transition-colors"
+                className="w-full px-4 py-2 bg-white border border-gray-300 rounded-md text-black placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-orange-500 hover:bg-gray-50 transition-colors"
               />
             </div>
 
             {message && (
               <div className={`p-4 rounded-md ${
-                message.type === 'success' ? 'bg-green-500/10 text-green-500' : 'bg-red-500/10 text-red-500'
+                message.type === 'success' ? 'bg-green-100 text-green-800' : 'bg-red-100 text-red-800'
               }`}>
                 {message.text}
               </div>
@@ -151,7 +145,7 @@ export default function SubmitDirectory() {
               <button
                 type="submit"
                 disabled={isSubmitting}
-                className="px-8 py-3 bg-[#00CED1] text-black font-medium rounded-md hover:bg-[#00CED1]/90 transition-colors disabled:opacity-50 disabled:cursor-not-allowed flex items-center gap-2"
+                className="px-8 py-3 bg-orange-500 text-white font-medium rounded-md hover:bg-orange-600 transition-colors disabled:opacity-50 disabled:cursor-not-allowed flex items-center gap-2"
               >
                 {isSubmitting ? 'Submitting...' : 'Submit'}
                 {!isSubmitting && <ArrowRight className="h-4 w-4" />}
