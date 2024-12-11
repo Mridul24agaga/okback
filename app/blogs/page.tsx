@@ -1,129 +1,177 @@
 import Link from 'next/link'
 import Image from 'next/image'
-import { Footer } from '../components/footer'
-import { ArrowRight, Calendar, User } from 'lucide-react'
+import { Footer } from '@/app/components/footer'
+import { ArrowRight } from 'lucide-react'
 
 // This would typically come from a database or CMS
 const blogPosts = [
   {
     id: 1,
-    title: "Top 10 Marketing Tools for Startups in 2024",
-    excerpt: "Discover the most effective marketing tools that can help your startup grow in 2024. We've curated a list of the best tools for social media management, email marketing, SEO, and more.",
-    date: "2024-03-01",
-    author: "Jane Doe",
-    slug: "top-10-marketing-tools-2024",
-    category: "Tools",
-    readTime: "8 min read"
+    title: "Top 10 Software Listing Websites for New Startups in 2025",
+    excerpt: "Discover the most effective platforms to showcase your startup and automate your directory submissions...",
+    date: "December 15, 2024",
+    slug: "top-10-software-listing-websites-2025",
+    image: "/brain.png"
   },
   {
     id: 2,
-    title: "How AI is Revolutionizing Digital Marketing",
-    excerpt: "Explore the ways artificial intelligence is transforming the landscape of digital marketing. Learn about AI-powered chatbots, personalized content creation, and predictive analytics.",
-    date: "2024-02-15",
-    author: "John Smith",
-    slug: "ai-revolutionizing-digital-marketing",
-    category: "Technology",
-    readTime: "6 min read"
+    title: "Automatic Directory Submission: How AI is Changing the Game",
+    excerpt: "Learn how artificial intelligence is revolutionizing the way startups build their online presence through automated directory submissions...",
+    date: "December 14, 2024",
+    slug: "automatic-directory-submission-ai-revolution",
+    image: "/aig.jpg"
   },
   {
     id: 3,
-    title: "The Power of Content Marketing for B2B Companies",
-    excerpt: "Learn why content marketing is crucial for B2B companies and how to implement an effective strategy. Discover the types of content that resonate with B2B audiences and drive conversions.",
-    date: "2024-01-30",
-    author: "Emily Johnson",
-    slug: "power-of-content-marketing-b2b",
-    category: "Strategy",
-    readTime: "10 min read"
+    title: "What Are PBN Links and Their Role in SEO? A Comprehensive Guide",
+    excerpt: "Learn about Private Blog Networks (PBNs), their impact on SEO, associated risks, and better alternatives for building quality backlinks.",
+    date: "December 10, 2024",
+    slug: "what-are-pbn-links-and-their-role-in-seo",
+    image: "/private.png"
+  },
+  {
+    id: 4,
+    title: "How to Analyze Competitors Backlinks for SEO Success: Complete Guide",
+    excerpt: "Learn how to effectively analyze your competitors backlinks, uncover valuable link building opportunities, and strengthen your SEO strategy with our comprehensive guide.",
+    date: "December 9, 2024",
+    slug: "how-to-analyze-competitors-backlinks-for-seo-success",
+    image: "/analyze.png"
+  },
+  {
+    id: 5,
+    title: "How to Create an Effective SEO Client Report Using getmorebacklinks.org",
+    excerpt: "Learn how to create comprehensive and impactful SEO client reports using getmorebacklinks.org. Discover best practices, key components, and the role of AI in directory submissions.",
+    date: "December 8, 2024",
+    slug: "how-to-create-an-effective-seo-client-report-using-getmorebacklinks",
+    image: "/getmorebacklinkss.webp"
+  },
+  {
+    id: 6,
+    title: "SEO Reporting for Agencies: How getmorebacklinks.org Can Help You Streamline Your SEO Efforts",
+    excerpt: "Discover how getmorebacklinks.org can help agencies streamline SEO reporting, automate backlink management, and enhance overall SEO strategies.",
+    date: "December 7, 2024",
+    slug: "seo-reporting-for-agencies-how-getmorebacklinks-can-streamline-your-efforts",
+    image: "/backlink-checker.webp"
+  },
+  {
+    id: 7,
+    title: "Step-by-Step: How to Build Quality Backlinks with AI-Powered Tools",
+    excerpt: "Learn how to leverage AI-powered tools for building high-quality backlinks. Discover automated directory submissions, personalized outreach, and advanced analytics for better SEO results.",
+    date: "December 6, 2024",
+    slug: "step-by-step-how-to-build-quality-backlinks-with-ai-powered-tools",
+    image: "/backlinks.webp"
+  },
+  {
+    id: 8,
+    title: "The Future of Directory Submissions: AI and Automation in SEO",
+    excerpt: "Explore how AI and automation are revolutionizing directory submissions and SEO strategies for startups and small businesses.",
+    date: "December 5, 2024",
+    slug: "the-future-directory-submission-ai-and-automation-in-seo",
+    image: "/ai-seo-future.webp"
+  },
+  {
+    id: 9,
+    title: "The Ultimate Guide to Automated Directory Submission: Save Time and Boost Your SEO",
+    excerpt: "Learn how automated directory submission can streamline your SEO strategy. Discover step-by-step implementation, benefits, and best practices for startups and SaaS founders.",
+    date: "December 3, 2024",
+    slug: "ultimate-guide-to-automated-directory-submission",
+    image: "/directory.png"
+  },
+  {
+    id: 10,
+    title: "The Ultimate Guide to Listing Bots: Automate Your Startups Online Presence",
+    excerpt: "Learn how to automate your directory submissions and boost your startups online visibility with listing bots. Comprehensive guide including tools, strategies, and best practices.",
+    date: "December 3, 2024",
+    slug: "ultimate-guide-to-listing-bots",
+    image: "/content.png"
+  },
+  {
+    id: 11,
+    title: "Why SaaS Founders Cant Ignore Directory Listings in Their Marketing Strategy",
+    excerpt: "Learn how directory listings can bolster visibility, SEO performance, and long-term growth for SaaS companies. Discover key benefits and implementation strategies.",
+    date: "December 3, 2024",
+    slug: "why-saas-founders-cant-ignore-directory-listings-in-their-marketing-strategy",
+    image: "/saas-marketing.webp"
   }
 ]
 
 export default function BlogPage() {
   return (
     <div className="min-h-screen flex flex-col bg-white">
-      {/* Header */}
-      <header className="container mx-auto px-4 py-4 sm:py-6 border-b border-gray-200">
+      <header className="container mx-auto px-4 py-4 sm:py-6 border-b border-gray-100">
         <div className="flex items-center justify-between">
-          <div className="flex items-center">
-            <Link href="/">
-              <Image
-                src="/getmorepacklinks.png"
-                alt="Logo"
-                width={532}
-                height={132}
-                className="h-8 sm:h-10 md:h-12 w-auto"
-              />
-            </Link>
-          </div>
+          <Link href="/">
+            <Image
+              src="/getmorepacklinks.png"
+              alt="Logo"
+              width={532}
+              height={132}
+              className="h-8 w-auto"
+              priority
+            />
+          </Link>
           <nav className="flex items-center gap-4">
-            
             <Link 
-              href="/blog" 
-              className="text-orange-500 transition-colors text-sm sm:text-base font-bold"
+              href="/blogs" 
+              className="text-gray-900 hover:text-gray-600 transition-colors text-sm font-medium"
             >
               Blog
             </Link>
-            
-            <Link href="/" className="px-3 py-1 sm:px-4 sm:py-2 text-sm sm:text-base rounded-md bg-black text-white hover:bg-orange-600 transition-colors font-bold">
+            <Link 
+              href="/" 
+              className="px-4 py-2 text-sm rounded-md bg-black text-white hover:bg-gray-800 transition-colors font-medium"
+            >
               Join Waitlist
             </Link>
           </nav>
         </div>
       </header>
 
-      <main className="container mx-auto px-4 sm:px-6 lg:px-8 py-12 flex-grow">
-        <div className="max-w-4xl mx-auto">
-          <h1 className="text-4xl sm:text-5xl font-bold text-black mb-4 text-center">
-            Marketing Insights Blog
+      <main className="container mx-auto px-4 py-12">
+        <div className="max-w-6xl mx-auto">
+          <h1 className="text-4xl font-bold text-gray-900 mb-2">
+            FastWaitlist Blog
           </h1>
-          <p className="text-gray-600 text-center mb-12 text-lg">
-            Stay updated with the latest trends, strategies, and tools in digital marketing.
+          <p className="text-xl text-gray-600 mb-12">
+            You can find guides, tutorials and actionable tips to grow your SaaS here.
           </p>
           
-          <div className="space-y-12">
+          <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
             {blogPosts.map((post) => (
-              <article key={post.id} className="bg-white border border-gray-200 rounded-lg overflow-hidden hover:border-orange-500 transition-all duration-300 transform hover:-translate-y-1 shadow-md">
-                <div className="p-6 sm:p-8">
-                  <div className="flex items-center justify-between mb-4">
-                    <span className="text-orange-500 text-sm font-semibold px-3 py-1 bg-orange-100 rounded-full">
-                      {post.category}
-                    </span>
-                    <span className="text-gray-500 text-sm flex items-center">
-                      <Calendar className="w-4 h-4 mr-1" />
-                      {new Date(post.date).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })}
-                    </span>
-                  </div>
-                  <h2 className="text-2xl sm:text-3xl font-bold text-black mb-4 hover:text-orange-500 transition-colors">
-                    <Link href={`/blog/${post.slug}`}>
-                      {post.title}
-                    </Link>
-                  </h2>
-                  <p className="text-gray-600 mb-6 line-clamp-3">{post.excerpt}</p>
-                  <div className="flex items-center justify-between">
-                    <div className="flex items-center space-x-4">
-                      <div className="w-10 h-10 rounded-full bg-gray-200 flex items-center justify-center">
-                        <User className="w-6 h-6 text-gray-500" />
-                      </div>
-                      <div>
-                        <p className="text-black font-semibold">{post.author}</p>
-                        <p className="text-gray-500 text-sm">{post.readTime}</p>
-                      </div>
+              <div key={post.id} className="group">
+                <article className="flex flex-col h-full space-y-3 border border-gray-200 rounded-lg overflow-hidden transition-shadow duration-300 hover:shadow-md">
+                  <Link href={`/blogs/${post.slug}`} className="block flex-grow">
+                    <div className="aspect-[3/2] relative overflow-hidden rounded-t-lg bg-gray-100">
+                      <Image
+                        src={post.image}
+                        alt={post.title}
+                        fill
+                        className="object-cover transition-transform duration-300 group-hover:scale-105"
+                      />
                     </div>
+                    <div className="p-4 space-y-2 flex-grow">
+                      <time className="text-sm text-gray-500">
+                        {post.date}
+                      </time>
+                      <h2 className="text-xl font-semibold text-gray-900 group-hover:text-gray-600 transition-colors">
+                        {post.title}
+                      </h2>
+                      <p className="text-gray-600 line-clamp-2">
+                        {post.excerpt}
+                      </p>
+                    </div>
+                  </Link>
+                  <div className="px-4 pb-4">
                     <Link 
                       href={`/blog/${post.slug}`}
-                      className="text-orange-500 hover:text-orange-600 transition-colors flex items-center"
+                      className="inline-flex items-center text-orange-500 hover:text-orange-600 transition-colors"
                     >
-                      Read More <ArrowRight className="ml-2 w-4 h-4" />
+                      Read More <ArrowRight className="ml-2 h-4 w-4" />
                     </Link>
                   </div>
-                </div>
-              </article>
+                </article>
+              </div>
             ))}
-          </div>
-
-          <div className="mt-12 text-center">
-            <button className="px-6 py-3 bg-orange-500 text-white font-bold rounded-md hover:bg-orange-600 transition-colors">
-              Load More Articles
-            </button>
           </div>
         </div>
       </main>

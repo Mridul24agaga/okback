@@ -2,58 +2,87 @@ import React from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
 import { Footer } from '@/app/components/footer'
+import { Metadata } from 'next'
 
-const BlogPost = () => {
+export const metadata: Metadata = {
+  title: 'Automatic Directory Submission: How AI is Changing the Game for Startups',
+  description: 'Discover how AI-powered automatic directory submission is revolutionizing online marketing for startups. Learn about the benefits, tools, and strategies for improving your SEO and online presence.',
+  openGraph: {
+    title: 'AI-Powered Automatic Directory Submission for Startups',
+    description: 'Learn how AI is transforming directory submissions and boosting SEO for startups.',
+    images: [
+      {
+        url: '/ai.png',
+        width: 1200,
+        height: 630,
+        alt: 'AI-Powered Automatic Directory Submission',
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'AI-Powered Automatic Directory Submission for Startups',
+    description: 'Discover how AI is revolutionizing directory submissions and SEO strategies for startups.',
+    images: ['/ai.png'],
+  },
+}
+
+const BlogPost: React.FC = () => {
   return (
     <div className="min-h-screen bg-white text-black">
-      {/* Header */}
       <header className="container mx-auto px-4 py-4 sm:py-6 border-b border-gray-200">
         <div className="flex items-center justify-between">
-          <div className="flex items-center">
+          <Link href="/" className="flex items-center">
             <Image
               src="/getmorepacklinks.png"
-              alt="Logo"
+              alt="GetMoreBacklinks Logo"
               width={532}
               height={132}
               className="h-8 sm:h-10 md:h-12 w-auto"
             />
-          </div>
-          <div className="flex items-center gap-4">
-            <Link 
-              href="/blogs" 
-              className="text-black hover:text-orange-500 transition-colors text-sm sm:text-base font-bold"
-            >
-              Blogs
-            </Link>
-            <Link 
-              href="/submit" 
-              className="px-3 py-1 sm:px-4 sm:py-2 text-sm sm:text-base rounded-md bg-black text-white hover:bg-orange-600 transition-colors font-bold"
-            >
-              Submit Your Directory
-            </Link>
-          </div>
+          </Link>
+          <nav>
+            <ul className="flex items-center gap-4">
+              <li>
+                <Link 
+                  href="/blogs" 
+                  className="text-black hover:text-orange-500 transition-colors text-sm sm:text-base font-bold"
+                >
+                  Blogs
+                </Link>
+              </li>
+              <li>
+                <Link 
+                  href="/submit" 
+                  className="px-3 py-1 sm:px-4 sm:py-2 text-sm sm:text-base rounded-md bg-black text-white hover:bg-orange-600 transition-colors font-bold"
+                >
+                  Submit Your Directory
+                </Link>
+              </li>
+            </ul>
+          </nav>
         </div>
       </header>
 
       <main className="container mx-auto px-4 py-8 sm:py-12 md:py-16">
         <article className="max-w-3xl mx-auto">
-          <div className="mb-8">
+          <header className="mb-8">
             <h1 className="text-3xl sm:text-4xl font-bold text-black mb-4">
               Automatic Directory Submission: How AI is Changing the Game
             </h1>
             <p className="text-gray-600 mb-4">
-              Published on {new Date().toLocaleDateString()} • 10 min read
+              <time dateTime={new Date().toISOString()}>Published on {new Date().toLocaleDateString()}</time> • 10 min read
             </p>
-            <div className="relative h-64 sm:h-80 rounded-lg overflow-hidden mb-8">
+            <figure className="relative h-64 sm:h-80 rounded-lg overflow-hidden mb-8">
               <Image
                 src="/ai.png"
-                alt="Automatic Directory Submission"
+                alt="AI-powered automatic directory submission concept"
                 layout="fill"
                 objectFit="cover"
                 className="w-full h-full object-center"
               />
-            </div>
-          </div>
+            </figure>
+          </header>
           
           <div className="space-y-6">
             <section>
@@ -213,7 +242,7 @@ const BlogPost = () => {
           </div>
         </article>
 
-        <div className="max-w-3xl mx-auto mt-12">
+        <aside className="max-w-3xl mx-auto mt-12">
           <div className="bg-orange-100 rounded-3xl p-8">
             <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
               <div className="space-y-2">
@@ -224,7 +253,7 @@ const BlogPost = () => {
                   Add your directory submission tool to our growing list
                 </p>
                 <div className="inline-flex items-center gap-2 bg-orange-200 text-orange-700 px-3 py-1 rounded-full text-xs font-medium">
-                  <svg className="w-3 h-3" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <svg className="w-3 h-3" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
                     <path d="M10 3L4.5 8.5L2 6" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
                   </svg>
                   Quick Process
@@ -240,8 +269,7 @@ const BlogPost = () => {
               </div>
             </div>
           </div>
-        </div>
-
+        </aside>
       </main>
       <Footer/>
     </div>

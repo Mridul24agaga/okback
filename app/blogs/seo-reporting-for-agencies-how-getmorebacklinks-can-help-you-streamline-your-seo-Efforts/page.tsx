@@ -1,11 +1,34 @@
 import Image from 'next/image'
 import Link from 'next/link'
 import { Footer } from '@/app/components/footer'
+import { Metadata } from 'next'
+
+export const metadata: Metadata = {
+  title: 'SEO Reporting for Agencies: How getmorebacklinks.org Can Help You Streamline Your SEO Efforts',
+  description: 'Discover how getmorebacklinks.org can help agencies streamline SEO reporting, automate backlink management, and enhance overall SEO strategies.',
+  openGraph: {
+    title: 'SEO Reporting for Agencies: Streamline Your SEO Efforts with getmorebacklinks.org',
+    description: 'Learn how getmorebacklinks.org can help agencies automate backlink management and enhance SEO reporting.',
+    images: [
+      {
+        url: '/backlink-checker.webp',
+        width: 1200,
+        height: 630,
+        alt: 'SEO Reporting Dashboard',
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'SEO Reporting for Agencies: Streamline Your SEO Efforts',
+    description: 'Discover how getmorebacklinks.org can help agencies automate backlink management and enhance SEO reporting.',
+    images: ['/backlink-checker.webp'],
+  },
+}
 
 export default function BlogPost() {
     return (
         <div className="min-h-screen bg-white">
-            {/* Header */}
             <header className="container mx-auto px-4 py-4 sm:py-6">
                 <div className="flex items-center justify-between">
                     <Link href="/" className="flex items-center">
@@ -17,42 +40,48 @@ export default function BlogPost() {
                             className="h-8 w-auto"
                         />
                     </Link>
-                    <div className="flex items-center gap-6">
-                        <Link
-                            href="/blogs"
-                            className="text-black hover:text-gray-600 transition-colors text-base font-semibold"
-                        >
-                            Blogs
-                        </Link>
-                        <Link
-                            href="/submit"
-                            className="px-4 py-2 text-base rounded-md bg-black text-white hover:bg-orange-600 transition-colors font-semibold"
-                        >
-                            Submit Your Directory
-                        </Link>
-                    </div>
+                    <nav>
+                        <ul className="flex items-center gap-6">
+                            <li>
+                                <Link
+                                    href="/blogs"
+                                    className="text-black hover:text-gray-600 transition-colors text-base font-semibold"
+                                >
+                                    Blogs
+                                </Link>
+                            </li>
+                            <li>
+                                <Link
+                                    href="/submit"
+                                    className="px-4 py-2 text-base rounded-md bg-black text-white hover:bg-orange-600 transition-colors font-semibold"
+                                >
+                                    Submit Your Directory
+                                </Link>
+                            </li>
+                        </ul>
+                    </nav>
                 </div>
             </header>
 
-            {/* Blog Content */}
             <main className="container mx-auto px-4 py-8">
                 <article className="max-w-4xl mx-auto">
-                    <h1 className="text-3xl sm:text-4xl font-bold text-black mb-4">
-                        SEO Reporting for Agencies: How getmorebacklinks.org Can Help You Streamline Your SEO Efforts
-                    </h1>
-                    <p className="text-gray-600 mb-8">
-                        Published on 11/12/2024 • 8 min read
-                    </p>
+                    <header>
+                        <h1 className="text-3xl sm:text-4xl font-bold text-black mb-4">
+                            SEO Reporting for Agencies: How getmorebacklinks.org Can Help You Streamline Your SEO Efforts
+                        </h1>
+                        <p className="text-gray-600 mb-8">
+                            <time dateTime="2024-11-12">Published on November 12, 2024</time> • 8 min read
+                        </p>
+                    </header>
 
-                    {/* Featured Image */}
-                    <div className="relative w-full h-[400px] mb-12 rounded-lg overflow-hidden">
+                    <figure className="relative w-full h-[400px] mb-12 rounded-lg overflow-hidden">
                         <Image
-                            src="/seo-reporting.jpg"
+                            src="/backlink-checker.webp"
                             alt="SEO Reporting Dashboard"
                             fill
-                            className="object-cover"
+                            className="object object-cover"
                         />
-                    </div>
+                    </figure>
 
                     <section className="mb-12">
                         <p className="text-gray-700 leading-relaxed mb-8">
@@ -188,14 +217,14 @@ export default function BlogPost() {
                         </p>
                         <ul className="list-disc pl-6 space-y-4 text-gray-700">
                             <li>
-                                <span className="font-semibold">Automated Link Monitoring:</span> No need for manual backlink checks; the tool keeps you
+                                <strong className="font-semibold">Automated Link Monitoring:</strong> No need for manual backlink checks; the tool keeps you
                                 updated on changes.
                             </li>
                             <li>
-                                <span className="font-semibold">Quick Report Generation:</span> Professional white-label reports can be created in minutes.
+                                <strong className="font-semibold">Quick Report Generation:</strong> Professional white-label reports can be created in minutes.
                             </li>
                             <li>
-                                <span className="font-semibold">Real-Time Alerts:</span> Immediate notifications about new backlinks, lost links, or issues ensure
+                                <strong className="font-semibold">Real-Time Alerts:</strong> Immediate notifications about new backlinks, lost links, or issues ensure
                                 proactive management.
                             </li>
                         </ul>
@@ -268,7 +297,7 @@ export default function BlogPost() {
                                         Add your directory submission tool to our growing list
                                     </p>
                                     <div className="inline-flex items-center gap-2 bg-orange-200 text-orange-700 px-3 py-1 rounded-full text-xs font-medium">
-                                        <svg className="w-3 h-3" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <svg className="w-3 h-3" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
                                             <path d="M10 3L4.5 8.5L2 6" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
                                         </svg>
                                         Quick Process

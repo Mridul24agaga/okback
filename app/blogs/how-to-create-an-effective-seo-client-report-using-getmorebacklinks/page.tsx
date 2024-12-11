@@ -1,11 +1,34 @@
 import Image from 'next/image'
 import Link from 'next/link'
 import { Footer } from '@/app/components/footer'
+import { Metadata } from 'next'
+
+export const metadata: Metadata = {
+  title: 'How to Create an Effective SEO Client Report Using getmorebacklinks.org',
+  description: 'Learn how to create comprehensive and impactful SEO client reports using getmorebacklinks.org. Discover best practices, key components, and the role of AI in directory submissions.',
+  openGraph: {
+    title: 'Create Effective SEO Client Reports with getmorebacklinks.org',
+    description: 'Master the art of SEO reporting and leverage AI for directory submissions with getmorebacklinks.org',
+    images: [
+      {
+        url: '/getmorebacklinkss.webp',
+        width: 1200,
+        height: 630,
+        alt: 'AI Directory Submission Concept',
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Effective SEO Client Reporting with getmorebacklinks.org',
+    description: 'Learn to create impactful SEO reports and leverage AI for directory submissions',
+    images: ['/getmorebacklinkss.webp'],
+  },
+}
 
 export default function BlogPost() {
     return (
         <div className="min-h-screen bg-white">
-            {/* Header */}
             <header className="container mx-auto px-4 py-4 sm:py-6">
                 <div className="flex items-center justify-between">
                     <Link href="/" className="flex items-center">
@@ -17,42 +40,48 @@ export default function BlogPost() {
                             className="h-8 w-auto"
                         />
                     </Link>
-                    <div className="flex items-center gap-6">
-                        <Link
-                            href="/blogs"
-                            className="text-black hover:text-gray-600 transition-colors text-base font-semibold"
-                        >
-                            Blogs
-                        </Link>
-                        <Link
-                            href="/submit"
-                            className="px-4 py-2 text-base rounded-md bg-black text-white hover:bg-orange-600 transition-colors font-semibold"
-                        >
-                            Submit Your Directory
-                        </Link>
-                    </div>
+                    <nav>
+                        <ul className="flex items-center gap-6">
+                            <li>
+                                <Link
+                                    href="/blogs"
+                                    className="text-black hover:text-gray-600 transition-colors text-base font-semibold"
+                                >
+                                    Blogs
+                                </Link>
+                            </li>
+                            <li>
+                                <Link
+                                    href="/submit"
+                                    className="px-4 py-2 text-base rounded-md bg-black text-white hover:bg-orange-600 transition-colors font-semibold"
+                                >
+                                    Submit Your Directory
+                                </Link>
+                            </li>
+                        </ul>
+                    </nav>
                 </div>
             </header>
 
-            {/* Blog Content */}
             <main className="container mx-auto px-4 py-8">
                 <article className="max-w-4xl mx-auto">
-                    <h1 className="text-3xl sm:text-4xl font-bold text-black mb-4">
-                        How to Create an Effecive SEO Client Report Using getmorebacklinks.org
-                    </h1>
-                    <p className="text-gray-600 mb-8">
-                        Published on 11/12/2024 • 10 min read
-                    </p>
+                    <header>
+                        <h1 className="text-3xl sm:text-4xl font-bold text-black mb-4">
+                            How to Create an Effective SEO Client Report Using getmorebacklinks.org
+                        </h1>
+                        <p className="text-gray-600 mb-8">
+                            <time dateTime="2024-11-12">Published on November 12, 2024</time> • 10 min read
+                        </p>
+                    </header>
 
-                    {/* Featured Image */}
-                    <div className="relative w-full h-[400px] mb-12 rounded-lg overflow-hidden">
+                    <figure className="relative w-full h-[400px] mb-12 rounded-lg overflow-hidden">
                         <Image
-                            src="/ai-directory.jpg"
+                            src="/getmorebacklinkss.webp"
                             alt="AI Directory Submission Concept"
                             fill
                             className="object-cover"
                         />
-                    </div>
+                    </figure>
 
                     <section className="mb-12">
                         <p className="text-gray-700 leading-relaxed mb-4">
@@ -119,16 +148,16 @@ export default function BlogPost() {
                             <div>
                                 <h3 className="text-xl font-bold text-orange-500 mb-4">1. Executive Summary</h3>
                                 <ul className="list-disc pl-6 space-y-2 text-gray-700">
-                                    <li><span className="font-semibold">Purpose:</span> Summarizing SEO efforts at a high level.</li>
-                                    <li><span className="font-semibold">Content:</span> Briefly outline the current SEO strategy, highlight progress since the last report, and mention key wins or challenges.</li>
+                                    <li><strong className="font-semibold">Purpose:</strong> Summarizing SEO efforts at a high level.</li>
+                                    <li><strong className="font-semibold">Content:</strong> Briefly outline the current SEO strategy, highlight progress since the last report, and mention key wins or challenges.</li>
                                 </ul>
                             </div>
 
                             <div>
                                 <h3 className="text-xl font-bold text-orange-500 mb-4">2. Keyword Performance</h3>
                                 <ul className="list-disc pl-6 space-y-2 text-gray-700">
-                                    <li><span className="font-semibold">Purpose:</span> Tracks the performance of targeted keywords over time.</li>
-                                    <li><span className="font-semibold">Content:</span> Include keyword rankings, positional changes, and traffic-driving keywords. Highlight improvements, especially for high-conversion terms.</li>
+                                    <li><strong className="font-semibold">Purpose:</strong> Tracks the performance of targeted keywords over time.</li>
+                                    <li><strong className="font-semibold">Content:</strong> Include keyword rankings, positional changes, and traffic-driving keywords. Highlight improvements, especially for high-conversion terms.</li>
                                 </ul>
                                 <div className="mt-4 p-4 bg-gray-50 rounded-lg">
                                     <p className="text-gray-600 italic">
@@ -140,8 +169,8 @@ export default function BlogPost() {
                             <div>
                                 <h3 className="text-xl font-bold text-orange-500 mb-4">3. Backlink Profile</h3>
                                 <ul className="list-disc pl-6 space-y-2 text-gray-700">
-                                    <li><span className="font-semibold">Purpose:</span> Showcases the quality and quantity of backlinks, a crucial SEO ranking factor.</li>
-                                    <li><span className="font-semibold">Content:</span> Highlight new backlinks acquired, their quality, and the domains linking to your client's website.</li>
+                                    <li><strong className="font-semibold">Purpose:</strong> Showcases the quality and quantity of backlinks, a crucial SEO ranking factor.</li>
+                                    <li><strong className="font-semibold">Content:</strong> Highlight new backlinks acquired, their quality, and the domains linking to your client's website.</li>
                                 </ul>
                                 <div className="mt-4 p-4 bg-gray-50 rounded-lg">
                                     <p className="text-gray-600 italic">
@@ -189,23 +218,23 @@ export default function BlogPost() {
                         </h2>
                         <div className="grid gap-4">
                             <div className="p-4 border border-gray-200 rounded-lg">
-                                <p className="font-semibold text-black">1. Be Clear and Concise</p>
+                                <h3 className="font-semibold text-black">1. Be Clear and Concise</h3>
                                 <p className="text-gray-600">Avoid jargon; use straightforward language.</p>
                             </div>
                             <div className="p-4 border border-gray-200 rounded-lg">
-                                <p className="font-semibold text-black">2. Incorporate Visuals</p>
+                                <h3 className="font-semibold text-black">2. Incorporate Visuals</h3>
                                 <p className="text-gray-600">Charts and graphs make complex data more digestible.</p>
                             </div>
                             <div className="p-4 border border-gray-200 rounded-lg">
-                                <p className="font-semibold text-black">3. Highlight Wins</p>
+                                <h3 className="font-semibold text-black">3. Highlight Wins</h3>
                                 <p className="text-gray-600">Focus on achievements to reinforce client confidence.</p>
                             </div>
                             <div className="p-4 border border-gray-200 rounded-lg">
-                                <p className="font-semibold text-black">4. Provide Actionable Insights</p>
+                                <h3 className="font-semibold text-black">4. Provide Actionable Insights</h3>
                                 <p className="text-gray-600">Recommend specific next steps to keep progress on track.</p>
                             </div>
                             <div className="p-4 border border-gray-200 rounded-lg">
-                                <p className="font-semibold text-black">5. Maintain Consistency</p>
+                                <h3 className="font-semibold text-black">5. Maintain Consistency</h3>
                                 <p className="text-gray-600">Deliver reports on a regular schedule (monthly or quarterly).</p>
                             </div>
                         </div>
@@ -214,17 +243,16 @@ export default function BlogPost() {
                     <section className="mb-12">
                         <h2 className="text-2xl font-bold text-black mb-6">Conclusion</h2>
                         <p className="text-gray-700 leading-relaxed mb-4">
-                            Creating an impactful SEO client report is crucial for showcasing your agencys value and fostering
+                            Creating an impactful SEO client report is crucial for showcasing your agency's value and fostering
                             trust with your clients. Using getmorebacklinks.org, you can automate backlink tracking, generate
-                            detailed white-label reports, and present acƟonable insights that make your SEO efforts shine.
+                            detailed white-label reports, and present actionable insights that make your SEO efforts shine.
                         </p>
                         <p className="text-gray-700 leading-relaxed mb-4">
                             Start leveraging the power of automation and create client reports that highlight your successes, inspire confidence, and drive long-term partnerships.
                         </p>
                         <p className="text-black font-bold leading-relaxed mb-4">
-                        Visit <a className='text-orange-600' href="https://www.getmorebacklinks.org/">getmorebacklinks.org</a> today and take your SEO reporting to the next level!
+                            Visit <a className='text-orange-600 hover:underline' href="https://www.getmorebacklinks.org/">getmorebacklinks.org</a> today and take your SEO reporting to the next level!
                         </p>
-
                     </section>
 
                     <div className="max-w-3xl mx-auto mt-12">
@@ -238,7 +266,7 @@ export default function BlogPost() {
                                         Add your directory submission tool to our growing list
                                     </p>
                                     <div className="inline-flex items-center gap-2 bg-orange-200 text-orange-700 px-3 py-1 rounded-full text-xs font-medium">
-                                        <svg className="w-3 h-3" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <svg className="w-3 h-3" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
                                             <path d="M10 3L4.5 8.5L2 6" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
                                         </svg>
                                         Quick Process
