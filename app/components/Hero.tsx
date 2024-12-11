@@ -141,6 +141,12 @@ export default function Hero() {
             />
           </div>
           <div className="flex items-center gap-4">
+          <Link 
+              href="/blogs" 
+              className="text-gray-900 hover:text-gray-600 transition-colors text-sm font-medium"
+            >
+              Blog
+            </Link>
             
             <Link href="/submit" className="px-3 py-1 sm:px-4 sm:py-2 text-sm sm:text-base rounded-md bg-black text-white hover:bg-orange-600 transition-colors font-bold">
               Submit Your Directory
