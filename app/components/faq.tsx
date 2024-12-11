@@ -58,16 +58,16 @@ interface FAQItemProps {
 function FAQItem({ question, answer, isOpen, onClick, columnIndex }: FAQItemProps) {
   return (
     <div 
-      className="bg-white/5 rounded-lg overflow-hidden cursor-pointer hover:bg-white/[0.07] transition-colors"
+      className="bg-gray-50 rounded-lg overflow-hidden cursor-pointer hover:bg-gray-100 transition-colors"
       onClick={onClick}
     >
       <div className="p-4 sm:p-6 flex justify-between items-center">
-        <h3 className="text-sm sm:text-base font-medium text-white pr-4">{question}</h3>
+        <h3 className="text-sm sm:text-base font-medium text-black pr-4">{question}</h3>
         <div className="flex-shrink-0">
           {isOpen ? (
-            <Minus className="h-5 w-5 text-[#00CED1]" />
+            <Minus className="h-5 w-5 text-orange-500" />
           ) : (
-            <Plus className="h-5 w-5 text-[#00CED1]" />
+            <Plus className="h-5 w-5 text-orange-500" />
           )}
         </div>
       </div>
@@ -79,7 +79,7 @@ function FAQItem({ question, answer, isOpen, onClick, columnIndex }: FAQItemProp
             exit={{ height: 0, opacity: 0 }}
             transition={{ duration: 0.2 }}
           >
-            <div className="px-4 sm:px-6 pb-4 sm:pb-6 text-sm sm:text-base text-gray-400">
+            <div className="px-4 sm:px-6 pb-4 sm:pb-6 text-sm sm:text-base text-gray-600">
               {answer}
             </div>
           </motion.div>
@@ -107,14 +107,14 @@ export default function FAQSection() {
   const rightColumnFAQs = faqs.slice(Math.ceil(faqs.length / 2))
 
   return (
-    <section className="bg-[#0A0A0A]">
+    <section className="bg-white">
       <div className="container mx-auto px-4 py-20">
         <div className="max-w-7xl mx-auto">
           <div className="flex flex-col items-center mb-12">
-            <div className="inline-block px-4 py-2 rounded-full bg-white/5 border border-gray-800 mb-4">
-              <span className="text-gray-300 text-sm font-medium">FAQ's</span>
+            <div className="inline-block px-4 py-2 rounded-full bg-orange-100 border border-orange-200 mb-4">
+              <span className="text-orange-600 text-sm font-medium">FAQ's</span>
             </div>
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-center text-white mb-4">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-center text-black mb-4">
               Frequently Asked Questions
             </h2>
           </div>

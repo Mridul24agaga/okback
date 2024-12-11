@@ -59,7 +59,7 @@ export default function WhyChooseSection() {
   const MotionDiv = motion.div as React.ComponentType<MotionDivProps>
 
   return (
-    <section className="bg-[#0A0A0A]">
+    <section className="bg-white">
       <div className="container mx-auto px-4 py-20">
         <div className="flex flex-col lg:grid lg:grid-cols-2 gap-12 items-start">
           {/* Features Grid */}
@@ -71,13 +71,13 @@ export default function WhyChooseSection() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 viewport={{ once: true }}
-                className="bg-white/5 backdrop-blur-sm rounded-2xl p-6 border border-gray-800"
+                className="bg-gray-100 rounded-xl p-6 border border-gray-300"
               >
-                <div className="bg-black rounded-lg w-12 h-12 flex items-center justify-center mb-4">
-                  <feature.icon className="h-6 w-6 text-[#00CED1]" />
+                <div className="bg-orange-100 rounded-lg w-12 h-12 flex items-center justify-center mb-4">
+                  <feature.icon className="h-6 w-6 text-orange-500" />
                 </div>
-                <h3 className="text-xl font-semibold text-white mb-2">{feature.title}</h3>
-                <p className="text-gray-400 text-sm">{feature.description}</p>
+                <h3 className="text-xl font-semibold text-black mb-2">{feature.title}</h3>
+                <p className="text-gray-600 text-sm">{feature.description}</p>
               </MotionDiv>
             ))}
           </div>
@@ -90,10 +90,10 @@ export default function WhyChooseSection() {
             viewport={{ once: true }}
             className="lg:pl-8 order-1 lg:order-2"
           >
-            <h2 className="text-4xl sm:text-5xl font-bold text-white mb-6">
+            <h2 className="text-4xl sm:text-5xl font-bold text-black mb-6">
               Why choose Getmorebacklinks?
             </h2>
-            <p className="text-gray-400 text-lg mb-8">
+            <p className="text-gray-600 text-lg mb-8">
               Experience unparalleled productivity with tailored features, AI insights, and seamless team collaboration.
             </p>
             <div className="space-y-4">
@@ -106,10 +106,10 @@ export default function WhyChooseSection() {
                   viewport={{ once: true }}
                   className="flex items-center space-x-3"
                 >
-                  <div className="flex-shrink-0 w-6 h-6 rounded-full bg-[#00CED1]/10 flex items-center justify-center">
-                    <Check className="h-4 w-4 text-[#00CED1]" />
+                  <div className="flex-shrink-0 w-6 h-6 rounded-full bg-orange-100 flex items-center justify-center">
+                    <Check className="h-4 w-4 text-orange-500" />
                   </div>
-                  <span className="text-gray-300">{benefit}</span>
+                  <span className="text-gray-700">{benefit}</span>
                 </MotionDiv>
               ))}
             </div>

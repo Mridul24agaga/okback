@@ -21,18 +21,16 @@ export function DirectoriesSection() {
   )
 
   return (
-    <section className="bg-[#0A0A0A]">
-      {/* Gradient overlay removed */}
-
+    <section className="bg-white">
       <div className="container mx-auto px-4 md:px-8 lg:px-12 py-20">
         <div className="text-center mb-12">
-          <span className="text-[#00CED1] text-sm font-medium mb-2 block">
+          <span className="text-orange-500 text-sm font-medium mb-2 block">
             Where We List You
           </span>
-          <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">
+          <h2 className="text-3xl sm:text-4xl font-bold text-black mb-4">
             We handpick 100 most relevant directories for you
           </h2>
-          <p className="text-gray-400 max-w-2xl mx-auto mb-8">
+          <p className="text-gray-600 max-w-2xl mx-auto mb-8">
             1000+ quality sites, directories, and forums across niches—updated daily.
           </p>
         </div>
@@ -42,7 +40,7 @@ export function DirectoriesSection() {
             <input
               type="search"
               placeholder="Search among 10,352 directories"
-              className="w-full px-4 py-2 bg-black/10 border border-[#091C1C]/50 rounded-md text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-[#00CED1]/50 hover:bg-black/20 transition-colors"
+              className="w-full px-4 py-2 bg-gray-100 border border-gray-300 rounded-md text-black placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-orange-500/50 hover:bg-gray-200 transition-colors"
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
             />
@@ -56,10 +54,10 @@ export function DirectoriesSection() {
         </div>
 
         <div className="mt-12 text-center">
-          <button className="px-6 py-3 bg-[#00CED1] hover:bg-[#00CED1]/90 text-black font-medium rounded-md transition-colors">
+          <button className="px-6 py-3 bg-orange-500 hover:bg-orange-600 text-white font-medium rounded-md transition-colors">
             Submit Your Directory
           </button>
-          <p className="text-gray-500 text-sm mt-4">
+          <p className="text-gray-600 text-sm mt-4">
             Want to list your directory? Submit it for review.
           </p>
         </div>
@@ -67,3 +65,4 @@ export function DirectoriesSection() {
     </section>
   )
 }
+

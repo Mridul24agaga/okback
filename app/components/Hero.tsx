@@ -11,13 +11,14 @@ import CuratorsSection from "./curators-section"
 import ManualListingSection from "./listing"
 import BacklinkFeatures from "./backlinkfeatures"
 import WhyChooseSection from "./whychooseus"
+import FAQSection from "./faq"
 
 const words = ["Startups", "Founders", "Innovators", "Entrepreneurs"]
 
 const containerVariants = {
   initial: {
     opacity: 0,
-    y: "100%",
+    y: 0,
   },
   animate: {
     opacity: 1,
@@ -55,7 +56,7 @@ const AnimatedWord = ({ word }: AnimatedWordProps) => (
     animate={{ opacity: 1, y: 0 }}
     exit={{ opacity: 0, y: "-100%" }}
     transition={{ duration: 0.5, ease: [0.41, 0.01, 0.56, 1] }}
-    style={{ display: 'inline-block' }}
+    style={{ display: 'inline-block', minWidth: '140px', padding: '0 4px' }}
   >
     {word}
   </motion.div>
@@ -70,7 +71,7 @@ const BackgroundGlow = () => (
       position: 'absolute',
       inset: 0,
       originY: 'bottom',
-      backgroundColor: 'rgba(0, 206, 209, 0.2)',
+      backgroundColor: 'rgba(255, 165, 0, 0.2)',
       zIndex: -1
     }}
   />
@@ -105,19 +106,19 @@ export default function Hero() {
         body: JSON.stringify({ email }),
       })
 
-      const data = await response.json()
-
-      if (response.ok) {
-        setMessage(data.message)
-        setEmail('')
-      } else {
-        setError(data.message)
+      if (!response.ok) {
+        throw new Error(`HTTP error! status: ${response.status}`)
       }
-    } catch (err) {
-      setError('An error occurred. Please try again.')
-    }
 
-    setIsLoading(false)
+      const data = await response.json()
+      setMessage(data.message)
+      setEmail('')
+    } catch (err) {
+      console.error('Subscription error:', err)
+      setError('An error occurred. Please try again.')
+    } finally {
+      setIsLoading(false)
+    }
   }
 
   return (
@@ -125,14 +126,14 @@ export default function Hero() {
       initial="initial"
       animate="animate"
       variants={containerVariants}
-      style={{ minHeight: '100vh', backgroundColor: '#0A0A0A' }}
+      style={{ minHeight: '100vh', backgroundColor: 'white' }}
     >
       {/* Header */}
-      <header className="container mx-auto px-4 py-4 sm:py-6 border-b border-gray-800">
+      <header className="container mx-auto px-4 py-4 sm:py-6 border-b border-gray-200/20">
         <div className="flex items-center justify-between">
           <div className="flex items-center">
             <Image
-              src="/getmorebacklinks.png"
+              src="/getmorepacklinks.png"
               alt="Logo"
               width={532}
               height={132}
@@ -142,11 +143,11 @@ export default function Hero() {
           <div className="flex items-center gap-4">
             <Link 
               href="/blogs" 
-              className="text-gray-400 hover:text-white transition-colors text-sm sm:text-base font-bold"
+              className="text-black hover:text-gray-600 transition-colors text-sm sm:text-base font-bold"
             >
               Blogs
             </Link>
-            <Link href="/submit" className="px-3 py-1 sm:px-4 sm:py-2 text-sm sm:text-base rounded-md bg-gray-100 text-gray-900 hover:bg-gray-200 transition-colors font-bold">
+            <Link href="/submit" className="px-3 py-1 sm:px-4 sm:py-2 text-sm sm:text-base rounded-md bg-black text-white hover:bg-orange-600 transition-colors font-bold">
               Submit Your Directory
             </Link>
           </div>
@@ -159,31 +160,31 @@ export default function Hero() {
           <div className="w-full flex justify-center mb-6 sm:mb-8">
             <Link
               href="#"
-              className="group inline-flex items-center gap-2 rounded-full bg-black/40 hover:bg-black/60 border border-gray-800 px-3 py-1 sm:px-4 sm:py-2 transition-colors"
+              className="group inline-flex items-center gap-2 rounded-full bg-gray-100 hover:bg-gray-200 px-3 py-1 sm:px-4 sm:py-2 transition-colors border border-gray-200"
             >
-              <span className="inline-flex items-center justify-center rounded-full bg-[#4ADE80] px-2 py-0.5 text-xs font-semibold text-black">
+              <span className="inline-flex items-center justify-center rounded-full bg-[#F97316] px-2 py-0.5 text-xs font-semibold text-black">
                 NEW
               </span>
-              <span className="text-xs sm:text-sm text-gray-200">
+              <span className="text-xs sm:text-sm text-black">
                 Exclusive early access coming soon
               </span>
-              <ChevronRight className="h-3 w-3 sm:h-4 sm:w-4 text-gray-400 group-hover:text-white transition-colors" />
+              <ChevronRight className="h-3 w-3 sm:h-4 sm:w-4 text-black group-hover:text-gray-600 transition-colors" />
             </Link>
           </div>
           <div className="space-y-6 sm:space-y-8 max-w-4xl mb-8 sm:mb-12">
-            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold tracking-tighter text-white animate-fade-in-up animation-delay-150 letter-spacing">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-5xl xl:text-6xl font-bold tracking-tighter text-black animate-fade-in-up animation-delay-150 letter-spacing">
               <span className="tracking-wide leading-tight">Marketing Database for</span>{" "}
-              <span className="text-[#00CED1] relative inline-block">
+              <span className="text-orange-500 relative inline-block">
                 <div className="relative overflow-hidden inline-block">
                   <AnimatePresence mode="wait">
                     <AnimatedWord key={words[currentWord]} word={words[currentWord]} />
                   </AnimatePresence>
                   <BackgroundGlow />
                 </div>
-                <span className="absolute bottom-0 left-0 w-full h-2 bg-[#00CED1] opacity-50 rounded"></span>
+                <span className="absolute bottom-0 left-0 w-full h-2 bg-orange-500 opacity-50 rounded"></span>
               </span>
             </h1>
-            <p className="text-gray-400 text-sm sm:text-base md:text-lg lg:text-xl max-w-2xl mx-auto animate-fade-in-up animation-delay-300">
+            <p className="text-black text-sm sm:text-base md:text-lg lg:text-xl max-w-2xl mx-auto animate-fade-in-up animation-delay-300">
               Join our exclusive waitlist for early access to our curated database of launch platforms, directories, marketplaces, newsletters, and communities - all in one place.
             </p>
           </div>
@@ -201,43 +202,57 @@ export default function Hero() {
               />
               <button 
                 type="submit"
-                className="w-full sm:w-auto px-4 py-2 bg-[#00CED1] hover:bg-[#00FFFF] text-black font-medium rounded-md sm:rounded-l-none transition-colors flex items-center justify-center sm:justify-start text-sm sm:text-base"
+                className="w-full sm:w-auto px-4 py-2 bg-[#F97316] hover:bg-[#F97316] text-black font-medium rounded-md sm:rounded-l-none transition-colors flex items-center justify-center sm:justify-start text-sm sm:text-base"
                 disabled={isLoading}
               >
                 {isLoading ? 'Joining...' : 'Join Waitlist'} <ArrowRight className="ml-2 h-4 w-4" />
               </button>
             </form>
+            
             {message && <p className="text-sm text-green-400">{message}</p>}
             {error && <p className="text-sm text-red-400">{error}</p>}
-            <p className="text-xs sm:text-sm text-gray-500">
-              Join 809 founders already on the waitlist for early access!
-            </p>
-          </div>
 
-          {/* Contact Section */}
-          <div className="mt-12 sm:mt-16 md:mt-20 flex flex-col sm:flex-row items-center gap-2 text-xs sm:text-sm text-gray-400 animate-fade-in-up animation-delay-600">
-            <span className="mb-2 sm:mb-0">Got a question?</span>
-            <div className="flex gap-2">
-              <Link href="#" className="hover:text-white transition-colors">LinkedIn</Link>
-              <span>•</span>
-              <Link href="#" className="hover:text-white transition-colors">Twitter</Link>
-              <span>•</span>
-              <Link href="#" className="hover:text-white transition-colors">Email</Link>
+            {/* Avatar Group Section */}
+            <div className="mt-6 flex items-center justify-center">
+              <div className="flex -space-x-2">
+                <Image
+                  src="/48.jpg"
+                  alt="User Avatar"
+                  width={40}
+                  height={40}
+                  className="rounded-full border-2 border-white"
+                />
+                <Image
+                  src="/49.jpg"
+                  alt="User Avatar"
+                  width={40}
+                  height={40}
+                  className="rounded-full border-2 border-white"
+                />
+                <Image
+                  src="/50.jpg"
+                  alt="User Avatar"
+                  width={40}
+                  height={40}
+                  className="rounded-full border-2 border-white"
+                />
+               
+              </div>
+              <p className="ml-4 text-sm font-medium text-black">Join 100+ founders</p>
             </div>
-          </div>
+
+          
         </div>
+      </div>
 
         {/* Directory Section */}
         <DirectoriesSection />
         <ManualListingSection/>
         <BacklinkFeatures/>
         <WhyChooseSection/>
+        <FAQSection/>
 
-        {/* Footer */}
-        <motion.div variants={fadeInUpVariants}>
-          <CuratorsSection />
-        </motion.div>
-
+       
         <motion.div variants={fadeInUpVariants}>
           <Footer />
         </motion.div>
