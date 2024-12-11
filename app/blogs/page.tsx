@@ -63,9 +63,9 @@ export default function BlogPage() {
               Blog
             </Link>
             
-            <button className="px-3 py-1 sm:px-4 sm:py-2 text-sm sm:text-base rounded-md bg-black text-white hover:bg-orange-600 transition-colors font-bold">
-              Try Now
-            </button>
+            <Link href="/" className="px-3 py-1 sm:px-4 sm:py-2 text-sm sm:text-base rounded-md bg-black text-white hover:bg-orange-600 transition-colors font-bold">
+              Join Waitlist
+            </Link>
           </nav>
         </div>
       </header>
