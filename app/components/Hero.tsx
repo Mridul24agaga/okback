@@ -12,6 +12,7 @@ import ManualListingSection from "./listing"
 import BacklinkFeatures from "./backlinkfeatures"
 import WhyChooseSection from "./whychooseus"
 import FAQSection from "./faq"
+import { PromoBanner } from "./promo-banner"
 
 const words = ["Seo", "Backlinks", "Ratings", "Sales"]
 
@@ -128,6 +129,7 @@ export default function Hero() {
       variants={containerVariants}
       style={{ minHeight: '100vh', backgroundColor: 'white' }}
     >
+      <PromoBanner /> {/* Added PromoBanner here */}
       {/* Header */}
       <header className="container mx-auto px-4 py-4 sm:py-6 border-b border-gray-200/20">
         <div className="flex items-center justify-between">
