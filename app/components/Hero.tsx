@@ -13,6 +13,8 @@ import BacklinkFeatures from "./backlinkfeatures"
 import WhyChooseSection from "./whychooseus"
 import FAQSection from "./faq"
 import { PromoBanner } from "./promo-banner"
+import ComparisonSection from "./comparisonsection"
+import PricingSection from "./pricing"
 
 const words = ["Seo", "Backlinks", "Ratings", "Sales"]
 
@@ -253,6 +255,8 @@ export default function Hero() {
         <ManualListingSection/>
         <BacklinkFeatures/>
         <WhyChooseSection/>
+        <ComparisonSection/>
+        <PricingSection/>
         <FAQSection/>
 
        
