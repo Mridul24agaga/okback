@@ -1,20 +1,49 @@
 import Link from "next/link"
 import Image from "next/image"
+import type { Metadata } from 'next'
+
+export const metadata: Metadata = {
+  title: 'Privacy Policy | GetMoreBacklinks.org',
+  description: 'Learn about how GetMoreBacklinks.org collects, uses, and protects your personal information.',
+  openGraph: {
+    title: 'Privacy Policy | GetMoreBacklinks.org',
+    description: 'Our commitment to protecting your privacy and personal information.',
+    url: 'https://www.getmorebacklinks.org/privacy-policy',
+    siteName: 'GetMoreBacklinks.org',
+    images: [
+      {
+        url: '/2.png',
+        width: 1200,
+        height: 630,
+        alt: 'GetMoreBacklinks.org Privacy Policy',
+      },
+    ],
+    locale: 'en_US',
+    type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Privacy Policy | GetMoreBacklinks.org',
+    description: 'Our commitment to protecting your privacy and personal information.',
+    images: ['/2.png'],
+  },
+}
 
 export default function PrivacyPolicy() {
   return (
     <div className="min-h-screen bg-white">
-      {/* Header */}
       <header className="container mx-auto px-4 py-4 sm:py-6 border-b border-gray-200">
         <div className="flex items-center justify-between">
           <div className="flex items-center">
-            <Image
-              src="/getmorepacklinks.png"
-              alt="Logo"
-              width={532}
-              height={132}
-              className="h-8 sm:h-10 md:h-12 w-auto"
-            />
+            <Link href="/">
+              <Image
+                src="/getmorepacklinks.png"
+                alt="GetMoreBacklinks.org Logo"
+                width={532}
+                height={132}
+                className="h-8 sm:h-10 md:h-12 w-auto"
+              />
+            </Link>
           </div>
           <div className="flex items-center gap-4">
             <Link 
@@ -33,11 +62,9 @@ export default function PrivacyPolicy() {
         </div>
       </header>
 
-      {/* Main Content */}
       <main className="container mx-auto px-4 py-8 sm:py-12 md:py-16">
         <div className="max-w-3xl mx-auto">
           <div className="space-y-8">
-            {/* Title Section */}
             <div className="text-center space-y-4">
               <h1 className="text-3xl sm:text-4xl font-bold text-black">Privacy Policy</h1>
               <p className="text-gray-600">Effective Date: December 1, 2024</p>
@@ -49,7 +76,6 @@ export default function PrivacyPolicy() {
               </p>
             </div>
 
-            {/* Introduction */}
             <section className="prose max-w-none">
               <h2 className="text-xl font-semibold text-black">Introduction</h2>
               <p className="text-gray-700">
@@ -59,7 +85,6 @@ export default function PrivacyPolicy() {
               </p>
             </section>
 
-            {/* Information Collection */}
             <section className="space-y-6">
               <h2 className="text-xl font-semibold text-black">Information We Collect</h2>
               
@@ -95,7 +120,6 @@ export default function PrivacyPolicy() {
               </div>
             </section>
 
-            {/* How We Use Your Information */}
             <section className="space-y-4">
               <h2 className="text-xl font-semibold text-black">How We Use Your Information</h2>
               <p className="text-gray-700">We use your data for:</p>
@@ -108,7 +132,6 @@ export default function PrivacyPolicy() {
               </ul>
             </section>
 
-            {/* How We Share Your Information */}
             <section className="space-y-6">
               <h2 className="text-xl font-semibold text-black">How We Share Your Information</h2>
               
@@ -137,7 +160,6 @@ export default function PrivacyPolicy() {
               </div>
             </section>
 
-            {/* Data Security */}
             <section className="space-y-4">
               <h2 className="text-xl font-semibold text-black">Data Security</h2>
               <p className="text-gray-700">
@@ -146,7 +168,6 @@ export default function PrivacyPolicy() {
               </p>
             </section>
 
-            {/* Your Rights */}
             <section className="space-y-6">
               <h2 className="text-xl font-semibold text-black">Your Rights</h2>
               
@@ -174,7 +195,6 @@ export default function PrivacyPolicy() {
               </div>
             </section>
 
-            {/* Cookies and Tracking */}
             <section className="space-y-4">
               <h2 className="text-xl font-semibold text-black">Cookies and Tracking</h2>
               <p className="text-gray-700">We use cookies to:</p>
@@ -189,7 +209,6 @@ export default function PrivacyPolicy() {
               </p>
             </section>
 
-            {/* Data Retention */}
             <section className="space-y-4">
               <h2 className="text-xl font-semibold text-black">Data Retention</h2>
               <p className="text-gray-700">
@@ -198,7 +217,6 @@ export default function PrivacyPolicy() {
               </p>
             </section>
 
-            {/* Changes to Privacy Policy */}
             <section className="space-y-4">
               <h2 className="text-xl font-semibold text-black">Changes to This Privacy Policy</h2>
               <p className="text-gray-700">
@@ -208,7 +226,6 @@ export default function PrivacyPolicy() {
               </p>
             </section>
 
-            {/* Contact Information */}
             <section className="space-y-4">
               <h2 className="text-xl font-semibold text-black">Contact Us</h2>
               <p className="text-gray-700">

@@ -2,6 +2,40 @@ import Link from 'next/link'
 import Image from 'next/image'
 import { Footer } from '@/app/components/footer'
 import { ArrowRight } from 'lucide-react'
+import type { Metadata } from 'next'
+
+export const metadata: Metadata = {
+  title: 'FastWaitlist Blog - Guides and Tips for SaaS Growth',
+  description: 'Discover guides, tutorials, and actionable tips to grow your SaaS business. Learn about directory submissions, SEO strategies, and more.',
+  openGraph: {
+    title: 'FastWaitlist Blog - SaaS Growth Strategies',
+    description: 'Explore our blog for in-depth guides on SaaS growth, SEO tactics, and directory submission strategies.',
+    images: [
+      {
+        url: '/3.png',
+        width: 1200,
+        height: 630,
+        alt: 'Getmorebacklinks'
+      },
+    ],
+    url: 'https://www.getmorebacklinks.org/blogs',
+    siteName: 'Getmorebacklinks'
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Getmorebacklinks SAAS Growth Insights',
+    description: 'Get the latest insights on SaaS growth, SEO strategies, and directory submissions.',
+    images: ['/3.png'],
+    creator: '@Getmorebacklinks',
+  },
+  alternates: {
+    canonical: 'https://www.getmorebacklinks.org/blogs',
+    languages: {
+      'en-US': 'https://www.getmorebacklinks.org/blogs',
+      
+    },
+  },
+}
 
 // This would typically come from a database or CMS
 const blogPosts = [
@@ -96,14 +130,42 @@ const blogPosts = [
 ]
 
 export default function BlogPage() {
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "Blog",
+    "name": "FastWaitlist Blog",
+    "description": "Guides, tutorials, and actionable tips to grow your SaaS business",
+    "url": "https://www.getmorebacklinks.org/blogs",
+    "publisher": {
+      "@type": "Organization",
+      "name": "FastWaitlist",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.getmorebacklinks.org/logo.png"
+      }
+    },
+    "blogPost": blogPosts.map(post => ({
+      "@type": "BlogPosting",
+      "headline": post.title,
+      "description": post.excerpt,
+      "datePublished": post.date,
+      "url": `https://www.getmorebacklinks.org/blogs/${post.slug}`,
+      "image": `https://www.getmorebacklinks.org${post.image}`
+    }))
+  };
+
   return (
     <div className="min-h-screen flex flex-col bg-white">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
       <header className="container mx-auto px-4 py-4 sm:py-6 border-b border-gray-100">
         <div className="flex items-center justify-between">
           <Link href="/">
             <Image
               src="/getmorepacklinks.png"
-              alt="Logo"
+              alt="FastWaitlist Logo"
               width={532}
               height={132}
               className="h-8 w-auto"
@@ -146,11 +208,12 @@ export default function BlogPage() {
                         src={post.image}
                         alt={post.title}
                         fill
+                        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                         className="object-cover transition-transform duration-300 group-hover:scale-105"
                       />
                     </div>
                     <div className="p-4 space-y-2 flex-grow">
-                      <time className="text-sm text-gray-500">
+                      <time className="text-sm text-gray-500" dateTime={post.date}>
                         {post.date}
                       </time>
                       <h2 className="text-xl font-semibold text-gray-900 group-hover:text-gray-600 transition-colors">
@@ -163,10 +226,11 @@ export default function BlogPage() {
                   </Link>
                   <div className="px-4 pb-4">
                     <Link 
-                      href={`/blog/${post.slug}`}
+                      href={`/blogs/${post.slug}`}
                       className="inline-flex items-center text-orange-500 hover:text-orange-600 transition-colors"
+                      aria-label={`Read more about ${post.title}`}
                     >
-                      Read More <ArrowRight className="ml-2 h-4 w-4" />
+                      Read More <ArrowRight className="ml-2 h-4 w-4" aria-hidden="true" />
                     </Link>
                   </div>
                 </article>

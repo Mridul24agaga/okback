@@ -1,22 +1,51 @@
 import Link from "next/link"
 import Image from "next/image"
+import type { Metadata } from 'next'
+
+export const metadata: Metadata = {
+  title: 'Terms and Conditions | GetMoreBacklinks.org',
+  description: 'Read our Terms and Conditions to understand your rights and responsibilities when using GetMoreBacklinks.org services.',
+  openGraph: {
+    title: 'Terms and Conditions | GetMoreBacklinks.org',
+    description: 'Understand your rights and responsibilities when using GetMoreBacklinks.org services.',
+    url: 'https://www.getmorebacklinks.org/terms-and-conditions',
+    siteName: 'GetMoreBacklinks.org',
+    images: [
+      {
+        url: '/1.png',
+        width: 1200,
+        height: 630,
+        alt: 'GetMoreBacklinks.org Terms and Conditions',
+      },
+    ],
+    locale: 'en_US',
+    type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Terms and Conditions | GetMoreBacklinks.org',
+    description: 'Understand your rights and responsibilities when using GetMoreBacklinks.org services.',
+    images: ['/1.png'],
+  },
+}
 
 export default function TermsAndConditions() {
   return (
     <div className="min-h-screen bg-white">
-      {/* Header */}
       <header className="container mx-auto px-4 py-4 sm:py-6 border-b border-gray-200">
         <div className="flex items-center justify-between">
           <div className="flex items-center">
-            <Image
-              src="/getmorepacklinks.png"
-              alt="Logo"
-              width={532}
-              height={132}
-              className="h-8 sm:h-10 md:h-12 w-auto"
-            />
+            <Link href="/">
+              <Image
+                src="/getmorepacklinks.png"
+                alt="GetMoreBacklinks.org Logo"
+                width={532}
+                height={132}
+                className="h-8 sm:h-10 md:h-12 w-auto"
+              />
+            </Link>
           </div>
-          <div className="flex items-center gap-4">
+          <nav className="flex items-center gap-4">
             <Link 
               href="/blogs" 
               className="text-gray-600 hover:text-black transition-colors text-sm sm:text-base font-bold"
@@ -29,15 +58,13 @@ export default function TermsAndConditions() {
             >
               Submit Your Directory
             </Link>
-          </div>
+          </nav>
         </div>
       </header>
 
-      {/* Main Content */}
       <main className="container mx-auto px-4 py-8 sm:py-12 md:py-16">
         <div className="max-w-3xl mx-auto">
           <div className="space-y-8">
-            {/* Title Section */}
             <div className="text-center space-y-4">
               <h1 className="text-3xl sm:text-4xl font-bold text-black">Terms and Conditions</h1>
               <p className="text-gray-600">Effective Date: December 1, 2024</p>
@@ -49,7 +76,6 @@ export default function TermsAndConditions() {
               </p>
             </div>
 
-            {/* 1. Acceptance of Terms */}
             <section className="space-y-4">
               <h2 className="text-xl font-semibold text-black">1. Acceptance of Terms</h2>
               <p className="text-gray-700">
@@ -58,7 +84,6 @@ export default function TermsAndConditions() {
               </p>
             </section>
 
-            {/* 2. Services Provided */}
             <section className="space-y-4">
               <h2 className="text-xl font-semibold text-black">2. Services Provided</h2>
               <p className="text-gray-700">
@@ -68,7 +93,6 @@ export default function TermsAndConditions() {
               </p>
             </section>
 
-            {/* 3. User Responsibilities */}
             <section className="space-y-4">
               <h2 className="text-xl font-semibold text-black">3. User Responsibilities</h2>
               <ul className="list-disc list-inside text-gray-700 space-y-2">
@@ -78,7 +102,6 @@ export default function TermsAndConditions() {
               </ul>
             </section>
 
-            {/* 4. Payment and Refund Policy */}
             <section className="space-y-4">
               <h2 className="text-xl font-semibold text-black">4. Payment and Refund Policy</h2>
               <ul className="list-disc list-inside text-gray-700 space-y-2">
@@ -90,7 +113,6 @@ export default function TermsAndConditions() {
               </ul>
             </section>
 
-            {/* 5. Data Security */}
             <section className="space-y-4">
               <h2 className="text-xl font-semibold text-black">5. Data Security</h2>
               <p className="text-gray-700">
@@ -99,7 +121,6 @@ export default function TermsAndConditions() {
               </p>
             </section>
 
-            {/* 6. Third-Party Links */}
             <section className="space-y-4">
               <h2 className="text-xl font-semibold text-black">6. Third-Party Links</h2>
               <p className="text-gray-700">
@@ -108,7 +129,6 @@ export default function TermsAndConditions() {
               </p>
             </section>
 
-            {/* 7. Limitation of Liability */}
             <section className="space-y-4">
               <h2 className="text-xl font-semibold text-black">7. Limitation of Liability</h2>
               <p className="text-gray-700">
@@ -120,7 +140,6 @@ export default function TermsAndConditions() {
               </ul>
             </section>
 
-            {/* 8. Intellectual Property */}
             <section className="space-y-4">
               <h2 className="text-xl font-semibold text-black">8. Intellectual Property</h2>
               <p className="text-gray-700">
@@ -130,7 +149,6 @@ export default function TermsAndConditions() {
               </p>
             </section>
 
-            {/* 9. Modifications to Terms */}
             <section className="space-y-4">
               <h2 className="text-xl font-semibold text-black">9. Modifications to Terms</h2>
               <p className="text-gray-700">
@@ -139,7 +157,6 @@ export default function TermsAndConditions() {
               </p>
             </section>
 
-            {/* 10. Governing Law */}
             <section className="space-y-4">
               <h2 className="text-xl font-semibold text-black">10. Governing Law</h2>
               <p className="text-gray-700">
@@ -148,7 +165,6 @@ export default function TermsAndConditions() {
               </p>
             </section>
 
-            {/* 11. Contact Us */}
             <section className="space-y-4">
               <h2 className="text-xl font-semibold text-black">11. Contact Us</h2>
               <p className="text-gray-700">

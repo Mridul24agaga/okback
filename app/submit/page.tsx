@@ -6,6 +6,34 @@ import Link from 'next/link'
 import { ArrowRight } from 'lucide-react'
 import { submitDirectory } from '../actions/submit-directory'
 import { Footer } from "@/app/components/footer"
+import type { Metadata } from 'next'
+
+export const metadata: Metadata = {
+  title: 'Submit Your Tool | GetMoreBacklinks.org',
+  description: 'Submit your directory submission tool to be featured on GetMoreBacklinks.org. Help others discover your valuable SEO resource.',
+  openGraph: {
+    title: 'Submit Your Tool | GetMoreBacklinks.org',
+    description: 'Submit your directory submission tool and join our curated list of SEO resources.',
+    url: 'https://www.getmorebacklinks.org/submit',
+    siteName: 'GetMoreBacklinks.org',
+    images: [
+      {
+        url: '/127.png',
+        width: 1200,
+        height: 630,
+        alt: 'Submit Your Tool to GetMoreBacklinks.org',
+      },
+    ],
+    locale: 'en_US',
+    type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Submit Your Tool | GetMoreBacklinks.org',
+    description: 'Submit your directory submission tool and join our curated list of SEO resources.',
+    images: ['/127.png'],
+  },
+}
 
 export default function SubmitDirectory() {
   const [isSubmitting, setIsSubmitting] = useState(false)
@@ -36,17 +64,17 @@ export default function SubmitDirectory() {
 
   return (
     <div className="min-h-screen flex flex-col bg-white">
-      {/* Header */}
       <header className="container mx-auto px-4 py-4 sm:py-6 border-b border-gray-200">
         <div className="flex items-center justify-between">
           <div className="flex items-center">
             <Link href="/">
               <Image
                 src="/getmorepacklinks.png"
-                alt="Logo"
+                alt="GetMoreBacklinks.org Logo"
                 width={532}
                 height={132}
                 className="h-8 sm:h-10 md:h-12 w-auto"
+                priority
               />
             </Link>
           </div>
@@ -78,6 +106,7 @@ export default function SubmitDirectory() {
                 name="toolName"
                 required
                 className="w-full px-4 py-2 bg-white border border-gray-300 rounded-md text-black placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-orange-500 hover:bg-gray-50 transition-colors"
+                aria-required="true"
               />
             </div>
 
@@ -91,6 +120,7 @@ export default function SubmitDirectory() {
                 name="toolWebsite"
                 required
                 className="w-full px-4 py-2 bg-white border border-gray-300 rounded-md text-black placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-orange-500 hover:bg-gray-50 transition-colors"
+                aria-required="true"
               />
             </div>
 
@@ -104,6 +134,7 @@ export default function SubmitDirectory() {
                 required
                 rows={4}
                 className="w-full px-4 py-2 bg-white border border-gray-300 rounded-md text-black placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-orange-500 hover:bg-gray-50 transition-colors"
+                aria-required="true"
               />
             </div>
 
@@ -117,6 +148,7 @@ export default function SubmitDirectory() {
                 name="fullName"
                 required
                 className="w-full px-4 py-2 bg-white border border-gray-300 rounded-md text-black placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-orange-500 hover:bg-gray-50 transition-colors"
+                aria-required="true"
               />
             </div>
 
@@ -130,13 +162,18 @@ export default function SubmitDirectory() {
                 name="email"
                 required
                 className="w-full px-4 py-2 bg-white border border-gray-300 rounded-md text-black placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-orange-500 hover:bg-gray-50 transition-colors"
+                aria-required="true"
               />
             </div>
 
             {message && (
-              <div className={`p-4 rounded-md ${
-                message.type === 'success' ? 'bg-green-100 text-green-800' : 'bg-red-100 text-red-800'
-              }`}>
+              <div 
+                className={`p-4 rounded-md ${
+                  message.type === 'success' ? 'bg-green-100 text-green-800' : 'bg-red-100 text-red-800'
+                }`}
+                role="alert"
+                aria-live="assertive"
+              >
                 {message.text}
               </div>
             )}
@@ -146,9 +183,10 @@ export default function SubmitDirectory() {
                 type="submit"
                 disabled={isSubmitting}
                 className="px-8 py-3 bg-orange-500 text-white font-medium rounded-md hover:bg-orange-600 transition-colors disabled:opacity-50 disabled:cursor-not-allowed flex items-center gap-2"
+                aria-disabled={isSubmitting}
               >
                 {isSubmitting ? 'Submitting...' : 'Submit'}
-                {!isSubmitting && <ArrowRight className="h-4 w-4" />}
+                {!isSubmitting && <ArrowRight className="h-4 w-4" aria-hidden="true" />}
               </button>
             </div>
           </form>
