@@ -17,19 +17,59 @@ export const metadata: Metadata = {
       width: 1200,
       height: 630,
       alt: 'Software Listing Websites Guide'
-    }]
+    }],
+    url: 'https://www.getmorebacklinks.org/blogs/top-10-software-listing-websites-for-new-startups',
+    siteName: 'GetMoreBacklinks',
   },
   twitter: {
     card: 'summary_large_image',
     title: 'Top Software Listing Sites for 2025',
     description: 'Essential platforms for startup visibility',
-    images: ['/brain.png']
-  }
+    images: ['/brain.png'],
+    creator: '@GetMoreBacklinks',
+  },
+  alternates: {
+    canonical: 'https://www.getmorebacklinks.org/blogs/top-10-software-listing-websites-for-new-startups',
+    languages: {
+      'en-US': 'https://www.getmorebacklinks.org/blogs/top-10-software-listing-websites-for-new-startups',
+    },
+  },
 }
 
 export default function BlogPost() {
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "headline": "Top 10 Software Listing Websites for New Startups in 2025",
+    "image": "https://www.getmorebacklinks.org/brain.png",
+    "author": {
+      "@type": "Organization",
+      "name": "GetMoreBacklinks",
+      "url": "https://www.getmorebacklinks.org"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "GetMoreBacklinks",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.getmorebacklinks.org/logo.png"
+      }
+    },
+    "datePublished": "2023-12-13",
+    "dateModified": "2023-12-13",
+    "description": "Discover the best software listing websites to promote your startup, gain visibility, and improve SEO through automated directory submissions.",
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.getmorebacklinks.org/blogs/top-10-software-listing-websites-for-new-startups"
+    }
+  };
+
   return (
     <div className="min-h-screen bg-white">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
       <header className="container mx-auto px-4 py-4 sm:py-6 border-b border-gray-100">
         <div className="flex items-center justify-between">
           <Link href="/">

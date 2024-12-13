@@ -11,23 +11,63 @@ export const metadata: Metadata = {
     title: 'Understanding PBN Links: Benefits, Risks, and Alternatives',
     description: 'Comprehensive guide to Private Blog Networks (PBNs) and their role in SEO strategy.',
     images: [{
-      url: '/private.png',
+      url: 'https://www.getmorebacklinks.org/private.png',
       width: 1200,
       height: 630,
       alt: 'PBN Links and SEO Guide'
-    }]
+    }],
+    url: 'https://www.getmorebacklinks.org/blogs/what-are-pbn-links-and-their-role-in-seo',
+    siteName: 'GetMoreBacklinks',
   },
   twitter: {
     card: 'summary_large_image',
     title: 'What Are PBN Links and Their Role in SEO?',
     description: 'Learn about PBN links, their risks, and better alternatives for SEO success.',
-    images: ['/private.png']
-  }
+    images: ['https://www.getmorebacklinks.org/private.png'],
+    creator: '@Innvisionagency',
+  },
+  alternates: {
+    canonical: 'https://www.getmorebacklinks.org/blogs/what-are-pbn-links-and-their-role-in-seo',
+    languages: {
+      'en-US': 'https://www.getmorebacklinks.org/blogs/what-are-pbn-links-and-their-role-in-seo',
+    },
+  },
 }
 
 export default function BlogPost() {
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "headline": "What Are PBN Links and Their Role in SEO? A Comprehensive Guide",
+    "image": "https://www.getmorebacklinks.org/private.png",
+    "author": {
+      "@type": "Organization",
+      "name": "GetMoreBacklinks",
+      "url": "https://www.getmorebacklinks.org"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "GetMoreBacklinks",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.getmorebacklinks.org/logo.png"
+      }
+    },
+    "datePublished": "2024-12-09",
+    "dateModified": "2024-12-09",
+    "description": "Learn about Private Blog Networks (PBNs), their impact on SEO, associated risks, and better alternatives for building quality backlinks.",
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.getmorebacklinks.org/blogs/what-are-pbn-links-and-their-role-in-seo"
+    }
+  };
+
   return (
     <div className="min-h-screen bg-white">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
       <header className="container mx-auto px-4 py-4 sm:py-6">
         <div className="flex items-center justify-between">
           <Link href="/" className="flex items-center">

@@ -11,23 +11,65 @@ export const metadata: Metadata = {
     title: 'Why SaaS Founders Cant Ignore Directory Listings in Their Marketing Strategy',
     description: 'Learn how directory listings can bolster visibility, SEO performance, and long-term growth for SaaS companies.',
     images: [{
-      url: '/saas-marketing.webp',
+      url: 'https://www.getmorebacklinks.org/saas-marketing.webp',
       width: 1200,
       height: 630,
       alt: 'SaaS Directory Marketing Strategy'
-    }]
+    }],
+    url: 'https://www.getmorebacklinks.org/blogs/why-saas-founders-cant-ignore-directory-listings',
+    siteName: 'GetMoreBacklinks',
   },
   twitter: {
     card: 'summary_large_image',
     title: 'Directory Listings: Essential for SaaS Marketing Success',
     description: 'Learn how directory listings can bolster visibility and SEO performance for SaaS companies.',
-    images: ['/saas-marketing.webp']
-  }
+    images: ['https://www.getmorebacklinks.org/saas-marketing.webp'],
+    creator: '@Innvisionagency',
+  },
+  alternates: {
+    canonical: 'https://www.getmorebacklinks.org/blogs/why-saas-founders-cant-ignore-directory-listings',
+    languages: {
+      'en-US': 'https://www.getmorebacklinks.org/blogs/why-saas-founders-cant-ignore-directory-listings',
+      'es': 'https://www.getmorebacklinks.org/es/blogs/por-que-los-fundadores-de-saas-no-pueden-ignorar-los-listados-de-directorios',
+      'fr': 'https://www.getmorebacklinks.org/fr/blogs/pourquoi-les-fondateurs-de-saas-ne-peuvent-pas-ignorer-les-annuaires',
+    },
+  },
 }
 
 export default function BlogPost() {
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "headline": "Why SaaS Founders Can't Ignore Directory Listings in Their Marketing Strategy",
+    "image": "https://www.getmorebacklinks.org/saas-marketing.webp",
+    "author": {
+      "@type": "Organization",
+      "name": "GetMoreBacklinks",
+      "url": "https://www.getmorebacklinks.org"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "GetMoreBacklinks",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.getmorebacklinks.org/logo.png"
+      }
+    },
+    "datePublished": "2023-06-20",
+    "dateModified": "2023-06-20",
+    "description": "Learn how directory listings can bolster visibility, SEO performance, and long-term growth for SaaS companies. Discover key benefits and implementation strategies.",
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.getmorebacklinks.org/blogs/why-saas-founders-cant-ignore-directory-listings"
+    }
+  };
+
   return (
     <div className="min-h-screen bg-white">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
       <header className="container mx-auto px-4 py-4 sm:py-6">
         <div className="flex items-center justify-between">
           <Link href="/" className="flex items-center">
@@ -171,8 +213,11 @@ export default function BlogPost() {
 
           <div className="mt-12 bg-orange-50 rounded-xl p-8">
             <p className="text-gray-700 text-center">
-              For more information, check tools like GetMoreBacklinks.org for automated solutions tailored to
-              your needs.
+              For more information, check tools like{' '}
+              <Link href="https://getmorebacklinks.org" className="text-orange-600 hover:underline">
+                GetMoreBacklinks.org
+              </Link>
+              {' '}for automated solutions tailored to your needs.
             </p>
           </div>
         </article>

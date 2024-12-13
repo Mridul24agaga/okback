@@ -13,23 +13,63 @@ export const metadata: Metadata = {
     title: 'AI-Powered Directory Submission: The Future of SEO',
     description: 'Learn how artificial intelligence is transforming directory submissions and backlink building for startups',
     images: [{
-      url: '/aig.jpg',
+      url: 'https://www.getmorebacklinks.org/aig.jpg',
       width: 1200,
       height: 630,
       alt: 'AI Directory Submission Guide'
-    }]
+    }],
+    url: 'https://www.getmorebacklinks.org/blogs/automatic-directory-submission-how-ai-is-changing-the-game',
+    siteName: 'GetMoreBacklinks',
   },
   twitter: {
     card: 'summary_large_image',
     title: 'The AI Revolution in Directory Submission',
     description: 'How artificial intelligence is changing the game for startups',
-    images: ['/aig.jpg']
-  }
+    images: ['https://www.getmorebacklinks.org/aig.jpg'],
+    creator: '@GetMoreBacklinks',
+  },
+  alternates: {
+    canonical: 'https://www.getmorebacklinks.org/blogs/automatic-directory-submission-how-ai-is-changing-the-game',
+    languages: {
+      'en-US': 'https://www.getmorebacklinks.org/blogs/automatic-directory-submission-how-ai-is-changing-the-game',
+    },
+  },
 }
 
 export default function BlogPost() {
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "headline": "Automatic Directory Submission: How AI is Changing the Game in 2024",
+    "image": "https://www.getmorebacklinks.org/aig.jpg",
+    "author": {
+      "@type": "Organization",
+      "name": "GetMoreBacklinks",
+      "url": "https://www.getmorebacklinks.org"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "GetMoreBacklinks",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.getmorebacklinks.org/logo.png"
+      }
+    },
+    "datePublished": "2024-01-15",
+    "dateModified": "2024-01-15",
+    "description": "Discover how AI-powered automatic directory submission tools are revolutionizing online marketing for startups. Learn about the benefits, strategies, and best practices.",
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.getmorebacklinks.org/blogs/automatic-directory-submission-how-ai-is-changing-the-game"
+    }
+  };
+
   return (
     <div className="min-h-screen bg-white">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
       <header className="container mx-auto px-4 py-4 sm:py-6 border-b border-gray-100">
         <div className="flex items-center justify-between">
           <Link href="/">

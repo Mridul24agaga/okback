@@ -17,19 +17,61 @@ export const metadata: Metadata = {
       width: 1200,
       height: 630,
       alt: 'Listing Bots Guide Cover'
-    }]
+    }],
+    url: 'https://getmorebacklinks.org/blogs/ultimate-guide-to-listing-bots',
+    siteName: 'GetMoreBacklinks',
   },
   twitter: {
     card: 'summary_large_image',
     title: 'Ultimate Guide to Listing Bots',
     description: 'Automate your startup\'s online presence effectively',
-    images: ['https://getmorebacklinks.org/images/listing-bots-guide.jpg']
-  }
+    images: ['https://getmorebacklinks.org/images/listing-bots-guide.jpg'],
+    creator: '@GetMoreBacklinks',
+  },
+  alternates: {
+    canonical: 'https://getmorebacklinks.org/blogs/ultimate-guide-to-listing-bots',
+    languages: {
+      'en-US': 'https://getmorebacklinks.org/blogs/ultimate-guide-to-listing-bots',
+      'es': 'https://getmorebacklinks.org/es/blogs/guia-definitiva-de-bots-de-listado',
+      'fr': 'https://getmorebacklinks.org/fr/blogs/guide-ultime-des-bots-de-referencement',
+    },
+  },
 }
 
 export default function BlogPost() {
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "headline": "The Ultimate Guide to Listing Bots: Automate Your Startup's Online Presence",
+    "image": "https://getmorebacklinks.org/images/listing-bots-guide.jpg",
+    "author": {
+      "@type": "Organization",
+      "name": "GetMoreBacklinks",
+      "url": "https://getmorebacklinks.org"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "GetMoreBacklinks",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://getmorebacklinks.org/logo.png"
+      }
+    },
+    "datePublished": "2023-12-13",
+    "dateModified": "2023-12-13",
+    "description": "Learn how to automate your directory submissions and boost your startup's online visibility with listing bots. Comprehensive guide including tools, strategies, and best practices.",
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://getmorebacklinks.org/blogs/ultimate-guide-to-listing-bots"
+    }
+  };
+
   return (
     <div className="min-h-screen bg-white">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
       <header className="container mx-auto px-4 py-4 sm:py-6 border-b border-gray-100">
         <div className="flex items-center justify-between">
           <Link href="/">

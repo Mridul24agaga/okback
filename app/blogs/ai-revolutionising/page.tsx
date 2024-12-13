@@ -2,34 +2,78 @@ import React from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
 import { Footer } from '@/app/components/footer'
-import { Metadata } from 'next'
+import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
   title: 'Automatic Directory Submission: How AI is Changing the Game for Startups',
   description: 'Discover how AI-powered automatic directory submission is revolutionizing online marketing for startups. Learn about the benefits, tools, and strategies for improving your SEO and online presence.',
+  keywords: 'automatic directory submission, AI, startups, SEO, online marketing, backlinks, ListingBott',
   openGraph: {
+    type: 'article',
     title: 'AI-Powered Automatic Directory Submission for Startups',
     description: 'Learn how AI is transforming directory submissions and boosting SEO for startups.',
     images: [
       {
-        url: '/ai.png',
+        url: 'https://www.getmorebacklinks.org/ai.png',
         width: 1200,
         height: 630,
         alt: 'AI-Powered Automatic Directory Submission',
       },
     ],
+    url: 'https://www.getmorebacklinks.org/blogs/automatic-directory-submission-how-ai-is-changing-the-game-for-startups',
+    siteName: 'GetMoreBacklinks',
   },
   twitter: {
     card: 'summary_large_image',
     title: 'AI-Powered Automatic Directory Submission for Startups',
     description: 'Discover how AI is revolutionizing directory submissions and SEO strategies for startups.',
-    images: ['/ai.png'],
+    images: ['https://www.getmorebacklinks.org/ai.png'],
+    creator: '@GetMoreBacklinks',
+  },
+  alternates: {
+    canonical: 'https://www.getmorebacklinks.org/blogs/automatic-directory-submission-how-ai-is-changing-the-game-for-startups',
+    languages: {
+      'en-US': 'https://www.getmorebacklinks.org/blogs/automatic-directory-submission-how-ai-is-changing-the-game-for-startups',
+    },
   },
 }
 
-const BlogPost: React.FC = () => {
+export default function BlogPost() {
+  const publishDate = new Date().toISOString();
+  
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "headline": "Automatic Directory Submission: How AI is Changing the Game for Startups",
+    "image": "https://www.getmorebacklinks.org/ai.png",
+    "author": {
+      "@type": "Organization",
+      "name": "GetMoreBacklinks",
+      "url": "https://www.getmorebacklinks.org"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "GetMoreBacklinks",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.getmorebacklinks.org/logo.png"
+      }
+    },
+    "datePublished": publishDate,
+    "dateModified": publishDate,
+    "description": "Discover how AI-powered automatic directory submission is revolutionizing online marketing for startups. Learn about the benefits, tools, and strategies for improving your SEO and online presence.",
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.getmorebacklinks.org/blogs/automatic-directory-submission-how-ai-is-changing-the-game-for-startups"
+    }
+  };
+
   return (
     <div className="min-h-screen bg-white text-black">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
       <header className="container mx-auto px-4 py-4 sm:py-6 border-b border-gray-200">
         <div className="flex items-center justify-between">
           <Link href="/" className="flex items-center">
@@ -71,15 +115,15 @@ const BlogPost: React.FC = () => {
               Automatic Directory Submission: How AI is Changing the Game
             </h1>
             <p className="text-gray-600 mb-4">
-              <time dateTime={new Date().toISOString()}>Published on {new Date().toLocaleDateString()}</time> • 10 min read
+              <time dateTime={publishDate}>Published on {new Date(publishDate).toLocaleDateString()}</time> • 10 min read
             </p>
             <figure className="relative h-64 sm:h-80 rounded-lg overflow-hidden mb-8">
               <Image
                 src="/ai.png"
                 alt="AI-powered automatic directory submission concept"
-                layout="fill"
-                objectFit="cover"
-                className="w-full h-full object-center"
+                fill
+                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                className="object-cover object-center"
               />
             </figure>
           </header>
@@ -275,6 +319,4 @@ const BlogPost: React.FC = () => {
     </div>
   )
 }
-
-export default BlogPost
 

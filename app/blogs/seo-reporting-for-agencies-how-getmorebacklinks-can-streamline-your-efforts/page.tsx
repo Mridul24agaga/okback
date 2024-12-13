@@ -13,23 +13,63 @@ export const metadata: Metadata = {
     title: 'Transform Your Agency\'s SEO Reporting with getmorebacklinks.org',
     description: 'Learn how to streamline your agency\'s SEO reporting process with automated tools and professional insights.',
     images: [{
-      url: '/report.png',
+      url: 'https://www.getmorebacklinks.org/report.png',
       width: 1200,
       height: 630,
       alt: 'SEO Reporting for Agencies Guide'
-    }]
+    }],
+    url: 'https://www.getmorebacklinks.org/blogs/seo-reporting-for-agencies-streamline-efforts-with-getmorebacklinks',
+    siteName: 'GetMoreBacklinks',
   },
   twitter: {
     card: 'summary_large_image',
     title: 'Streamline Your Agency\'s SEO Reporting',
     description: 'Discover automated SEO reporting tools for agencies',
-    images: ['/report.png']
-  }
+    images: ['https://www.getmorebacklinks.org/report.png'],
+    creator: '@GetMoreBacklinks',
+  },
+  alternates: {
+    canonical: 'https://www.getmorebacklinks.org/blogs/seo-reporting-for-agencies-streamline-efforts-with-getmorebacklinks',
+    languages: {
+      'en-US': 'https://www.getmorebacklinks.org/blogs/seo-reporting-for-agencies-streamline-efforts-with-getmorebacklinks',
+    },
+  },
 }
 
 export default function BlogPost() {
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "headline": "SEO Reporting for Agencies: How getmorebacklinks.org Streamlines Your SEO Efforts",
+    "image": "https://www.getmorebacklinks.org/report.png",
+    "author": {
+      "@type": "Organization",
+      "name": "GetMoreBacklinks",
+      "url": "https://www.getmorebacklinks.org"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "GetMoreBacklinks",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.getmorebacklinks.org/logo.png"
+      }
+    },
+    "datePublished": "2024-12-09",
+    "dateModified": "2024-12-09",
+    "description": "Discover how getmorebacklinks.org helps agencies automate SEO reporting, track backlinks in real-time, and deliver professional white-label reports to clients.",
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.getmorebacklinks.org/blogs/seo-reporting-for-agencies-streamline-efforts-with-getmorebacklinks"
+    }
+  };
+
   return (
     <div className="min-h-screen bg-white">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
       <header className="container mx-auto px-4 py-4 sm:py-6">
         <div className="flex items-center justify-between">
           <Link href="/" className="flex items-center">

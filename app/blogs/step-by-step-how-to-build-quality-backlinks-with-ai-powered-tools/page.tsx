@@ -11,23 +11,63 @@ export const metadata: Metadata = {
     title: 'Step-by-Step: How to Build Quality Backlinks with AI-Powered Tools',
     description: 'Master the art of building quality backlinks using AI-powered tools. A comprehensive guide for SaaS founders and digital marketers.',
     images: [{
-      url: '/backlinks.webp',
+      url: 'https://www.getmorebacklinks.org/backlinks.webp',
       width: 1200,
       height: 630,
       alt: 'AI-Powered Backlink Building'
-    }]
+    }],
+    url: 'https://www.getmorebacklinks.org/blogs/how-to-build-quality-backlinks-with-ai-powered-tools',
+    siteName: 'GetMoreBacklinks',
   },
   twitter: {
     card: 'summary_large_image',
     title: 'Build Quality Backlinks with AI-Powered Tools',
     description: 'Step-by-step guide to leveraging AI for building high-quality backlinks',
-    images: ['/backlinks.webp']
-  }
+    images: ['https://www.getmorebacklinks.org/backlinks.webp'],
+    creator: '@GetMoreBacklinks',
+  },
+  alternates: {
+    canonical: 'https://www.getmorebacklinks.org/blogs/how-to-build-quality-backlinks-with-ai-powered-tools',
+    languages: {
+      'en-US': 'https://www.getmorebacklinks.org/blogs/how-to-build-quality-backlinks-with-ai-powered-tools',
+    },
+  },
 }
 
 export default function BlogPost() {
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "headline": "Step-by-Step: How to Build Quality Backlinks with AI-Powered Tools",
+    "image": "https://www.getmorebacklinks.org/backlinks.webp",
+    "author": {
+      "@type": "Organization",
+      "name": "GetMoreBacklinks",
+      "url": "https://www.getmorebacklinks.org"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "GetMoreBacklinks",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.getmorebacklinks.org/logo.png"
+      }
+    },
+    "datePublished": "2023-12-13",
+    "dateModified": "2023-12-13",
+    "description": "Learn how to leverage AI-powered tools for building high-quality backlinks. Discover automated directory submissions, personalized outreach, and advanced analytics for better SEO results.",
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.getmorebacklinks.org/blogs/how-to-build-quality-backlinks-with-ai-powered-tools"
+    }
+  };
+
   return (
     <div className="min-h-screen bg-white">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
       <header className="container mx-auto px-4 py-4 sm:py-6">
         <div className="flex items-center justify-between">
           <Link href="/" className="flex items-center">

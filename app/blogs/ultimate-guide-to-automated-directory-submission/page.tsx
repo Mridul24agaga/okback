@@ -15,19 +15,59 @@ export const metadata: Metadata = {
       width: 1200,
       height: 630,
       alt: 'Automated Directory Submission Guide'
-    }]
+    }],
+    url: 'https://www.getmorebacklinks.org/blogs/ultimate-guide-to-automated-directory-submission',
+    siteName: 'GetMoreBacklinks',
   },
   twitter: {
     card: 'summary_large_image',
     title: 'Ultimate Guide to Automated Directory Submission',
     description: 'Learn how to leverage automated directory submissions for better SEO results',
-    images: ['/directory.png']
-  }
+    images: ['/directory.png'],
+    creator: '@Innvisionagency',
+  },
+  alternates: {
+    canonical: 'https://www.getmorebacklinks.org/blogs/ultimate-guide-to-automated-directory-submission',
+    languages: {
+      'en-US': 'https://www.getmorebacklinks.org/blogs/ultimate-guide-to-automated-directory-submission',
+    },
+  },
 }
 
 export default function BlogPost() {
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "headline": "The Ultimate Guide to Automated Directory Submission: Save Time and Boost Your SEO",
+    "image": "https://www.getmorebacklinks.org/directory.png",
+    "author": {
+      "@type": "Organization",
+      "name": "GetMoreBacklinks",
+      "url": "https://www.getmorebacklinks.org"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "GetMoreBacklinks",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.getmorebacklinks.org/logo.png"
+      }
+    },
+    "datePublished": "2023-06-15",
+    "dateModified": "2023-06-15",
+    "description": "Learn how automated directory submission can streamline your SEO strategy. Discover step-by-step implementation, benefits, and best practices for startups and SaaS founders.",
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.getmorebacklinks.org/blogs/ultimate-guide-to-automated-directory-submission"
+    }
+  };
+
   return (
     <div className="min-h-screen bg-white">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
       <header className="container mx-auto px-4 py-4 sm:py-6">
         <div className="flex items-center justify-between">
           <Link href="/" className="flex items-center">

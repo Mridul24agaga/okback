@@ -17,18 +17,59 @@ export const metadata: Metadata = {
         alt: 'AI and SEO Future Concept',
       },
     ],
+    url: 'https://www.getmorebacklinks.org/blogs/future-of-directory-submissions-ai-and-automation-in-seo',
+    siteName: 'GetMoreBacklinks',
   },
   twitter: {
     card: 'summary_large_image',
     title: 'The Future of Directory Submissions: AI and Automation in SEO',
     description: 'Explore how AI and automation are revolutionizing directory submissions and SEO strategies for startups and small businesses.',
     images: ['/ai-seo-future.webp'],
+    creator: '@GetMoreBacklinks',
+  },
+  alternates: {
+    canonical: 'https://www.getmorebacklinks.org/blogs/future-of-directory-submissions-ai-and-automation-in-seo',
+    languages: {
+      'en-US': 'https://www.getmorebacklinks.org/blogs/future-of-directory-submissions-ai-and-automation-in-seo',
+     
+    },
   },
 }
 
 export default function BlogPost() {
+    const jsonLd = {
+      "@context": "https://schema.org",
+      "@type": "BlogPosting",
+      "headline": "The Future of Directory Submissions: AI and Automation in SEO",
+      "image": "https://www.getmorebacklinks.org/ai-seo-future.webp",
+      "author": {
+        "@type": "Organization",
+        "name": "GetMoreBacklinks",
+        "url": "https://www.getmorebacklinks.org"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "GetMoreBacklinks",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://www.getmorebacklinks.org/logo.png"
+        }
+      },
+      "datePublished": "2024-11-12",
+      "dateModified": "2024-11-12",
+      "description": "Explore how AI and automation are revolutionizing directory submissions and SEO strategies for startups and small businesses.",
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://www.getmorebacklinks.org/blogs/future-of-directory-submissions-ai-and-automation-in-seo"
+      }
+    };
+
     return (
         <div className="min-h-screen bg-white">
+            <script
+              type="application/ld+json"
+              dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+            />
             <header className="container mx-auto px-4 py-4 sm:py-6">
                 <div className="flex items-center justify-between">
                     <Link href="/" className="flex items-center">
