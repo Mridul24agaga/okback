@@ -31,6 +31,12 @@ export const metadata: Metadata = {
   },
   alternates: {
     canonical: 'https://www.getmorebacklinks.org',
+    languages: {
+      'en-US': 'https://www.getmorebacklinks.org',
+      'en-GB': 'https://www.getmorebacklinks.org/gb',
+      'es': 'https://www.getmorebacklinks.org/es',
+      'fr': 'https://www.getmorebacklinks.org/fr',
+    },
   },
 }
 
