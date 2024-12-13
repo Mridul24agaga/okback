@@ -1,6 +1,7 @@
 import Link from "next/link"
 import Image from "next/image"
 import type { Metadata } from 'next'
+import { Footer } from "@/app/components/footer"
 
 export const metadata: Metadata = {
   title: 'Privacy Policy | GetMoreBacklinks.org',
@@ -12,7 +13,7 @@ export const metadata: Metadata = {
     siteName: 'GetMoreBacklinks.org',
     images: [
       {
-        url: '/2.png',
+        url: 'https://www.getmorebacklinks.org/2.png',
         width: 1200,
         height: 630,
         alt: 'GetMoreBacklinks.org Privacy Policy',
@@ -25,13 +26,39 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Privacy Policy | GetMoreBacklinks.org',
     description: 'Our commitment to protecting your privacy and personal information.',
-    images: ['/2.png'],
+    images: ['https://www.getmorebacklinks.org/2.png'],
+  },
+  alternates: {
+    canonical: 'https://www.getmorebacklinks.org/privacy-policy',
   },
 }
 
 export default function PrivacyPolicy() {
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "Privacy Policy | GetMoreBacklinks.org",
+    "description": "Learn about how GetMoreBacklinks.org collects, uses, and protects your personal information.",
+    "url": "https://www.getmorebacklinks.org/privacy-policy",
+    "inLanguage": "en-US",
+    "publisher": {
+      "@type": "Organization",
+      "name": "GetMoreBacklinks.org",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.getmorebacklinks.org/logo.png"
+      }
+    },
+    "datePublished": "2024-12-01",
+    "dateModified": "2024-12-01"
+  };
+
   return (
     <div className="min-h-screen bg-white">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
       <header className="container mx-auto px-4 py-4 sm:py-6 border-b border-gray-200">
         <div className="flex items-center justify-between">
           <div className="flex items-center">
@@ -240,6 +267,7 @@ export default function PrivacyPolicy() {
           </div>
         </div>
       </main>
+      <Footer />
     </div>
   )
 }

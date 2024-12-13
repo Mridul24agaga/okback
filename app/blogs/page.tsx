@@ -5,34 +5,33 @@ import { ArrowRight } from 'lucide-react'
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'FastWaitlist Blog - Guides and Tips for SaaS Growth',
+  title: 'GetMoreBacklinks Blog - Guides and Tips for SaaS Growth',
   description: 'Discover guides, tutorials, and actionable tips to grow your SaaS business. Learn about directory submissions, SEO strategies, and more.',
   openGraph: {
-    title: 'FastWaitlist Blog - SaaS Growth Strategies',
+    title: 'GetMoreBacklinks Blog - SaaS Growth Strategies',
     description: 'Explore our blog for in-depth guides on SaaS growth, SEO tactics, and directory submission strategies.',
     images: [
       {
-        url: '/3.png',
+        url: 'https://www.getmorebacklinks.org/3.png',
         width: 1200,
         height: 630,
-        alt: 'Getmorebacklinks'
+        alt: 'GetMoreBacklinks'
       },
     ],
     url: 'https://www.getmorebacklinks.org/blogs',
-    siteName: 'Getmorebacklinks'
+    siteName: 'GetMoreBacklinks'
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Getmorebacklinks SAAS Growth Insights',
+    title: 'GetMoreBacklinks SAAS Growth Insights',
     description: 'Get the latest insights on SaaS growth, SEO strategies, and directory submissions.',
-    images: ['/3.png'],
-    creator: '@Getmorebacklinks',
+    images: ['https://www.getmorebacklinks.org/3.png'],
+    creator: '@GetMoreBacklinks',
   },
   alternates: {
     canonical: 'https://www.getmorebacklinks.org/blogs',
     languages: {
       'en-US': 'https://www.getmorebacklinks.org/blogs',
-      
     },
   },
 }
@@ -73,16 +72,16 @@ const blogPosts = [
   },
   {
     id: 5,
-    title: "How to Create an Effective SEO Client Report Using getmorebacklinks.org",
-    excerpt: "Learn how to create comprehensive and impactful SEO client reports using getmorebacklinks.org. Discover best practices, key components, and the role of AI in directory submissions.",
+    title: "How to Create an Effective SEO Client Report Using GetMoreBacklinks",
+    excerpt: "Learn how to create comprehensive and impactful SEO client reports using GetMoreBacklinks. Discover best practices, key components, and the role of AI in directory submissions.",
     date: "December 8, 2024",
     slug: "how-to-create-an-effective-seo-client-report-using-getmorebacklinks",
     image: "/getmorebacklinkss.webp"
   },
   {
     id: 6,
-    title: "SEO Reporting for Agencies: How getmorebacklinks.org Can Help You Streamline Your SEO Efforts",
-    excerpt: "Discover how getmorebacklinks.org can help agencies streamline SEO reporting, automate backlink management, and enhance overall SEO strategies.",
+    title: "SEO Reporting for Agencies: How GetMoreBacklinks Can Help You Streamline Your SEO Efforts",
+    excerpt: "Discover how GetMoreBacklinks can help agencies streamline SEO reporting, automate backlink management, and enhance overall SEO strategies.",
     date: "December 7, 2024",
     slug: "seo-reporting-for-agencies-how-getmorebacklinks-can-streamline-your-efforts",
     image: "/backlink-checker.webp"
@@ -133,12 +132,13 @@ export default function BlogPage() {
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "Blog",
-    "name": "FastWaitlist Blog",
+    "name": "GetMoreBacklinks Blog",
     "description": "Guides, tutorials, and actionable tips to grow your SaaS business",
     "url": "https://www.getmorebacklinks.org/blogs",
+    "inLanguage": "en-US",
     "publisher": {
       "@type": "Organization",
-      "name": "FastWaitlist",
+      "name": "GetMoreBacklinks",
       "logo": {
         "@type": "ImageObject",
         "url": "https://www.getmorebacklinks.org/logo.png"
@@ -165,7 +165,7 @@ export default function BlogPage() {
           <Link href="/">
             <Image
               src="/getmorepacklinks.png"
-              alt="FastWaitlist Logo"
+              alt="GetMoreBacklinks Logo"
               width={532}
               height={132}
               className="h-8 w-auto"
@@ -181,7 +181,7 @@ export default function BlogPage() {
             </Link>
             <Link 
               href="/" 
-              className="px-4 py-2 text-sm rounded-md bg-black text-white hover:bg-gray-800 transition-colors font-medium"
+              className="px-4 py-2 text-sm rounded-md bg-orange-500 text-white hover:bg-orange-600 transition-colors font-medium"
             >
               Join Waitlist
             </Link>
@@ -192,7 +192,7 @@ export default function BlogPage() {
       <main className="container mx-auto px-4 py-12">
         <div className="max-w-6xl mx-auto">
           <h1 className="text-4xl font-bold text-gray-900 mb-2">
-            FastWaitlist Blog
+            GetMoreBacklinks Blog
           </h1>
           <p className="text-xl text-gray-600 mb-12">
             You can find guides, tutorials and actionable tips to grow your SaaS here.
