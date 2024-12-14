@@ -15,20 +15,6 @@ export function Header() {
               className="h-8 w-auto"
             />
           </Link>
-          <div className="flex items-center gap-6">
-            <Link 
-              href="/blog" 
-              className="text-gray-600 hover:text-gray-900"
-            >
-              Blog
-            </Link>
-            <Link
-              href="/submit-directory"
-              className="inline-flex items-center justify-center px-4 py-2 border border-transparent font-medium rounded-md text-white bg-black hover:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-500"
-            >
-              Submit Your Directory
-            </Link>
-          </div>
         </div>
       </div>
     </header>
