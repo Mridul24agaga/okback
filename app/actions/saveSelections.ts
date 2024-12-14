@@ -7,10 +7,10 @@ import { directories } from '../data/directories'
 export async function saveSelections(selectedDirectories: number[], userName: string, websiteUrl: string) {
   try {
     const csvContent = [
-      'Name,Category,User Name,Website URL',
+      'Name,Category,User Name,Website URL,Price', // Updated header
       ...selectedDirectories.map(id => {
         const dir = directories.find(d => d.id === id)
-        return dir ? `"${dir.name}","${dir.category}","${userName}","${websiteUrl}"` : ''
+        return dir ? `"${dir.name}","${dir.category}","${userName}","${websiteUrl}","$75"` : '' // Updated content
       })
     ].join('\n')
 
