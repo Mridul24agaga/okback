@@ -18,7 +18,7 @@ const plans = [
       "Results in less than 30 days",
     ],
     cta: "Get Started",
-    paymentLink: "https://www.paypal.com/ncp/payment/4MZR7S8U3ZM5J",
+    paymentLink: "https://www.paypal.com/ncp/payment/YMCLCF3YXAPJ8",
   },
   {
     name: "Pro",
@@ -38,7 +38,7 @@ const plans = [
       "Results in less than 30 days",
     ],
     cta: "Get Pro",
-    paymentLink: "https://www.paypal.com/ncp/payment/UZDBTNS7KWZBL",
+    paymentLink: "https://www.paypal.com/ncp/payment/L45V8DSQVT3N6",
   },
   {
     name: "Advanced",
@@ -60,7 +60,7 @@ const plans = [
       "Results in less than 30 days",
     ],
     cta: "Get Advanced",
-    paymentLink: "https://www.paypal.com/ncp/payment/TX2M3JFBRGKEA",
+    paymentLink: "https://www.paypal.com/ncp/payment/CMM6QF99TTNEY",
   },
 ]
 
