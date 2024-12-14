@@ -7,10 +7,10 @@ import { directories } from '../data/directories'
 export async function saveSelections(selectedDirectories: number[], userName: string, websiteUrl: string) {
   try {
     const csvContent = [
-      'Name,Category',
+      'Name,Category,User Name,Website URL',
       ...selectedDirectories.map(id => {
         const dir = directories.find(d => d.id === id)
-        return dir ? `"${dir.name}","${dir.category}"` : ''
+        return dir ? `"${dir.name}","${dir.category}","${userName}","${websiteUrl}"` : ''
       })
     ].join('\n')
 
@@ -28,19 +28,6 @@ export async function saveSelections(selectedDirectories: number[], userName: st
 
     if (uploadError) {
       throw new Error(`Failed to upload file: ${uploadError.message}`)
-    }
-
-    const { error: dbError } = await supabase
-      .from('user_selections')
-      .insert({
-        file_path: data.path,
-        selected_count: selectedDirectories.length,
-        user_name: userName,
-        website_url: websiteUrl,
-      })
-
-    if (dbError) {
-      throw new Error(`Failed to save to database: ${dbError.message}`)
     }
 
     revalidatePath('/')
