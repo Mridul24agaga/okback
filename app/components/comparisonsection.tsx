@@ -4,7 +4,7 @@ import Link from 'next/link'
 
 export default function ComparisonSection() {
   const handleScrollToPricing = () => {
-    const pricingSection = document.getElementById('pricing')
+    const pricingSection = document.getElementById('pricing-section')
     if (pricingSection) {
       pricingSection.scrollIntoView({ behavior: 'smooth' })
     }

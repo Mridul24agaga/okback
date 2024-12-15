@@ -18,7 +18,7 @@ export function Footer() {
               className="h-10 w-auto"
             />
             <p className="text-gray-600 text-base leading-relaxed max-w-sm font-semibold">
-            Join our exclusive waitlist for early access to our curated database of launch platforms, directories, marketplaces, newsletters, and communities - all in one place.
+            Boost your startup's online visibility with GetMoreBacklinks! Semi-Automated tool automates directory submissions to 500+ websites, saving time and maximizing your SEO. Perfect for startups, entrepreneurs, and marketers for effortless backlink building.
             </p>
             <div className="flex items-center gap-4">
               <Link

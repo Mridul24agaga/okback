@@ -1,7 +1,17 @@
+'use client'
+
 import { BarChart3, Globe2, Bell, Settings2 } from 'lucide-react'
 import Image from "next/image"
+import { useRef } from 'react'
 
 export default function BacklinkFeatures() {
+  const scrollToPricing = () => {
+    const pricingSection = document.getElementById('pricing-section')
+    if (pricingSection) {
+      pricingSection.scrollIntoView({ behavior: 'smooth' })
+    }
+  }
+
   return (
     <section className="bg-white relative">
       <div className="container mx-auto px-4 py-20">
@@ -58,6 +68,7 @@ export default function BacklinkFeatures() {
               <div>
                 <button 
                   className="bg-orange-500 hover:bg-orange-600 text-white font-semibold px-6 py-3 text-base rounded-md transition-colors duration-200 ease-in-out"
+                  onClick={scrollToPricing}
                 >
                   Submit your Startup Now
                 </button>

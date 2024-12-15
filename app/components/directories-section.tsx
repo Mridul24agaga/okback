@@ -54,9 +54,9 @@ export function DirectoriesSection() {
         </div>
 
         <div className="mt-12 text-center">
-          <button className="px-6 py-3 bg-orange-500 hover:bg-orange-600 text-white font-medium rounded-md transition-colors">
+          <Link href="/submit" className="px-6 py-3 bg-orange-500 hover:bg-orange-600 text-white font-medium rounded-md transition-colors">
             Submit Your Directory
-          </button>
+          </Link>
           <p className="text-gray-600 text-sm mt-4">
             Want to list your directory? Submit it for review.
           </p>
