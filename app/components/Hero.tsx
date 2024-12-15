@@ -190,7 +190,7 @@ export default function Hero() {
               </span>
             </h1>
             <p className="text-black text-sm sm:text-base md:text-lg lg:text-xl max-w-2xl mx-auto animate-fade-in-up animation-delay-300">
-              Join our exclusive waitlist for early access to our curated database of launch platforms, directories, marketplaces, newsletters, and communities - all in one place.
+            Boost your startup's online visibility with GetMoreBacklinks! Semi-Automated tool automates directory submissions to 500+ websites, saving time and maximizing your SEO. Perfect for startups, entrepreneurs, and marketers for effortless backlink building.
             </p>
           </div>
 
