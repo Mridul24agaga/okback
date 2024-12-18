@@ -70,7 +70,7 @@ export default function BacklinkFeatures() {
                   className="bg-orange-500 hover:bg-orange-600 text-white font-semibold px-6 py-3 text-base rounded-md transition-colors duration-200 ease-in-out"
                   onClick={scrollToPricing}
                 >
-                  Submit your Startup Now
+                  Submit my Product
                 </button>
               </div>
             </div>

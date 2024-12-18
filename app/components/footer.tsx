@@ -1,111 +1,128 @@
-import Link from "next/link"
-import Image from "next/image"
-import { Instagram, Youtube, Linkedin, X } from 'lucide-react'
-import { BsTiktok } from "react-icons/bs"
+'use client'
 
-export function Footer() {
+import { Twitter, Linkedin } from 'lucide-react'
+import Link from 'next/link'
+import Image from 'next/image'
+import { useEffect, useState } from 'react'
+
+export default function Footer() {
+  const [isClient, setIsClient] = useState(false)
+
+  useEffect(() => {
+    setIsClient(true)
+  }, [])
+
+  const scrollTo = (id: string) => {
+    const element = document.getElementById(id)
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' })
+    }
+  }
+
   return (
-    <footer className="w-full border-t border-gray-200 bg-white relative">
-      <div className="container mx-auto px-4 py-16">
-        <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-4">
-          {/* Logo and Description */}
-          <div className="space-y-6">
-            <Image
-              src="/getmorepacklinks.png"
-              alt="Logo"
-              width={250}
-              height={62}
-              className="h-10 w-auto"
-            />
-            <p className="text-gray-600 text-base leading-relaxed max-w-sm font-semibold">
-            Boost your startup's online visibility with GetMoreBacklinks! Semi-Automated tool automates directory submissions to 500+ websites, saving time and maximizing your SEO. Perfect for startups, entrepreneurs, and marketers for effortless backlink building.
-            </p>
-            <div className="flex items-center gap-4">
-              <Link
-                href="https://www.linkedin.com/in/krissmann/"
-                className="text-gray-600 hover:text-orange-500 transition-colors"
-              >
-                <Linkedin className="h-6 w-6" />
-                <span className="sr-only">Linkedin</span>
-              </Link>
+    <footer className="bg-white text-gray-600 pt-16 pb-0 px-4 sm:px-6 lg:px-8 relative">
+      {/* Top border */}
+      <div className="absolute top-0 left-0 right-0 h-px bg-gray-200"></div>
+      
+      {/* Orange to white gradient at the bottom */}
+      <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-orange-50 to-white" style={{ bottom: '-32px' }}></div>
+      
+      <div className="max-w-7xl mx-auto relative z-10">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12">
+          {/* Logo and Description Section */}
+          <div className="lg:col-span-4">
+            <div className="space-y-8">
+              {/* Logo */}
+              <div className="h-10 w-auto">
+                <Image
+                  src="/getmorepacklinks.png"
+                  alt="Company Logo"
+                  width={120}
+                  height={40}
+                  className="h-10 w-auto"
+                />
+              </div>
+              
+              <p className="text-gray-600 leading-relaxed">
+              Get instant traffic on your site, save days of manual work with just one click. Submit Your AI Startup To 100+ Plaƞorms In 7 Days
+              </p>
+
+              <div className="flex space-x-4">
+                <Link href="https://x.com/KrissmannGupta" className="text-gray-600 hover:text-gray-900 transition-colors">
+                  <Twitter className="h-5 w-5" />
+                  <span className="sr-only">Twitter</span>
+                </Link>
+                <Link href="https://www.linkedin.com/in/krissmann/" className="text-gray-600 hover:text-gray-900 transition-colors">
+                  <Linkedin className="h-5 w-5" />
+                  <span className="sr-only">LinkedIn</span>
+                </Link>
+              </div>
             </div>
           </div>
 
-          {/* Quick Links */}
-          <div>
-            <h3 className="text-black font-bold text-lg mb-4">Quick Links</h3>
-            <ul className="space-y-3">
-              <li>
-                <Link href="/submit" className="text-gray-600 hover:text-orange-500 transition-colors text-base font-semibold">
-                  Submit Your Directory
-                </Link>
-              </li>
-            </ul>
-          </div>
+          {/* Navigation Sections */}
+          <div className="lg:col-span-8">
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-8">
+              {/* Product Section */}
+              <div>
+                <h3 className="text-gray-900 font-semibold mb-4">Product</h3>
+                <ul className="space-y-3">
+                  {isClient ? (
+                    <>
+                      <li><button onClick={() => scrollTo('features')} className="hover:text-gray-900 transition-colors">Features</button></li>
+                      <li><button onClick={() => scrollTo('pricing-section')} className="hover:text-gray-900 transition-colors">Pricing</button></li>
+                      <li><button onClick={() => scrollTo('howitworks')} className="hover:text-gray-900 transition-colors">How it Works</button></li>
+                      <li><button onClick={() => scrollTo('faq')} className="hover:text-gray-900 transition-colors">FAQ</button></li>
+                    </>
+                  ) : (
+                    <>
+                      <li><span className="hover:text-gray-900 transition-colors">Features</span></li>
+                      <li><span className="hover:text-gray-900 transition-colors">Pricing</span></li>
+                      <li><span className="hover:text-gray-900 transition-colors">How it Works</span></li>
+                      <li><span className="hover:text-gray-900 transition-colors">FAQ</span></li>
+                    </>
+                  )}
+                </ul>
+              </div>
 
-          {/* Our Tools */}
-          <div>
-            <h3 className="text-black font-bold text-lg mb-4">Our Tools</h3>
-            <ul className="space-y-3">
-              <li>
-                <Link href="https://indiehackerop.com/" className="text-gray-600 hover:text-orange-500 transition-colors text-base font-semibold">
-                  IndiehackerOp
-                </Link>
-              </li>
-              <li>
-                <Link href="https://nextboilerplate.com/" className="text-gray-600 hover:text-orange-500 transition-colors text-base font-semibold">
-                  NextBoilerPlate
-                </Link>
-              </li>
-              <li>
-                <Link href="https://anonymousmail.fun/" className="text-gray-600 hover:text-orange-500 transition-colors text-base font-semibold">
-                  AnonymousMail
-                </Link>
-              </li>
-            </ul>
-          </div>
+              {/* Tools Section */}
+              <div>
+                <h3 className="text-gray-900 font-semibold mb-4">Tools</h3>
+                <ul className="space-y-3">
+                  <li><Link href="/ai-content-checker" className="hover:text-gray-900 transition-colors">AI Content Checker</Link></li>
+                  <li><Link href="/paragraph-writer" className="hover:text-gray-900 transition-colors">Paragraph Rewriter</Link></li>
+                  <li><Link href="/backlink-checker" className="hover:text-gray-900 transition-colors">Backlink Checker</Link></li>
+                  <li><Link href="/keyword-rank-tracker" className="hover:text-gray-900 transition-colors">Keyword Rank Tracker</Link></li>
+                  <li><Link href="/seo-scorecard" className="hover:text-gray-900 transition-colors">SEO Scorecard</Link></li>
+                  <li><Link href="/seo-audit" className="hover:text-gray-900 transition-colors">SEO Audit</Link></li>
+                  <li><Link href="/seo-keyword-generator" className="hover:text-gray-900 transition-colors">SEO Keyword Generator</Link></li>
+                  <li><Link href="/seo-content-gap-analysis" className="hover:text-gray-900 transition-colors">SEO Content Gap Analysis</Link></li>
+                </ul>
+              </div>
 
-          {/* Contact and Legal */}
-          <div>
-            <h3 className="text-black font-bold text-lg mb-4">Contact</h3>
-            <div className="space-y-2 mb-6">
-              <Link
-                href="mailto:founder@markupxbrands.com"
-                className="text-gray-600 hover:text-orange-500 transition-colors text-base font-semibold block"
-              >
-                founder@markupxbrands.com
-              </Link>
-              <Link
-                href="mailto:hi@mridulthareja.com"
-                className="text-gray-600 hover:text-orange-500 transition-colors text-base font-semibold block"
-              >
-                hi@mridulthareja.com
-              </Link>
+              {/* Company Section */}
+              <div>
+                <h3 className="text-gray-900 font-semibold mb-4">Company</h3>
+                <ul className="space-y-3">
+                  <li><Link href="/privacy-policy" className="hover:text-gray-900 transition-colors">Privacy Policy</Link></li>
+                  <li><Link href="/terms" className="hover:text-gray-900 transition-colors">Terms of Service</Link></li>
+                </ul>
+              </div>
             </div>
-            <h3 className="text-black font-bold text-lg mb-4">Legal</h3>
-            <ul className="space-y-3">
-              <li>
-                <Link href="/privacy-policy" className="text-gray-600 hover:text-orange-500 transition-colors text-base font-semibold">
-                  Privacy Policy
-                </Link>
-              </li>
-              <li>
-                <Link href="/terms" className="text-gray-600 hover:text-orange-500 transition-colors text-base font-semibold">
-                  Terms
-                </Link>
-              </li>
-            </ul>
           </div>
         </div>
 
-        {/* Copyright */}
-        <div className="mt-12 pt-8">
-          <p className="text-gray-600 text-base text-center font-semibold">
+        {/* Footer Bottom */}
+        <div className="mt-16 pt-8 border-t border-gray-200 flex flex-col sm:flex-row justify-between items-center space-y-4 sm:space-y-0">
+          <div className="text-sm text-gray-500">
             © 2024 Get More Backlinks. All rights reserved. Licensed under MarkupX Technologies.
-          </p>
+          </div>
+          <div className="flex items-center space-x-2 text-sm">
+            <span className="inline-block w-2 h-2 bg-green-500 rounded-full"></span>
+            <span className="text-green-600">All systems operational</span>
+          </div>
         </div>
       </div>
-      <div className="absolute inset-0 bg-gradient-to-t from-orange-100/50 to-transparent pointer-events-none" />
     </footer>
   )
 }

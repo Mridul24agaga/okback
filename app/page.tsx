@@ -2,6 +2,18 @@ import { Metadata } from 'next'
 import Image from "next/image"
 import Hero from "@/app/components/Hero"
 import { Analytics } from "@vercel/analytics/react"
+import TestimonialsSection from './components/testimonial'
+import { DirectoriesSection } from './components/directories-section'
+import ListingSection from './components/listing'
+import BacklinkFeatures from './components/backlinkfeatures'
+import WhyChooseSection from './components/whychooseus'
+import ComparisonSection from './components/comparisonsection'
+import PricingSection from './components/pricing'
+import TeamStats from './components/teamstats'
+import FAQSection from './components/faq'
+import EarlyBirdFooter from './components/cta'
+import Footer from './components/footer'
+import SenjaWidget from './components/senjawidget'
 
 export const metadata: Metadata = {
   title: 'GetMoreBacklinks - Boost Your SEO with 500+ Directory Listings',
@@ -71,11 +83,19 @@ export default function Home() {
     <html lang="en">
       <body>
         <main>
-          <script
-            type="application/ld+json"
-            dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
-          />
           <Hero/>
+          <TestimonialsSection/>
+          <DirectoriesSection/>
+          <ListingSection/>
+          <BacklinkFeatures/>
+          <WhyChooseSection/>
+          <ComparisonSection/>
+          <SenjaWidget/>
+          <PricingSection/>
+          <EarlyBirdFooter/>
+          <TeamStats/>
+          <FAQSection/>
+          <Footer/>
           <Analytics/>
         </main>
       </body>

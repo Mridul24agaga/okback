@@ -1,6 +1,6 @@
 import Image from 'next/image'
 import Link from 'next/link'
-import { Footer } from '@/app/components/footer'
+import Footer from '@/app/components/footer'
 import { Metadata } from 'next'
 
 export const metadata: Metadata = {

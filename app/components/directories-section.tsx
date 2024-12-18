@@ -21,7 +21,7 @@ export function DirectoriesSection() {
   )
 
   return (
-    <section className="bg-white">
+    <section id="learn" className="bg-white">
       <div className="container mx-auto px-4 md:px-8 lg:px-12 py-20">
         <div className="text-center mb-12">
           <span className="text-orange-500 text-sm font-medium mb-2 block">
@@ -39,7 +39,7 @@ export function DirectoriesSection() {
           <div className="relative">
             <input
               type="search"
-              placeholder="Search among 10,352 directories"
+              placeholder="Search among 1,352 directories"
               className="w-full px-4 py-2 bg-gray-100 border border-gray-300 rounded-md text-black placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-orange-500/50 hover:bg-gray-200 transition-colors"
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}

@@ -107,7 +107,7 @@ export default function FAQSection() {
   const rightColumnFAQs = faqs.slice(Math.ceil(faqs.length / 2))
 
   return (
-    <section className="bg-white">
+    <section id="faq" className="bg-white">
       <div className="container mx-auto px-4 py-20">
         <div className="max-w-7xl mx-auto">
           <div className="flex flex-col items-center mb-12">

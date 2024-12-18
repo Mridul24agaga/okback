@@ -5,7 +5,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { ArrowRight } from 'lucide-react'
 import { submitDirectory } from '../actions/submit-directory'
-import { Footer } from "@/app/components/footer"
+import Footer from '../components/footer'
 
 export default function SubmitDirectoryForm() {
   const [isSubmitting, setIsSubmitting] = useState(false)
@@ -73,8 +73,8 @@ export default function SubmitDirectoryForm() {
               </Link>
             </div>
             <div className="flex items-center gap-4">
-              <Link href="/" className="px-3 py-1 sm:px-4 sm:py-2 text-sm sm:text-base rounded-md bg-black text-white hover:bg-orange-600 transition-colors font-bold">
-                Join Waitlist
+              <Link href="/" className="px-3 py-1 sm:px-4 sm:py-2 text-sm sm:text-base rounded-md bg-orange-600 text-white hover:bg-black transition-colors font-bold">
+                Submit Your App
               </Link>
             </div>
           </div>

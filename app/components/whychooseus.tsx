@@ -59,7 +59,7 @@ export default function WhyChooseSection() {
   const MotionDiv = motion.div as React.ComponentType<MotionDivProps>
 
   return (
-    <section className="bg-white">
+    <section id="howitworks" className="bg-white">
       <div className="container mx-auto px-4 py-20">
         <div className="flex flex-col lg:grid lg:grid-cols-2 gap-12 items-start">
           {/* Features Grid */}
