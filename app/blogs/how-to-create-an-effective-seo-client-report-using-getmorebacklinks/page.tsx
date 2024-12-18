@@ -4,72 +4,72 @@ import Footer from '@/app/components/footer'
 import { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'How to Create an Effective SEO Client Report Using getmorebacklinks.org',
-  description: 'Learn how to create comprehensive and impactful SEO client reports using getmorebacklinks.org. Discover best practices, key components, and the role of AI in directory submissions.',
-  keywords: 'SEO client report, getmorebacklinks.org, directory submission, AI in SEO, SEO reporting',
-  openGraph: {
-    type: 'article',
-    title: 'Create Effective SEO Client Reports with getmorebacklinks.org',
-    description: 'Master the art of SEO reporting and leverage AI for directory submissions with getmorebacklinks.org',
-    images: [
-      {
-        url: 'https://www.getmorebacklinks.org/getmorebacklinkss.webp',
-        width: 1200,
-        height: 630,
-        alt: 'AI Directory Submission Concept',
-      },
-    ],
-    url: 'https://www.getmorebacklinks.org/blogs/how-to-create-effective-seo-client-report-using-getmorebacklinks',
-    siteName: 'GetMoreBacklinks',
-  },
-  twitter: {
-    card: 'summary_large_image',
-    title: 'Effective SEO Client Reporting with getmorebacklinks.org',
-    description: 'Learn to create impactful SEO reports and leverage AI for directory submissions',
-    images: ['https://www.getmorebacklinks.org/getmorebacklinkss.webp'],
-    creator: '@GetMoreBacklinks',
-  },
-  alternates: {
-    canonical: 'https://www.getmorebacklinks.org/blogs/how-to-create-effective-seo-client-report-using-getmorebacklinks',
-    languages: {
-      'en-US': 'https://www.getmorebacklinks.org/blogs/how-to-create-effective-seo-client-report-using-getmorebacklinks',
+    title: 'How to Create an Effective SEO Client Report Using getmorebacklinks.org',
+    description: 'Learn how to create comprehensive and impactful SEO client reports using getmorebacklinks.org. Discover best practices, key components, and the role of AI in directory submissions.',
+    keywords: 'SEO client report, getmorebacklinks.org, directory submission, AI in SEO, SEO reporting',
+    openGraph: {
+        type: 'article',
+        title: 'Create Effective SEO Client Reports with getmorebacklinks.org',
+        description: 'Master the art of SEO reporting and leverage AI for directory submissions with getmorebacklinks.org',
+        images: [
+            {
+                url: 'https://www.getmorebacklinks.org/getmorebacklinkss.webp',
+                width: 1200,
+                height: 630,
+                alt: 'AI Directory Submission Concept',
+            },
+        ],
+        url: 'https://www.getmorebacklinks.org/blogs/how-to-create-effective-seo-client-report-using-getmorebacklinks',
+        siteName: 'GetMoreBacklinks',
     },
-  },
+    twitter: {
+        card: 'summary_large_image',
+        title: 'Effective SEO Client Reporting with getmorebacklinks.org',
+        description: 'Learn to create impactful SEO reports and leverage AI for directory submissions',
+        images: ['https://www.getmorebacklinks.org/getmorebacklinkss.webp'],
+        creator: '@GetMoreBacklinks',
+    },
+    alternates: {
+        canonical: 'https://www.getmorebacklinks.org/blogs/how-to-create-effective-seo-client-report-using-getmorebacklinks',
+        languages: {
+            'en-US': 'https://www.getmorebacklinks.org/blogs/how-to-create-effective-seo-client-report-using-getmorebacklinks',
+        },
+    },
 }
 
 export default function BlogPost() {
     const jsonLd = {
-      "@context": "https://schema.org",
-      "@type": "BlogPosting",
-      "headline": "How to Create an Effective SEO Client Report Using getmorebacklinks.org",
-      "image": "https://www.getmorebacklinks.org/getmorebacklinkss.webp",
-      "author": {
-        "@type": "Organization",
-        "name": "GetMoreBacklinks",
-        "url": "https://www.getmorebacklinks.org"
-      },
-      "publisher": {
-        "@type": "Organization",
-        "name": "GetMoreBacklinks",
-        "logo": {
-          "@type": "ImageObject",
-          "url": "https://www.getmorebacklinks.org/logo.png"
+        "@context": "https://schema.org",
+        "@type": "BlogPosting",
+        "headline": "How to Create an Effective SEO Client Report Using getmorebacklinks.org",
+        "image": "https://www.getmorebacklinks.org/getmorebacklinkss.webp",
+        "author": {
+            "@type": "Organization",
+            "name": "GetMoreBacklinks",
+            "url": "https://www.getmorebacklinks.org"
+        },
+        "publisher": {
+            "@type": "Organization",
+            "name": "GetMoreBacklinks",
+            "logo": {
+                "@type": "ImageObject",
+                "url": "https://www.getmorebacklinks.org/logo.png"
+            }
+        },
+        "datePublished": "2024-11-12",
+        "dateModified": "2024-11-12",
+        "description": "Learn how to create comprehensive and impactful SEO client reports using getmorebacklinks.org. Discover best practices, key components, and the role of AI in directory submissions.",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https://www.getmorebacklinks.org/blogs/how-to-create-effective-seo-client-report-using-getmorebacklinks"
         }
-      },
-      "datePublished": "2024-11-12",
-      "dateModified": "2024-11-12",
-      "description": "Learn how to create comprehensive and impactful SEO client reports using getmorebacklinks.org. Discover best practices, key components, and the role of AI in directory submissions.",
-      "mainEntityOfPage": {
-        "@type": "WebPage",
-        "@id": "https://www.getmorebacklinks.org/blogs/how-to-create-effective-seo-client-report-using-getmorebacklinks"
-      }
     };
 
     return (
         <div className="min-h-screen bg-white">
             <script
-              type="application/ld+json"
-              dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
             />
             <header className="container mx-auto px-4 py-4 sm:py-6">
                 <div className="flex items-center justify-between">
@@ -288,7 +288,7 @@ export default function BlogPost() {
                         <h2 className="text-2xl font-bold text-black mb-6">Conclusion</h2>
                         <p className="text-gray-700 leading-relaxed mb-4">
                             Creating an impactful SEO client report is crucial for showcasing your agency's value and fostering
-                            trust with your clients. Using getmorebacklinks.org, you can automate backlink tracking, generate
+                            trust with your clients. Using <a className='text-orange-600 hover:underline' href="https://www.getmorebacklinks.org/">getmorebacklinks.org</a> you can automate backlink tracking, generate
                             detailed white-label reports, and present actionable insights that make your SEO efforts shine.
                         </p>
                         <p className="text-gray-700 leading-relaxed mb-4">
@@ -299,15 +299,15 @@ export default function BlogPost() {
                         </p>
                     </section>
 
-                    <div className="max-w-3xl mx-auto mt-12">
+                    <aside className="max-w-3xl mx-auto mt-12">
                         <div className="bg-orange-100 rounded-3xl p-8">
                             <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
                                 <div className="space-y-2">
                                     <h2 className="text-3xl md:text-4xl font-bold text-black">
-                                        Ready to <span className="border-b-4 border-orange-500">Submit</span> Your Tool?
+                                        Submit your starup
                                     </h2>
                                     <p className="text-gray-700 text-sm md:text-base">
-                                        Add your directory submission tool to our growing list
+                                        Boost your SEO and get High Domain Ratings
                                     </p>
                                     <div className="inline-flex items-center gap-2 bg-orange-200 text-orange-700 px-3 py-1 rounded-full text-xs font-medium">
                                         <svg className="w-3 h-3" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
@@ -318,7 +318,7 @@ export default function BlogPost() {
                                 </div>
                                 <div className="relative self-end md:self-center">
                                     <Link
-                                        href="/submit"
+                                        href="/#pricing-section"
                                         className="inline-flex items-center justify-center px-6 py-3 text-sm font-medium text-white bg-orange-500 rounded-lg hover:bg-orange-600 transition-colors"
                                     >
                                         Submit Your Tool
@@ -326,7 +326,7 @@ export default function BlogPost() {
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    </aside>
                 </article>
             </main>
             <Footer />

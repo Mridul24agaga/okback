@@ -160,7 +160,7 @@ export default function BlogPost() {
                 <h3 className="font-semibold text-black mb-2">1. Saves Time</h3>
                 <p className="text-gray-700">
                   Startups operate on limited resources, and manually submitting to directories is time-intensive.
-                  Automated tools like getmorebacklinks.org eliminate the drudgery, letting you focus on growing
+                  Automated tools like <a className='text-orange-600 hover:underline' href="https://www.getmorebacklinks.org/">getmorebacklinks.org</a> eliminate the drudgery, letting you focus on growing
                   your core business.
                 </p>
               </div>
@@ -211,7 +211,7 @@ export default function BlogPost() {
               <div className="p-6 bg-gray-50 rounded-lg">
                 <h3 className="font-semibold text-black mb-2">Step 2: Choose the Right Tool</h3>
                 <p className="text-gray-700 mb-4">
-                  Select an automated directory submission tool like getmorebacklinks.org. Look for features such as:
+                  Select an automated directory submission tool like <a className='text-orange-600 hover:underline' href="https://www.getmorebacklinks.org/">getmorebacklinks.org</a>. Look for features such as:
                 </p>
                 <ul className="list-disc pl-6 space-y-2">
                   <li>Directory filters (niche-specific, high DA)</li>
@@ -256,7 +256,7 @@ export default function BlogPost() {
                 <h3 className="font-semibold text-black mb-2">1. Directory Volume and Quality</h3>
                 <p className="text-gray-700">
                   While competitors might offer automated submission to a handful of directories,
-                  getmorebacklinks.org provides access to over 500 high-quality directories, including niche-specific
+                  <a className='text-orange-600 hover:underline' href="https://www.getmorebacklinks.org/">getmorebacklinks.org</a> provides access to over 500 high-quality directories, including niche-specific
                   options for SaaS and startups.
                 </p>
               </div>
@@ -264,7 +264,7 @@ export default function BlogPost() {
               <div className="p-6 bg-gray-50 rounded-lg">
                 <h3 className="font-semibold text-black mb-2">2. Speed and Scalability</h3>
                 <p className="text-gray-700">
-                  Most tools require hours to complete submissions. Getmorebacklinks.org accomplishes this in
+                  Most tools require hours to complete submissions. <a className='text-orange-600 hover:underline' href="https://www.getmorebacklinks.org/">getmorebacklinks.org</a> accomplishes this in
                   minutes, making it ideal for fast-paced growth strategies.
                 </p>
               </div>
@@ -272,7 +272,7 @@ export default function BlogPost() {
               <div className="p-6 bg-gray-50 rounded-lg">
                 <h3 className="font-semibold text-black mb-2">3. Free Directory List</h3>
                 <p className="text-gray-700">
-                  Unlike others, getmorebacklinks.org offers a free list of 500+ directories for manual submissions,
+                  Unlike others, <a className='text-orange-600 hover:underline' href="https://www.getmorebacklinks.org/">getmorebacklinks.org</a> offers a free list of 500+ directories for manual submissions,
                   ensuring even non-users benefit.
                 </p>
               </div>
@@ -280,7 +280,7 @@ export default function BlogPost() {
               <div className="p-6 bg-gray-50 rounded-lg">
                 <h3 className="font-semibold text-black mb-2">4. Cost Efficiency</h3>
                 <p className="text-gray-700">
-                  Some indie tools charge upwards of $500 for similar services. Getmorebacklinks.org delivers
+                  Some indie tools charge upwards of $500 for similar services. <a className='text-orange-600 hover:underline' href="https://www.getmorebacklinks.org/">getmorebacklinks.org</a> delivers
                   automation at a fraction of the cost, making it accessible for budget-conscious founders.
                 </p>
               </div>
@@ -367,34 +367,34 @@ export default function BlogPost() {
           </div>
         </article>
 
-        <div className="max-w-3xl mx-auto mt-12">
-          <div className="bg-orange-100 rounded-3xl p-8">
-            <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
-              <div className="space-y-2">
-                <h2 className="text-3xl md:text-4xl font-bold text-black">
-                  Ready to <span className="border-b-4 border-orange-500">Submit</span> Your Tool?
-                </h2>
-                <p className="text-gray-700 text-sm md:text-base">
-                  Add your directory submission tool to our growing list
-                </p>
-                <div className="inline-flex items-center gap-2 bg-orange-200 text-orange-700 px-3 py-1 rounded-full text-xs font-medium">
-                  <svg className="w-3 h-3" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-                    <path d="M10 3L4.5 8.5L2 6" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-                  </svg>
-                  Quick Process
+        <aside className="max-w-3xl mx-auto mt-12">
+              <div className="bg-orange-100 rounded-3xl p-8">
+                <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
+                  <div className="space-y-2">
+                    <h2 className="text-3xl md:text-4xl font-bold text-black">
+                      Submit your starup
+                    </h2>
+                    <p className="text-gray-700 text-sm md:text-base">
+                      Boost your SEO and get High Domain Ratings
+                    </p>
+                    <div className="inline-flex items-center gap-2 bg-orange-200 text-orange-700 px-3 py-1 rounded-full text-xs font-medium">
+                      <svg className="w-3 h-3" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                        <path d="M10 3L4.5 8.5L2 6" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                      </svg>
+                      Quick Process
+                    </div>
+                  </div>
+                  <div className="relative self-end md:self-center">
+                    <Link
+                      href="/#pricing-section"
+                      className="inline-flex items-center justify-center px-6 py-3 text-sm font-medium text-white bg-orange-500 rounded-lg hover:bg-orange-600 transition-colors"
+                    >
+                      Submit Your Tool
+                    </Link>
+                  </div>
                 </div>
               </div>
-              <div className="relative self-end md:self-center">
-                <Link
-                  href="/submit"
-                  className="inline-flex items-center justify-center px-6 py-3 text-sm font-medium text-white bg-orange-500 rounded-lg hover:bg-orange-600 transition-colors"
-                >
-                  Submit Your Tool
-                </Link>
-              </div>
-            </div>
-          </div>
-        </div>
+            </aside>
       </main>
       <Footer />
     </div>

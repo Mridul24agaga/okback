@@ -101,13 +101,13 @@ export default function BlogPost() {
                             What is getmorebacklinks.org?
                         </h2>
                         <p className="text-gray-700 leading-relaxed mb-8">
-                            getmorebacklinks.org is an advanced SEO tool designed to simplify backlink and directory
+                        <a className='text-orange-600 hover:underline' href="https://www.getmorebacklinks.org/">getmorebacklinks.org</a> is an advanced SEO tool designed to simplify backlink and directory
                             submission management for agencies. By automating key SEO tasks, it enables professionals to
                             efficiently track, analyze, and improve backlink profiles for their clients while generating
                             comprehensive, professional-grade SEO reports.
                         </p>
                         <p className="text-gray-700 leading-relaxed mb-8">
-                            With its intuitive design and powerful features, getmorebacklinks.org helps agencies save time,
+                            With its intuitive design and powerful features, <a className='text-orange-600 hover:underline' href="https://www.getmorebacklinks.org/">getmorebacklinks.org</a> helps agencies save time,
                             enhance SEO strategies, and deliver unparalleled value to clients.
                         </p>
                     </section>
@@ -121,7 +121,7 @@ export default function BlogPost() {
                             <div>
                                 <h3 className="text-xl font-bold text-orange-500 mb-4">1. Automated Backlink Monitoring</h3>
                                 <p className="text-gray-700 mb-4">
-                                    getmorebacklinks.org automates the process of tracking backlinks, keeping you updated in real-time.
+                                <a className='text-orange-600 hover:underline' href="https://www.getmorebacklinks.org/">getmorebacklinks.org</a> automates the process of tracking backlinks, keeping you updated in real-time.
                                     It notifies you when:
                                 </p>
                                 <ul className="list-disc pl-6 space-y-2 text-gray-700">
@@ -138,7 +138,7 @@ export default function BlogPost() {
                             <div>
                                 <h3 className="text-xl font-bold text-orange-500 mb-4">2. Customizable SEO Reports</h3>
                                 <p className="text-gray-700 mb-4">
-                                    Create white-label SEO reports tailored to your agency's needs with getmorebacklinks.org. These
+                                    Create white-label SEO reports tailored to your agency's needs with <a className='text-orange-600 hover:underline' href="https://www.getmorebacklinks.org/">getmorebacklinks.org</a>. These
                                     reports can include:
                                 </p>
                                 <ul className="list-disc pl-6 space-y-2 text-gray-700">
@@ -155,7 +155,7 @@ export default function BlogPost() {
                             <div>
                                 <h3 className="text-xl font-bold text-orange-500 mb-4">3. Link Quality Analysis</h3>
                                 <p className="text-gray-700 mb-4">
-                                    The quality of backlinks is as important as their quantity. getmorebacklinks.org evaluates:
+                                    The quality of backlinks is as important as their quantity. <a className='text-orange-600 hover:underline' href="https://www.getmorebacklinks.org/">getmorebacklinks.org</a> evaluates:
                                 </p>
                                 <ul className="list-disc pl-6 space-y-2 text-gray-700">
                                     <li>Domain authority of linking sites.</li>
@@ -168,7 +168,7 @@ export default function BlogPost() {
                             <div>
                                 <h3 className="text-xl font-bold text-orange-500 mb-4">4. Competitor Backlink Tracking</h3>
                                 <p className="text-gray-700 mb-4">
-                                    Gain a competitive edge with getmorebacklinks.org's competitor analysis tools. By tracking
+                                    Gain a competitive edge with <a className='text-orange-600 hover:underline' href="https://www.getmorebacklinks.org/">getmorebacklinks.org</a> competitor analysis tools. By tracking
                                     competitors' backlink profiles, you can:
                                 </p>
                                 <ul className="list-disc pl-6 space-y-2 text-gray-700">
@@ -181,7 +181,7 @@ export default function BlogPost() {
                             <div>
                                 <h3 className="text-xl font-bold text-orange-500 mb-4">5. SEO Health Insights</h3>
                                 <p className="text-gray-700 mb-4">
-                                    Beyond backlinks, getmorebacklinks.org provides insights into your client's overall SEO health. This
+                                    Beyond backlinks, <a className='text-orange-600 hover:underline' href="https://www.getmorebacklinks.org/">getmorebacklinks.org</a> provides insights into your client's overall SEO health. This
                                     includes:
                                 </p>
                                 <ul className="list-disc pl-6 space-y-2 text-gray-700">
@@ -194,7 +194,7 @@ export default function BlogPost() {
                             <div>
                                 <h3 className="text-xl font-bold text-orange-500 mb-4">6. Easy Integration with Other SEO Tools</h3>
                                 <p className="text-gray-700 mb-4">
-                                    getmorebacklinks.org integrates seamlessly with essential tools like Google Analytics and Google
+                                <a className='text-orange-600 hover:underline' href="https://www.getmorebacklinks.org/">getmorebacklinks.org</a> integrates seamlessly with essential tools like Google Analytics and Google
                                     Search Console. This integration allows you to combine backlink data with metrics such as:
                                 </p>
                                 <ul className="list-disc pl-6 space-y-2 text-gray-700">
@@ -211,7 +211,7 @@ export default function BlogPost() {
                             How getmorebacklinks.org Helps Agencies Save Time
                         </h2>
                         <p className="text-gray-700 mb-6">
-                            Managing SEO campaigns for multiple clients can be time-consuming. getmorebacklinks.org reduces
+                            Managing SEO campaigns for multiple clients can be time-consuming. <a className='text-orange-600 hover:underline' href="https://www.getmorebacklinks.org/">getmorebacklinks.org</a> reduces
                             manual effort through automation, allowing agencies to focus on high-value tasks. Here's how it
                             helps:
                         </p>
@@ -235,7 +235,7 @@ export default function BlogPost() {
                             getmorebacklinks.org's Impact on SEO Strategy
                         </h2>
                         <p className="text-gray-700 mb-6">
-                            Backlinks are a cornerstone of any effective SEO campaign. getmorebacklinks.org enhances your
+                            Backlinks are a cornerstone of any effective SEO campaign. <a className='text-orange-600 hover:underline' href="https://www.getmorebacklinks.org/">getmorebacklinks.org</a> enhances your
                             agency's strategies by:
                         </p>
                         <div className="space-y-4">
@@ -249,7 +249,7 @@ export default function BlogPost() {
                             <div className="bg-orange-50 border-l-4 border-orange-500 p-6">
                                 <h3 className="font-semibold text-black mb-2">2. Detecting Toxic Backlinks</h3>
                                 <p className="text-gray-700">
-                                    Toxic backlinks from spammy or low-quality sites can harm rankings. getmorebacklinks.org identifies
+                                    Toxic backlinks from spammy or low-quality sites can harm rankings. <a className='text-orange-600 hover:underline' href="https://www.getmorebacklinks.org/">getmorebacklinks.org</a> identifies
                                     these links and provides an easy way to disavow them, protecting your client's SEO performance.
                                 </p>
                             </div>
@@ -263,7 +263,7 @@ export default function BlogPost() {
                             <div className="bg-orange-50 border-l-4 border-orange-500 p-6">
                                 <h3 className="font-semibold text-black mb-2">4. Building a Diverse Backlink Profile</h3>
                                 <p className="text-gray-700">
-                                    A natural backlink profile includes various link types. getmorebacklinks.org tracks and organizes
+                                    A natural backlink profile includes various link types. <a className='text-orange-600 hover:underline' href="https://www.getmorebacklinks.org/">getmorebacklinks.org</a> tracks and organizes
                                     these links, helping you maintain a balanced and effective profile.
                                 </p>
                             </div>
@@ -273,47 +273,47 @@ export default function BlogPost() {
                     <section className="mb-12">
                         <h2 className="text-2xl font-bold text-black mb-6">Conclusion</h2>
                         <p className="text-gray-700 leading-relaxed mb-4">
-                            SEO reporting is a vital component of any digital marketing strategy. getmorebacklinks.org provides
+                            SEO reporting is a vital component of any digital marketing strategy. <a className='text-orange-600 hover:underline' href="https://www.getmorebacklinks.org/">getmorebacklinks.org</a> provides
                             an intuitive, automated solution for agencies that want to streamline backlink management and
                             reporting processes.
                         </p>
                         <p className="text-gray-700 leading-relaxed mb-4">
                             With features like real-time backlink tracking, customizable white-label reports, and integration with
-                            other SEO tools, getmorebacklinks.org empowers agencies to deliver exceptional results. Whether
+                            other SEO tools, <a className='text-orange-600 hover:underline' href="https://www.getmorebacklinks.org/">getmorebacklinks.org</a> empowers agencies to deliver exceptional results. Whether
                             it's identifying high-quality backlink opportunities, discovering toxic links, or optimizing link
                             placement, this tool simplifies the complexities of SEO and ensures your clients see the value of your
                             efforts.
                         </p>
                     </section>
 
-                    <div className="max-w-3xl mx-auto mt-12">
-                        <div className="bg-orange-100 rounded-3xl p-8">
-                            <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
-                                <div className="space-y-2">
-                                    <h2 className="text-3xl md:text-4xl font-bold text-black">
-                                        Ready to <span className="border-b-4 border-orange-500">Submit</span> Your Tool?
-                                    </h2>
-                                    <p className="text-gray-700 text-sm md:text-base">
-                                        Add your directory submission tool to our growing list
-                                    </p>
-                                    <div className="inline-flex items-center gap-2 bg-orange-200 text-orange-700 px-3 py-1 rounded-full text-xs font-medium">
-                                        <svg className="w-3 h-3" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-                                            <path d="M10 3L4.5 8.5L2 6" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-                                        </svg>
-                                        Quick Process
-                                    </div>
-                                </div>
-                                <div className="relative self-end md:self-center">
-                                    <Link
-                                        href="/submit"
-                                        className="inline-flex items-center justify-center px-6 py-3 text-sm font-medium text-white bg-orange-500 rounded-lg hover:bg-orange-600 transition-colors"
-                                    >
-                                        Submit Your Tool
-                                    </Link>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                    <aside className="max-w-3xl mx-auto mt-12">
+          <div className="bg-orange-100 rounded-3xl p-8">
+            <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
+              <div className="space-y-2">
+                <h2 className="text-3xl md:text-4xl font-bold text-black">
+                Submit your starup
+                </h2>
+                <p className="text-gray-700 text-sm md:text-base">
+                Boost your SEO and get High Domain Ratings 
+                </p>
+                <div className="inline-flex items-center gap-2 bg-orange-200 text-orange-700 px-3 py-1 rounded-full text-xs font-medium">
+                  <svg className="w-3 h-3" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                    <path d="M10 3L4.5 8.5L2 6" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                  </svg>
+                  Quick Process
+                </div>
+              </div>
+              <div className="relative self-end md:self-center">
+                <Link
+                  href="/#pricing-section"
+                  className="inline-flex items-center justify-center px-6 py-3 text-sm font-medium text-white bg-orange-500 rounded-lg hover:bg-orange-600 transition-colors"
+                >
+                  Submit Your Tool
+                </Link>
+              </div>
+            </div>
+          </div>
+        </aside>
                 </article>
             </main>
             <Footer />

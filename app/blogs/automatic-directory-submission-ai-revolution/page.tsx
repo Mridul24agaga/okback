@@ -83,14 +83,14 @@ export default function BlogPost() {
             />
           </Link>
           <nav className="flex items-center gap-4">
-            <Link 
-              href="/blog" 
+            <Link
+              href="/blog"
               className="text-gray-900 hover:text-gray-600 transition-colors text-sm font-medium"
             >
               Blog
             </Link>
-            <Link 
-              href="/" 
+            <Link
+              href="/#pricing-section"
               className="px-4 py-2 text-sm rounded-md bg-black text-white hover:bg-gray-800 transition-colors font-medium"
             >
               Try It Free
@@ -152,7 +152,7 @@ export default function BlogPost() {
               <h2 className="text-3xl font-bold text-gray-900 mb-6">
                 Benefits of Using Automatic Directory Submission
               </h2>
-              
+
               <div className="grid gap-6 md:grid-cols-2">
                 <div className="bg-white p-6 rounded-lg border border-gray-200">
                   <div className="flex items-start gap-4">
@@ -228,8 +228,11 @@ export default function BlogPost() {
                 </p>
                 <p className="text-gray-600">
                   With backlink ahrefs analysis, startups can monitor the impact of their automatic directory
-                  submission efforts and fine-tune their strategies for better results. For instance, a startup using
-                  GetMoreBacklinks.org to automate its directory submissions noted a significant increase in traffic
+                  submission efforts and fine-tune their strategies for better results. For instance, a startup using{' '}
+                  <Link href="https://getmorebacklinks.org" className="text-blue-600 hover:text-blue-800">
+                    GetMoreBacklinks.org
+                  </Link>{' '}
+                  to automate its directory submissions noted a significant increase in traffic
                   and keyword rankings within weeks.
                 </p>
               </div>
@@ -273,34 +276,34 @@ export default function BlogPost() {
               </div>
             </section>
 
-            <div className="max-w-3xl mx-auto mt-12">
-          <div className="bg-orange-100 rounded-3xl p-8">
-            <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
-              <div className="space-y-2">
-                <h2 className="text-3xl md:text-4xl font-bold text-black">
-                  Ready to <span className="border-b-4 border-orange-500">Submit</span> Your Tool?
-                </h2>
-                <p className="text-gray-700 text-sm md:text-base">
-                  Add your directory submission tool to our growing list
-                </p>
-                <div className="inline-flex items-center gap-2 bg-orange-200 text-orange-700 px-3 py-1 rounded-full text-xs font-medium">
-                  <svg className="w-3 h-3" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-                    <path d="M10 3L4.5 8.5L2 6" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-                  </svg>
-                  Quick Process
+            <aside className="max-w-3xl mx-auto mt-12">
+              <div className="bg-orange-100 rounded-3xl p-8">
+                <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
+                  <div className="space-y-2">
+                    <h2 className="text-3xl md:text-4xl font-bold text-black">
+                      Submit your starup
+                    </h2>
+                    <p className="text-gray-700 text-sm md:text-base">
+                      Boost your SEO and get High Domain Ratings
+                    </p>
+                    <div className="inline-flex items-center gap-2 bg-orange-200 text-orange-700 px-3 py-1 rounded-full text-xs font-medium">
+                      <svg className="w-3 h-3" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                        <path d="M10 3L4.5 8.5L2 6" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                      </svg>
+                      Quick Process
+                    </div>
+                  </div>
+                  <div className="relative self-end md:self-center">
+                    <Link
+                      href="/#pricing-section"
+                      className="inline-flex items-center justify-center px-6 py-3 text-sm font-medium text-white bg-orange-500 rounded-lg hover:bg-orange-600 transition-colors"
+                    >
+                      Submit Your Tool
+                    </Link>
+                  </div>
                 </div>
               </div>
-              <div className="relative self-end md:self-center">
-                <Link
-                  href="/submit"
-                  className="inline-flex items-center justify-center px-6 py-3 text-sm font-medium text-white bg-orange-500 rounded-lg hover:bg-orange-600 transition-colors"
-                >
-                  Submit Your Tool
-                </Link>
-              </div>
-            </div>
-          </div>
-        </div>
+            </aside>
           </div>
         </article>
       </main>

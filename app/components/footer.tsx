@@ -4,18 +4,24 @@ import { Twitter, Linkedin } from 'lucide-react'
 import Link from 'next/link'
 import Image from 'next/image'
 import { useEffect, useState } from 'react'
+import { usePathname } from 'next/navigation'
 
 export default function Footer() {
   const [isClient, setIsClient] = useState(false)
+  const pathname = usePathname()
 
   useEffect(() => {
     setIsClient(true)
   }, [])
 
   const scrollTo = (id: string) => {
-    const element = document.getElementById(id)
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' })
+    if (pathname === '/') {
+      const element = document.getElementById(id)
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth' })
+      } else {
+        console.warn(`Element with id "${id}" not found`)
+      }
     }
   }
 
@@ -44,7 +50,7 @@ export default function Footer() {
               </div>
               
               <p className="text-gray-600 leading-relaxed">
-              Get instant traffic on your site, save days of manual work with just one click. Submit Your AI Startup To 100+ Plaƞorms In 7 Days
+                Get instant traffic on your site, save days of manual work with just one click. Submit Your AI Startup To 100+ Plaƞorms In 7 Days
               </p>
 
               <div className="flex space-x-4">
@@ -69,17 +75,41 @@ export default function Footer() {
                 <ul className="space-y-3">
                   {isClient ? (
                     <>
-                      <li><button onClick={() => scrollTo('features')} className="hover:text-gray-900 transition-colors">Features</button></li>
-                      <li><button onClick={() => scrollTo('pricing-section')} className="hover:text-gray-900 transition-colors">Pricing</button></li>
-                      <li><button onClick={() => scrollTo('howitworks')} className="hover:text-gray-900 transition-colors">How it Works</button></li>
-                      <li><button onClick={() => scrollTo('faq')} className="hover:text-gray-900 transition-colors">FAQ</button></li>
+                      <li>
+                        {pathname === '/' ? (
+                          <button onClick={() => scrollTo('features')} className="hover:text-gray-900 transition-colors">Features</button>
+                        ) : (
+                          <Link href="/#features" className="hover:text-gray-900 transition-colors">Features</Link>
+                        )}
+                      </li>
+                      <li>
+                        {pathname === '/' ? (
+                          <button onClick={() => scrollTo('pricing-section')} className="hover:text-gray-900 transition-colors">Pricing</button>
+                        ) : (
+                          <Link href="/#pricing-section" className="hover:text-gray-900 transition-colors">Pricing</Link>
+                        )}
+                      </li>
+                      <li>
+                        {pathname === '/' ? (
+                          <button onClick={() => scrollTo('howitworks')} className="hover:text-gray-900 transition-colors">How it Works</button>
+                        ) : (
+                          <Link href="/#howitworks" className="hover:text-gray-900 transition-colors">How it Works</Link>
+                        )}
+                      </li>
+                      <li>
+                        {pathname === '/' ? (
+                          <button onClick={() => scrollTo('faq')} className="hover:text-gray-900 transition-colors">FAQ</button>
+                        ) : (
+                          <Link href="/#faq" className="hover:text-gray-900 transition-colors">FAQ</Link>
+                        )}
+                      </li>
                     </>
                   ) : (
                     <>
-                      <li><span className="hover:text-gray-900 transition-colors">Features</span></li>
-                      <li><span className="hover:text-gray-900 transition-colors">Pricing</span></li>
-                      <li><span className="hover:text-gray-900 transition-colors">How it Works</span></li>
-                      <li><span className="hover:text-gray-900 transition-colors">FAQ</span></li>
+                      <li><Link href="/#features" className="hover:text-gray-900 transition-colors">Features</Link></li>
+                      <li><Link href="/#pricing-section" className="hover:text-gray-900 transition-colors">Pricing</Link></li>
+                      <li><Link href="/#howitworks" className="hover:text-gray-900 transition-colors">How it Works</Link></li>
+                      <li><Link href="/#faq" className="hover:text-gray-900 transition-colors">FAQ</Link></li>
                     </>
                   )}
                 </ul>

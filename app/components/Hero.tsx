@@ -81,8 +81,14 @@ export default function Hero() {
             <div className="absolute inset-[1px] rounded-full bg-gradient-to-r from-gray-50 via-white to-gray-50"></div>
             <div className="relative flex items-center">
               <span className="bg-[#F97316] text-white text-xs font-semibold px-2 py-0.5 rounded-full mr-2">HOT</span>
-              <span className="text-gray-900 text-sm">One Click to SEO Success and Authority.</span>
-              <ChevronRight className="h-4 w-4 text-gray-400 ml-1 group-hover:translate-x-0.5 transition-transform" />
+              <Link 
+          href="/#pricing-section" 
+          className="text-gray-900 text-sm hover:text-orange-500 transition-colors"
+          onClick={scrollToPricing}
+
+        >
+          One Click to SEO Success and Authority.
+        </Link>              <ChevronRight className="h-4 w-4 text-gray-400 ml-1 group-hover:translate-x-0.5 transition-transform" />
             </div>
           </div>
 

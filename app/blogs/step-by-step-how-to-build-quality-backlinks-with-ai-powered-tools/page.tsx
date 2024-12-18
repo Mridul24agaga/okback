@@ -177,7 +177,7 @@ export default function BlogPost() {
                 <h3 className="font-semibold text-black mb-2">Step 2: AI-Powered Prospecting</h3>
                 <p className="text-gray-700">
                   AI tools analyze thousands of websites to find backlink opportunities. For instance,
-                  getmorebacklinks.org uses keyword analysis and content matching to recommend high-authority
+                  <a className='text-orange-600 hover:underline' href="https://www.getmorebacklinks.org/">getmorebacklinks.org</a> uses keyword analysis and content matching to recommend high-authority
                   sites.
                 </p>
               </div>
@@ -201,7 +201,7 @@ export default function BlogPost() {
               <div className="bg-gray-50 border-l-4 border-orange-500 p-6">
                 <h3 className="font-semibold text-black mb-2">Step 5: Automating Directory Submissions</h3>
                 <p className="text-gray-700">
-                  Tools like getmorebacklinks.org streamline the process of submitting your site to 500+ directories in
+                  Tools like <a className='text-orange-600 hover:underline' href="https://www.getmorebacklinks.org/">getmorebacklinks.org</a> streamline the process of submitting your site to 500+ directories in
                   minutes. They ensure accurate, consistent data across all platforms.
                 </p>
               </div>
@@ -248,36 +248,36 @@ export default function BlogPost() {
           <div className="mt-12 bg-orange-50 rounded-xl p-8">
             <p className="text-gray-700">
               By leveraging AI-powered tools, SaaS founders can focus on strategic growth while these platforms
-              handle the intricacies of link building. Platforms like getmorebacklinks.org are paving the way for a
+              handle the intricacies of link building. Platforms like <a className='text-orange-600 hover:underline' href="https://www.getmorebacklinks.org/">getmorebacklinks.org</a> are paving the way for a
               new era in SEO, combining automation with precision to drive meaningful results.
             </p>
             <p className="text-gray-700 mt-4">
               For more details, visit resources on AI and backlink automation, such as those provided by
-              getmorebacklinks.org and SEO industry leaders.
+              <a className='text-orange-600 hover:underline' href="https://www.getmorebacklinks.org/">getmorebacklinks.org</a> and SEO industry leaders.
             </p>
           </div>
         </article>
 
-        <div className="max-w-3xl mx-auto mt-12">
+        <aside className="max-w-3xl mx-auto mt-12">
           <div className="bg-orange-100 rounded-3xl p-8">
             <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
               <div className="space-y-2">
                 <h2 className="text-3xl md:text-4xl font-bold text-black">
-                  Ready to <span className="border-b-4 border-orange-500">Submit</span> Your Tool?
+                Submit your starup
                 </h2>
                 <p className="text-gray-700 text-sm md:text-base">
-                  Add your directory submission tool to our growing list
+                Boost your SEO and get High Domain Ratings 
                 </p>
                 <div className="inline-flex items-center gap-2 bg-orange-200 text-orange-700 px-3 py-1 rounded-full text-xs font-medium">
                   <svg className="w-3 h-3" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-                    <path d="M10 3L4.5 8.5L2 6" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                    <path d="M10 3L4.5 8.5L2 6" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
                   </svg>
                   Quick Process
                 </div>
               </div>
               <div className="relative self-end md:self-center">
                 <Link
-                  href="/submit"
+                  href="/#pricing-section"
                   className="inline-flex items-center justify-center px-6 py-3 text-sm font-medium text-white bg-orange-500 rounded-lg hover:bg-orange-600 transition-colors"
                 >
                   Submit Your Tool
@@ -285,7 +285,7 @@ export default function BlogPost() {
               </div>
             </div>
           </div>
-        </div>
+        </aside>
       </main>
       <Footer />
     </div>

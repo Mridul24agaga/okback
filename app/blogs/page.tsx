@@ -180,10 +180,10 @@ export default function BlogPage() {
               Blog
             </Link>
             <Link 
-              href="/" 
+              href="/#pricing-section" 
               className="px-4 py-2 text-sm rounded-md bg-orange-500 text-white hover:bg-orange-600 transition-colors font-medium"
             >
-              Join Waitlist
+              Submit your app
             </Link>
           </nav>
         </div>

@@ -340,26 +340,26 @@ export default function BlogPost() {
           </div>
         </article>
 
-        <div className="max-w-3xl mx-auto mt-12">
+        <aside className="max-w-3xl mx-auto mt-12">
           <div className="bg-orange-100 rounded-3xl p-8">
             <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
               <div className="space-y-2">
                 <h2 className="text-3xl md:text-4xl font-bold text-black">
-                  Ready to <span className="border-b-4 border-orange-500">Submit</span> Your Tool?
+                Submit your starup
                 </h2>
                 <p className="text-gray-700 text-sm md:text-base">
-                  Add your directory submission tool to our growing list
+                Boost your SEO and get High Domain Ratings 
                 </p>
                 <div className="inline-flex items-center gap-2 bg-orange-200 text-orange-700 px-3 py-1 rounded-full text-xs font-medium">
                   <svg className="w-3 h-3" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-                    <path d="M10 3L4.5 8.5L2 6" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                    <path d="M10 3L4.5 8.5L2 6" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
                   </svg>
                   Quick Process
                 </div>
               </div>
               <div className="relative self-end md:self-center">
                 <Link
-                  href="/submit"
+                  href="/#pricing-section"
                   className="inline-flex items-center justify-center px-6 py-3 text-sm font-medium text-white bg-orange-500 rounded-lg hover:bg-orange-600 transition-colors"
                 >
                   Submit Your Tool
@@ -367,7 +367,7 @@ export default function BlogPost() {
               </div>
             </div>
           </div>
-        </div>
+        </aside>
       </main>
       <Footer />
     </div>
