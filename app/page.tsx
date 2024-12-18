@@ -17,11 +17,11 @@ import SenjaWidget from './components/senjawidget'
 
 export const metadata: Metadata = {
   title: 'GetMoreBacklinks - Boost Your SEO with 500+ Directory Listings',
-  description: 'List your website on 500+ directories to improve SEO, backlinks, ratings, and sales. Join our exclusive waitlist for early access to our curated database of launch platforms, directories, marketplaces, newsletters, and communities.',
+  description: 'List your website on 500+ directories to improve SEO, backlinks, ratings, and sales. Get instant traffic on your site, save days of manual work with just one click. Submit Your AI Startup To 100+ Plaƞorms In 7 Days',
   keywords: ['SEO', 'backlinks', 'directory listings', 'digital marketing', 'website promotion'],
   openGraph: {
     title: 'GetMoreBacklinks - Boost Your SEO with 500+ Directory Listings',
-    description: 'List your website on 500+ directories to improve SEO, backlinks, ratings, and sales. Join our exclusive waitlist for early access.',
+    description: 'List your website on 500+ directories to improve SEO, backlinks, ratings, and sales. Get instant traffic on your site, save days of manual work with just one click. Submit Your AI Startup To 100+ Plaƞorms In 7 Days',
     url: 'https://www.getmorebacklinks.org',
     siteName: 'GetMoreBacklinks',
     images: [
@@ -38,7 +38,7 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     title: 'GetMoreBacklinks - Boost Your SEO with 500+ Directory Listings',
-    description: 'List your website on 500+ directories to improve SEO, backlinks, ratings, and sales. Join our exclusive waitlist for early access.',
+    description: 'List your website on 500+ directories to improve SEO, backlinks, ratings, and sales. Get instant traffic on your site, save days of manual work with just one click. Submit Your AI Startup To 100+ Plaƞorms In 7 Days',
     images: ['/og.jpg'],
   },
   alternates: {

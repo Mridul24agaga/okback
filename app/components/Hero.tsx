@@ -77,8 +77,8 @@ export default function Hero() {
             <div className="absolute inset-0 rounded-full border border-gray-200"></div>
             <div className="absolute inset-[1px] rounded-full bg-gradient-to-r from-gray-50 via-white to-gray-50"></div>
             <div className="relative flex items-center">
-              <span className="bg-[#F97316] text-white text-xs font-semibold px-2 py-0.5 rounded-full mr-2">NEW</span>
-              <span className="text-gray-900 text-sm">Exclusive early access coming soon</span>
+              <span className="bg-[#F97316] text-white text-xs font-semibold px-2 py-0.5 rounded-full mr-2">HOT</span>
+              <span className="text-gray-900 text-sm">One Click to SEO Success and Authority.</span>
               <ChevronRight className="h-4 w-4 text-gray-400 ml-1 group-hover:translate-x-0.5 transition-transform" />
             </div>
           </div>
@@ -94,7 +94,7 @@ export default function Hero() {
           <p
             className="text-gray-600 text-xl max-w-2xl mx-auto mb-12 animate-slideUp animation-delay-200"
           >
-            Get instant traffic on your site, save days of manual work with just one click. Submit Your AI Startup To 100+ Plaƞorms In 7 Days
+            Get instant traffic on your site, save days of manual work with just one click. Submit Your AI Startup To 100+ Platforms In 7 Days
           </p>
 
           <div
