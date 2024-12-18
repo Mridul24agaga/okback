@@ -54,6 +54,9 @@ export default function Hero() {
             </div>
             {/* Navigation links */}
             <div className={`${mobileMenuOpen ? 'block' : 'hidden'} md:flex md:items-center md:space-x-8 mt-4 md:mt-0`}>
+            <Link href="/blogs" className="block py-2 text-gray-900 hover:text-[#F97316] transition-colors">
+                Blogs
+              </Link>
               <Link href="/submit" className="block py-2 text-gray-900 hover:text-[#F97316] transition-colors">
                 Submit my Directory
               </Link>
