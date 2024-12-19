@@ -17,7 +17,6 @@ const plans = [
     name: "Pro",
     originalPrice: 119,
     discountedPrice: 37,
-    popular: true,
     features: [
       "50 backlinks",
       "Priority email support",
@@ -31,6 +30,7 @@ const plans = [
     name: "Advanced",
     originalPrice: 229,
     discountedPrice: 75,
+    popular: true,
     features: [
       "100+ backlinks",
       "Comprehensive SEO report",
