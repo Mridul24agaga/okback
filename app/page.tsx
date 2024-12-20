@@ -1,7 +1,7 @@
 import { Metadata } from 'next'
 import Image from "next/image"
+import Script from 'next/script'
 import Hero from "@/app/components/Hero"
-import { Analytics } from "@vercel/analytics/react"
 import TestimonialsSection from './components/testimonial'
 import { DirectoriesSection } from './components/directories-section'
 import ListingSection from './components/listing'
@@ -96,8 +96,17 @@ export default function Home() {
           <TeamStats/>
           <FAQSection/>
           <Footer/>
-          <Analytics/>
         </main>
+        <Script strategy="afterInteractive" src="https://www.googletagmanager.com/gtag/js?id=G-VTWX7GVQ6X"/>
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+
+            gtag('config', 'G-VTWX7GVQ6X');
+          `}
+        </Script>
       </body>
     </html>
   )

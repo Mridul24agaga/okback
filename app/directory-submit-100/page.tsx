@@ -4,7 +4,7 @@ import { useState, useEffect } from 'react'
 import { useRouter } from 'next/navigation'
 import { directories } from '../data/directories'
 import { Search, Shuffle, CheckSquare, Square, Smartphone } from 'lucide-react'
-import { saveSelections } from '../actions/saveSelections'
+import { saveSelections } from '../actions/saveSelectionssss'
 import { Header } from '../components/header'
 
 export default function DirectoryListing() {
@@ -29,10 +29,10 @@ export default function DirectoryListing() {
     setSelectedDirectories(prev => {
       if (prev.includes(id)) {
         return prev.filter(item => item !== id)
-      } else if (prev.length < 125) {
+      } else if (prev.length < 200) {
         return [...prev, id]
       } else {
-        alert("You can't select more than 125 directories.")
+        alert("You can't select more than 200 directories.")
         return prev
       }
     })
@@ -68,12 +68,12 @@ export default function DirectoryListing() {
 
   const selectRandomDirectories = () => {
     const shuffled = [...directories].sort(() => 0.5 - Math.random())
-    const randomSelected = shuffled.slice(0, 125).map(dir => dir.id)
+    const randomSelected = shuffled.slice(0, 200).map(dir => dir.id)
     setSelectedDirectories(randomSelected)
   }
 
   const selectAllDirectories = () => {
-    const allSelected = directories.slice(0, 125).map(dir => dir.id)
+    const allSelected = directories.slice(0, 200).map(dir => dir.id)
     setSelectedDirectories(allSelected)
   }
 
@@ -158,7 +158,7 @@ export default function DirectoryListing() {
           </div>
           <div className="md:w-1/3">
             <div className="bg-white rounded-lg shadow-md p-6 sticky top-8">
-              <h2 className="text-xl font-bold mb-4">Selected Directories ({selectedDirectories.length}/125):</h2>
+              <h2 className="text-xl font-bold mb-4">Selected Directories ({selectedDirectories.length}/200):</h2>
               <div className="max-h-[calc(100vh-200px)] overflow-y-auto">
                 <div className="grid grid-cols-1 gap-4">
                   {selectedDirectories.map(id => {
