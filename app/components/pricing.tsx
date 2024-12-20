@@ -5,7 +5,7 @@ const plans = [
   {
     name: "Basic",
     originalPrice: 59,
-    discountedPrice: 20,
+    discountedPrice:20,
     features: [
       "25 backlinks",
       "Basic SEO report",
@@ -29,7 +29,7 @@ const plans = [
   {
     name: "Advanced",
     originalPrice: 229,
-    discountedPrice: 75,
+    discountedPrice:75,
     popular: true,
     features: [
       "100+ backlinks",
@@ -103,7 +103,7 @@ export default function PricingSection() {
                   <div className="mt-2">
                     <span className="text-base md:text-lg text-gray-500 line-through mr-2">${plan.originalPrice}</span>
                     <span className="text-base md:text-lg font-semibold text-green-600">
-                      Save {Math.round((1 - plan.discountedPrice / plan.originalPrice) * 100)}%
+                      Save 67%
                     </span>
                   </div>
                 </div>
@@ -130,6 +130,35 @@ export default function PricingSection() {
               </div>
             </div>
           ))}
+        </div>
+        
+        <div className="mt-12 text-center">
+          <p className="text-lg font-bold text-gray-800 mb-4">
+            If you are facing any issue with the payment, We've got you covered
+          </p>
+          <p className="text-base text-gray-600 max-w-2xl mx-auto">
+            <strong className="font-bold text-orange-500">
+              Contact us on{' '}
+              <a
+                href="https://www.reddit.com/user/Sad-Industry3436/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="underline hover:text-orange-600"
+              >
+                Reddit
+              </a>{' '}
+              or{' '}
+              <a
+                href="https://x.com/KrissmannGupta"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="underline hover:text-orange-600"
+              >
+                X (Twitter)
+              </a>
+              , and we'll provide you with a PayPal link for any plan!
+            </strong>
+          </p>
         </div>
       </div>
     </section>
