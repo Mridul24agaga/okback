@@ -4,6 +4,7 @@ import { useEffect, useState } from "react"
 import Link from "next/link"
 import Image from "next/image"
 import { ChevronRight } from 'lucide-react'
+import { PromoBanner } from "./promo-banner"
 
 export default function Hero() {
   const [isVisible, setIsVisible] = useState(false)
@@ -29,6 +30,7 @@ export default function Hero() {
 
   return (
     <div className="bg-white min-h-screen font-sans flex flex-col">
+      <PromoBanner/>
       {/* Navigation */}
       <nav className="sticky top-0 z-50 transition-all duration-300 bg-white bg-opacity-90 backdrop-blur-sm">
         <div className="container mx-auto px-4 py-4 md:py-6">
