@@ -107,6 +107,7 @@ export default function Home() {
             gtag('config', 'G-VTWX7GVQ6X');
           `}
         </Script>
+        <Script async src="https://scripts.simpleanalyticscdn.com/latest.js"/>
       </body>
     </html>
   )
