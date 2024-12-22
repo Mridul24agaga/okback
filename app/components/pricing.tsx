@@ -11,7 +11,7 @@ const plans = [
       "Basic SEO report",
     ],
     cta: "Get Started",
-    paymentLink: "https://checkout.dodopayments.com/buy/pdt_PW8GfDarmrkBwepjKsiWf?quantity=1&redirect_url=https://www.getmorebacklinks.org%2Fform-25",
+    paymentLink: "https://www.paypal.com/ncp/payment/YMCLCF3YXAPJ8",
   },
   {
     name: "Pro",
@@ -24,7 +24,7 @@ const plans = [
       "Hand-picked listings",
     ],
     cta: "Get Pro",
-    paymentLink: "https://checkout.dodopayments.com/buy/pdt_OE0yTNYKXdQczHEOfjKk5?quantity=1&redirect_url=https://www.getmorebacklinks.org%2Fform-37",
+    paymentLink: "https://www.paypal.com/ncp/payment/BATGY7ZHHACRL",
   },
   {
     name: "Advanced",
@@ -39,7 +39,7 @@ const plans = [
       "Hand-picked listings",
     ],
     cta: "Get Advanced",
-    paymentLink: "https://checkout.dodopayments.com/buy/pdt_h70bR16BhpI3Oy96jOw0M?quantity=1&redirect_url=https://www.getmorebacklinks.org%2Fform-75",
+    paymentLink: "https://www.paypal.com/ncp/payment/CMM6QF99TTNEY",
   },
   {
     name: "Business",
@@ -54,7 +54,7 @@ const plans = [
       "Hand-picked premium listings",
     ],
     cta: "Get Business",
-    paymentLink: "https://checkout.dodopayments.com/buy/pdt_zTn7Aq0Y3d6Y2LSB4KZ6r?quantity=1&redirect_url=https://www.getmorebacklinks.org%2Fform-100",
+    paymentLink: "https://www.paypal.com/ncp/payment/VK6EF5V9RT5V8",
   },
 ]
 
@@ -156,7 +156,7 @@ export default function PricingSection() {
               >
                 X (Twitter)
               </a>
-              , and we'll provide you with a PayPal link for any plan!
+              
             </strong>
           </p>
         </div>
