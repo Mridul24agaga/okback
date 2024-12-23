@@ -393,11 +393,7 @@ export default function ReportPage() {
           </div>
         </section>
 
-        <div className="text-center">
-          <button className="bg-gradient-to-r from-gray-600 to-orange-500 text-white px-8 py-3 rounded-lg font-bold">
-            Download Full Report
-          </button>
-        </div>
+       
       </main>
 
       <Footer/>
