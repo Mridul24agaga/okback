@@ -6,7 +6,7 @@ export function PromoBanner() {
           🚀 Get your 2 startups listed to 200+ directories at just <b>$87.5</b> each! 🎉 Plan valid for 1 year. ⏳
         </span>
         <a
-          href="https://checkout.dodopayments.com/buy/pdt_EEM9kSwW82b7xmxHuoXV6?quantity=1&redirect_url=https://getmorebacklinks.org%2Fform-100"
+          href="https://www.paypal.com/ncp/payment/P7DNHRX74TF22"
           className="bg-black text-white px-4 py-2 rounded-lg hover:bg-gray-800 transition duration-300 text-sm md:text-base"
         >
           Click Here
