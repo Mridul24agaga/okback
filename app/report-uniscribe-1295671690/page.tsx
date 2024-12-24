@@ -204,7 +204,7 @@ export default function ReportPage() {
                   <li>✅ 10 high-quality, SEO-optimized blog posts per month</li>
                   <li>✅ Tailored content strategy aligned with your business goals</li>
                   <li>✅ Expert writers with industry knowledge</li>
-                  <li>✅ Only $399/month</li>
+                  <li>✅ Only $499/month</li>
                 </ul>
                 <p className="text-sm font-bold">
                   Ready to elevate your SEO game? DM us on <a className='text-orange-600' href="https://x.com/KrissmannGupta">Twitter</a> to get started!
