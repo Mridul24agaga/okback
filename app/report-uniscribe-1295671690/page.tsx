@@ -207,7 +207,7 @@ export default function ReportPage() {
                   <li>✅ Only $399/month</li>
                 </ul>
                 <p className="text-sm font-bold">
-                  Ready to elevate your SEO game? DM us on Twitter to get started!
+                  Ready to elevate your SEO game? DM us on <a className='text-orange-600' href="https://x.com/KrissmannGupta">Twitter</a> to get started!
                 </p>
               </div>
             </div>
@@ -244,7 +244,7 @@ export default function ReportPage() {
                   If your startup has not been listed yet, don't worry! It takes 30-60 days for the results to appear.
                 </p>
                 <p className="text-lg mt-4">
-                  After 30 days, if you face any issues, message us on Twitter. We will help you out as much as we can!
+                  After 30 days, if you face any issues, message us on <a className='text-orange-600' href="https://x.com/KrissmannGupta">Twitter</a>. We will help you out as much as we can!
                 </p>
               </div>
             </div>
@@ -267,7 +267,6 @@ export default function ReportPage() {
                 rel="noopener noreferrer"
                 className="text-orange-500 hover:underline"
               >
-                Learn More
               </a>
             </div>
             <div className="bg-white border border-gray-200 rounded-lg p-4">
@@ -279,7 +278,6 @@ export default function ReportPage() {
                 rel="noopener noreferrer"
                 className="text-orange-500 hover:underline"
               >
-                Learn More
               </a>
             </div>
             <div className="bg-white border border-gray-200 rounded-lg p-4">
@@ -291,7 +289,6 @@ export default function ReportPage() {
                 rel="noopener noreferrer"
                 className="text-orange-500 hover:underline"
               >
-                Learn More
               </a>
             </div>
           </div>
