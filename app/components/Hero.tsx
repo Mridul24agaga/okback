@@ -216,11 +216,12 @@ export default function Hero() {
               >
                 Submit my Product
               </Link>
-              <button
+              <Link
+              href="/#learn"
                 className="px-6 sm:px-8 py-3 bg-white text-gray-900 rounded-md border border-gray-200 hover:bg-gray-50 transition-colors font-semibold text-base sm:text-lg"
               >
                 Learn more
-              </button>
+              </Link>
             </div>
 
             {/* Browser Window Mockup */}
