@@ -43,7 +43,7 @@ export default function Hero() {
   const [isScanning, setIsScanning] = useState(false)
   const [scanProgress, setScanProgress] = useState(0)
   const [analysisResult, setAnalysisResult] = useState<{ seoScore: number } | { error: string } | null>(null)
-  const [isDarkMode, setIsDarkMode] = useState(false)
+  //const [isDarkMode, setIsDarkMode] = useState(false)
   const [isMenuOpen, setIsMenuOpen] = useState(false)
 
   useEffect(() => {
@@ -80,9 +80,9 @@ export default function Hero() {
     }
   }
 
-  const toggleDarkMode = () => {
-    setIsDarkMode(!isDarkMode)
-  }
+  //const toggleDarkMode = () => {
+  //  setIsDarkMode(!isDarkMode)
+  //}
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen)
@@ -105,7 +105,7 @@ export default function Hero() {
   }, [isScanning]);
 
   return (
-    <div className={`min-h-screen font-sans flex flex-col ${isDarkMode ? 'dark' : ''}`}>
+    <div className="min-h-screen font-sans flex flex-col">
       <div className="bg-[#F97316] text-black py-2 px-4 text-center">
         <p className="text-sm font-medium">
           🎉 New Year Special Offer! 🎆 Get your 2 startups listed to 200+ directories at just $87.5 each! 🚀 Plan valid for 1 year. ⌛ 
@@ -170,7 +170,7 @@ export default function Hero() {
       </nav>
 
       {/* Hero Content */}
-      <div className="flex-grow relative overflow-hidden bg-white dark:bg-gray-900">
+      <div className="flex-grow relative overflow-hidden bg-white">
         {/* Grid Background */}
         <div 
           className="absolute inset-0"
@@ -193,18 +193,18 @@ export default function Hero() {
 
         <div className="container mx-auto px-4 py-12 sm:py-24 relative">
           <div className={`text-center max-w-4xl mx-auto transition-opacity duration-1000 ${isVisible ? 'opacity-100' : 'opacity-0'}`}>
-            <div className="inline-flex items-center justify-center bg-white dark:bg-gray-800 rounded-full px-4 py-2 mb-8 sm:mb-12 border border-gray-200 dark:border-gray-700 shadow-sm group relative">
+            <div className="inline-flex items-center justify-center bg-white rounded-full px-4 py-2 mb-8 sm:mb-12 border border-gray-200 shadow-sm group relative">
               <span className="bg-[#FF6B35] text-white text-xs font-semibold px-2 py-0.5 rounded-full mr-2">HOT</span>
-              <span className="text-gray-800 dark:text-gray-200 text-sm tracking-wide font-medium">
+              <span className="text-gray-800 text-sm tracking-wide font-medium">
                 One Click to SEO Success and Authority
               </span>
             </div>
-            <h1 className="text-4xl sm:text-6xl font-bold leading-tight mb-6 sm:mb-8 tracking-tight text-gray-900 dark:text-white">
+            <h1 className="text-4xl sm:text-6xl font-bold leading-tight mb-6 sm:mb-8 tracking-tight text-gray-900">
               BOOST YOUR <span className="text-[#F97316]">SEO</span><br />
               & GET MORE <span className="text-[#F97316]">SALES</span>
             </h1>
 
-            <p className="text-gray-700 dark:text-gray-300 text-lg sm:text-xl mb-8 sm:mb-12 max-w-2xl mx-auto">
+            <p className="text-gray-700 text-lg sm:text-xl mb-8 sm:mb-12 max-w-2xl mx-auto">
               Get instant traffic on your site, save days of manual work with just one click.
               Submit Your AI Startup To 100+ Platforms in 7 Days
             </p>
@@ -216,22 +216,21 @@ export default function Hero() {
               >
                 Submit my Product
               </Link>
-              <Link
-              href="/#learn"
+              <button
                 className="px-6 sm:px-8 py-3 bg-white text-gray-900 rounded-md border border-gray-200 hover:bg-gray-50 transition-colors font-semibold text-base sm:text-lg"
               >
                 Learn more
-              </Link>
+              </button>
             </div>
 
             {/* Browser Window Mockup */}
             <div className="mt-12 sm:mt-16 relative w-full max-w-4xl mx-auto bg-gray-900 rounded-lg shadow-2xl overflow-hidden">
               <div className="bg-gray-800 border-b border-gray-700 p-2 sm:p-4">
                 <div className="flex items-center">
-                  <div className="flex gap-1.5 ml-1.5">
-                    <div className="w-2 h-2 sm:w-3 sm:h-3 rounded-full bg-[#FF5F57]"></div>
-                    <div className="w-2 h-2 sm:w-3 sm:h-3 rounded-full bg-[#FFBD2E]"></div>
-                    <div className="w-2 h-2 sm:w-3 sm:h-3 rounded-full bg-[#28C840]"></div>
+                  <div className="flex gap-1.5 ml-3 sm:ml-4">
+                    <div className="w-2.5 h-2.5 sm:w-3 sm:h-3 rounded-full bg-[#FF5F57]"></div>
+                    <div className="w-2.5 h-2.5 sm:w-3 sm:h-3 rounded-full bg-[#FFBD2E]"></div>
+                    <div className="w-2.5 h-2.5 sm:w-3 sm:h-3 rounded-full bg-[#28C840]"></div>
                   </div>
                   <div className="flex-1 flex justify-center">
                     <div className="bg-gray-700 rounded-md px-2 sm:px-3 py-1 text-gray-300 text-xs sm:text-sm flex items-center gap-2 w-full sm:w-96 border border-gray-600">
@@ -242,7 +241,7 @@ export default function Hero() {
                 </div>
               </div>
               <div className="p-4 sm:p-8 bg-gradient-to-br from-gray-900 to-gray-800">
-                <div className="inline-block px-4 py-1 mb-4 text-sm text-white bg-gray-800 rounded-full border border-gray-700 max-w-full whitespace-normal sm:whitespace-nowrap">
+                <div className="inline-block px-4 py-1 mb-4 text-sm text-white bg-gray-800 rounded-full border border-gray-700 whitespace-nowrap overflow-hidden text-ellipsis max-w-full">
                   Note: This tool is in beta and may occasionally make mistakes.
                 </div>
                 <h2 className="text-2xl sm:text-3xl font-bold text-white mb-4 text-center">Welcome to GetMoreBacklinks</h2>
@@ -296,7 +295,7 @@ export default function Hero() {
                       <div className="mt-6 bg-gray-700 border border-gray-600 rounded-lg p-4">
                         <h3 className="text-base sm:text-lg font-semibold text-white mb-2">Analysis Report</h3>
                         {'error' in analysisResult ? (
-                          <div className="flex items-center text-red-500 dark:text-red-400">
+                          <div className="flex items-center text-red-500">
                             <AlertCircle className="w-4 h-4 sm:w-5 sm:h-5 mr-2" />
                             <p className="text-sm sm:text-base">{analysisResult.error}</p>
                           </div>
@@ -311,11 +310,11 @@ export default function Hero() {
                             </div>
                             <div className="text-center mb-4">
                               {analysisResult.seoScore < 50 ? (
-                                <p className="text-red-600 dark:text-red-400 font-semibold text-sm sm:text-base">Your SEO needs immediate attention!</p>
+                                <p className="text-red-600 font-semibold text-sm sm:text-base">Your SEO needs immediate attention!</p>
                               ) : analysisResult.seoScore < 80 ? (
-                                <p className="text-yellow-600 dark:text-yellow-400 font-semibold text-sm sm:text-base">Your SEO has room for improvement.</p>
+                                <p className="text-yellow-600 font-semibold text-sm sm:text-base">Your SEO has room for improvement.</p>
                               ) : (
-                                <p className="text-green-600 dark:text-green-400 font-semibold text-sm sm:text-base">Great job! Let's make it even better.</p>
+                                <p className="text-green-600 font-semibold text-sm sm:text-base">Great job! Let's make it even better.</p>
                               )}
                             </div>
                             <div className="bg-gray-700 p-4 rounded-md shadow-sm">
