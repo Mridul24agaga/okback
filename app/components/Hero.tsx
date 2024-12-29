@@ -109,9 +109,9 @@ export default function Hero() {
       <div className="bg-[#F97316] text-black py-2 px-4 text-center">
         <p className="text-sm font-medium">
           🎉 New Year Special Offer! 🎆 Get your 2 startups listed to 200+ directories at just $87.5 each! 🚀 Plan valid for 1 year. ⌛ 
-          <button className="ml-2 bg-black text-white px-3 py-1 rounded-md text-sm hover:bg-gray-900 transition-colors">
+          <Link href="https://www.paypal.com/ncp/payment/P7DNHRX74TF22" className="ml-2 bg-black text-white px-3 py-1 rounded-md text-sm hover:bg-gray-900 transition-colors">
             Click Here
-          </button>
+          </Link>
         </p>
       </div>
       {/* Navigation */}

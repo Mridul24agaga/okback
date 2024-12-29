@@ -1,17 +1,22 @@
-export function PromoBanner() {
+import Link from "next/link"
+
+export default function PromoBanner() {
   return (
-    <div className="w-full bg-orange-500 text-black py-3">
-      <div className="container mx-auto px-4 text-center font-medium flex flex-col md:flex-row items-center justify-center space-y-2 md:space-y-0 md:space-x-2">
-        <span className="text-sm md:text-lg text-center">
-          🚀 Get your 2 startups listed to 200+ directories at just <b>$87.5</b> each! 🎉 Plan valid for 1 year. ⏳
-        </span>
-        <a
-          href="https://www.paypal.com/ncp/payment/P7DNHRX74TF22"
-          className="bg-black text-white px-4 py-2 rounded-lg hover:bg-gray-800 transition duration-300 text-sm md:text-base"
+    <div className="w-full bg-[#FF6B00] py-4 px-4">
+      <div className="container mx-auto flex flex-col items-center justify-center gap-3 text-center text-sm sm:text-base">
+        <div className="flex flex-col items-center justify-center gap-2 text-black sm:flex-row sm:flex-wrap">
+          <span>🎉 New Year Special Offer!</span>
+          <span>📱 Get your 2 startups listed to 200+ directories at just $87.5 each!</span>
+          <span>📅 Plan valid for 1 year.</span>
+        </div>
+        <Link
+          href="/special-offer"
+          className="rounded-md bg-black px-6 py-2 font-medium text-white transition-colors hover:bg-black/80"
         >
           Click Here
-        </a>
+        </Link>
       </div>
     </div>
-  );
+  )
 }
+
