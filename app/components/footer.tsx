@@ -1,6 +1,6 @@
 'use client'
 
-import { Twitter, Linkedin } from 'lucide-react'
+import { Twitter, Linkedin, Send } from 'lucide-react'
 import Link from 'next/link'
 import Image from 'next/image'
 import { useEffect, useState } from 'react'
@@ -137,6 +137,14 @@ export default function Footer() {
                   <li><Link href="/privacy-policy" className="hover:text-gray-900 transition-colors">Privacy Policy</Link></li>
                   <li><Link href="/terms" className="hover:text-gray-900 transition-colors">Terms of Service</Link></li>
                 </ul>
+                {/* Contact Email Addresses */}
+                <div className="mt-6">
+                  <h4 className="text-gray-900 font-semibold mb-2">Contact Us</h4>
+                  <ul className="space-y-2">
+                    <li><a href="mailto:hi@mridulthareja.com" className="hover:text-gray-900 transition-colors">hi@mridulthareja.com</a></li>
+                    <li><a href="mailto:founder@markupxbrands.com" className="hover:text-gray-900 transition-colors">founder@markupxbrands.com</a></li>
+                  </ul>
+                </div>
               </div>
             </div>
           </div>
