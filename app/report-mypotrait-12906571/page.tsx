@@ -25,7 +25,6 @@ export default function ReportPage() {
       </header>
 
       <main className="container mx-auto py-12 px-4">
-        {/* Report Overview Section */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">
           <section className="bg-gray-50/80 border border-gray-200 rounded-lg p-6">
             <h2 className="text-2xl font-bold mb-4">
@@ -62,22 +61,21 @@ export default function ReportPage() {
           </section>
         </div>
 
-        {/* Submitted Websites Section */}
         <section className="bg-gray-50/80 border border-gray-200 rounded-lg p-6 mb-12">
           <h2 className="text-2xl font-bold mb-6">
             <span className="text-orange-500">Submitted</span> Websites
           </h2>
           <p className="mb-6">Your startup has been submitted to {websiteList.length} websites. This extensive list covers a wide range of platforms, increasing your chances of visibility and success.</p>
           
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-6">
-            <div className="col-span-full bg-gray-50/80 border border-gray-200 rounded-lg p-4">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mb-6">
+            <div className="bg-gray-50/80 border border-gray-200 rounded-lg p-4">
               <div className="flex items-start justify-between">
                 <div>
-                  <h3 className="font-bold text-lg mb-2">BanSearch</h3>
-                  <p className="text-sm text-gray-600 mb-2">Enter a Steam account below to check a players ban status and history.</p>
+                  <h3 className="font-bold text-lg mb-2">SaasyDB</h3>
+                  <p className="text-sm text-gray-600 mb-2">Comprehensive SaaS company lead database</p>
                 </div>
                 <a 
-                  href="https://bansearch.com/"
+                  href="https://saasydb.com/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-black"
@@ -92,19 +90,19 @@ export default function ReportPage() {
             
             <div className="col-span-full bg-gray-50/80 border border-gray-200 rounded-lg p-4">
               <h3 className="font-bold text-lg mb-2">Landing Page Analysis</h3>
-              <p className="text-sm text-gray-600 mb-2">Overall Score: 46/100</p>
+              <p className="text-sm text-gray-600 mb-2">Overall Score: 68/100</p>
               <div className="space-y-2">
                 <div className="flex justify-between">
                   <span>Messaging</span>
-                  <span className="font-bold">80/100</span>
+                  <span className="font-bold">60/100</span>
                 </div>
                 <div className="flex justify-between">
                   <span>Readability</span>
-                  <span className="font-bold">40/100</span>
+                  <span className="font-bold">65/100</span>
                 </div>
                 <div className="flex justify-between">
                   <span>Structure</span>
-                  <span className="font-bold">40/100</span>
+                  <span className="font-bold">75/100</span>
                 </div>
                 <div className="flex justify-between">
                   <span>Actionability</span>
@@ -116,26 +114,16 @@ export default function ReportPage() {
                 </div>
                 <div className="flex justify-between">
                   <span>Credibility</span>
-                  <span className="font-bold">10/100</span>
+                  <span className="font-bold">80/100</span>
                 </div>
               </div>
               <h4 className="font-bold mt-4 mb-2">Summary</h4>
-              <p className="text-sm mb-2">The landing page has a sleek and modern design with a dark background that makes the essential elements pop. The use of purple for the main heading and search box draws immediate attention. However, it's too minimal and leaves out crucial information, such as a more detailed explanation of what BanSearch does and why users should care. The call to action is clear but feels somewhat lost on the page due to the lack of supporting content. Not having enough context or information might leave users wondering if this is trustworthy or worth their time.</p>
+              <p className="text-sm mb-2">The website aims to capture the attention of marketers seeking a comprehensive SaaS database. The strong offer of "Get the Leads of a Whole Company" is eye-catching and bold. However, the visual hierarchy feels somewhat scattered with inconsistent usage of colors and fonts, which can make navigation a bit cumbersome. The call-to-action buttons, while present, lack urgency and don't stand out enough against the background.</p>
               <h4 className="font-bold mt-4 mb-2">Main Recommendations</h4>
               <ul className="list-disc list-inside text-sm">
-                <li>Add a clearer explanation of what BanSearch offers, beyond a one-liner.</li>
-                <li>Include social proof or trust indicators to enhance credibility.</li>
-                <li>Improve the Open Graph data with a relevant and engaging title and description.</li>
-              </ul>
-            </div>
-            <div className="mt-6 bg-orange-100 border-2 border-orange-500 rounded-lg p-6">
-              <h4 className="font-bold text-xl mb-4 text-orange-600">Landing Page Improvement Suggestions</h4>
-              <ul className="list-disc list-inside space-y-2">
-                <li><strong>Enhance Readability (40/100):</strong> Simplify language, use shorter paragraphs, and incorporate bullet points for key information.</li>
-                <li><strong>Improve Structure (40/100):</strong> Organize content with clear headings and subheadings. Use a logical flow of information.</li>
-                <li><strong>Boost Actionability (55/100):</strong> Make call-to-action buttons more prominent and place them strategically throughout the page.</li>
-                <li><strong>Upgrade Design (50/100):</strong> Use more whitespace, improve color contrast, and ensure consistent styling across the page.</li>
-                <li><strong>Increase Credibility (10/100):</strong> Add customer testimonials, trust badges, and showcase any relevant certifications or partnerships.</li>
+                <li>Add more testimonials or customer reviews to build trust.</li>
+                <li>Improve CTA visibility by using contrasting colors and more specific action verbs.</li>
+                <li>Enhance section breaks with more whitespace and visual cues to guide reading flow.</li>
               </ul>
             </div>
 
@@ -143,30 +131,13 @@ export default function ReportPage() {
               <h3 className="font-bold text-lg mb-4">SEO Analysis</h3>
               <div className="space-y-6">
                 <div>
-                  <h4 className="font-bold">Links & Navigation</h4>
-                  <p className="text-sm text-gray-600">Score: 67/100</p>
-                </div>
-                <div>
-                  <h4 className="font-bold">Internal Links</h4>
-                  <p className="text-sm text-gray-600">Score: 0/100</p>
-                  <p className="text-sm">Internal links are crucial for SEO, helping search engines understand your site structure and distributing page authority.</p>
-                  <p className="text-sm font-semibold mt-2">Issue: No internal links found</p>
-                  <p className="text-sm">Suggestion: Add more internal links to improve site structure and help search engines understand your content hierarchy.</p>
-                </div>
-                <div>
-                  <h4 className="font-bold">Robots.txt</h4>
-                  <p className="text-sm text-gray-600">Score: 50/100</p>
-                  <p className="text-sm">A robots.txt file is used to tell search engine crawlers which pages they can or cannot access on your site.</p>
-                  <p className="text-sm font-semibold mt-2">Issue: Current page is blocked by robots.txt</p>
-                  <p className="text-sm">Suggestion: The current page is blocked by robots.txt. If this is unintentional, update your robots.txt file.</p>
-                </div>
-                <div>
                   <h4 className="font-bold">Canonical URL</h4>
-                  <p className="text-sm text-gray-600">Score: 0/100</p>
+                  <p className="text-sm text-gray-600">Score: 50/100</p>
                   <p className="text-sm">Canonical URLs help prevent duplicate content issues by specifying the preferred version of a page.</p>
-                  <p className="text-sm font-semibold mt-2">Issue: No canonical URL found</p>
-                  <p className="text-sm">Suggestion: Add a canonical URL to specify the preferred version of this page.</p>
+                  <p className="text-sm font-semibold mt-2">Issue: Canonical URL differs from current URL (https://www.saasydb.com/)</p>
+                  <p className="text-sm">Suggestion: The canonical URL differs from the current URL. Ensure this is intentional.</p>
                 </div>
+                
                 <div>
                   <h4 className="font-bold">Hreflang Tags</h4>
                   <p className="text-sm text-gray-600">Score: 0/100</p>
@@ -174,101 +145,68 @@ export default function ReportPage() {
                   <p className="text-sm font-semibold mt-2">Issue: No hreflang tags found</p>
                   <p className="text-sm">Suggestion: Consider adding hreflang tags if your content is available in multiple languages.</p>
                 </div>
-                <div>
-                  <h4 className="font-bold">Title</h4>
-                  <p className="text-sm text-gray-600">Score: 50/100</p>
-                  <p className="text-sm">The title tag is one of the most important elements for SEO and appears in search results.</p>
-                  <p className="text-sm font-semibold mt-2">Issue: Title length not optimal</p>
-                  <p className="text-sm">Current title: BanSearch - Player Ban Checker</p>
-                  <p className="text-sm">Suggestion: Title is too short. Aim for 50-60 characters.</p>
-                </div>
-                <div>
-                  <h4 className="font-bold">Meta Description</h4>
-                  <p className="text-sm text-gray-600">Score: 74/100</p>
-                  <p className="text-sm">The meta description provides a brief summary of the page content for search results.</p>
-                  <p className="text-sm font-semibold mt-2">Issue: Meta description length not optimal</p>
-                  <p className="text-sm">Current description: Easily check Steam accounts for their complete ban history across multiple games, anti-cheat providers and communities.</p>
-                  <p className="text-sm">Suggestion: Meta description is too short. Aim for 120-160 characters.</p>
-                </div>
-                <div>
-                  <h4 className="font-bold">Open Graph</h4>
-                  <p className="text-sm text-gray-600">Score: 33/100</p>
-                  <p className="text-sm">The og:title, og:description and og:image tags are used to define the title, description and image of your content when shared on social media platforms.</p>
-                  <p className="text-sm font-semibold mt-2">Issues:</p>
-                  <ul className="list-disc list-inside text-sm">
-                    <li>No Open Graph title found</li>
-                    <li>No Open Graph description found</li>
-                  </ul>
-                  <p className="text-sm">Suggestion: Add an og:title tag to optimize how your content appears when shared on social media.</p>
-                </div>
-                <div>
-                  <h4 className="font-bold">Word Count</h4>
-                  <p className="text-sm text-gray-600">Score: 6/100</p>
-                  <p className="text-sm">The word count is used to determine the number of words on the page, which can impact SEO and user engagement.</p>
-                  <p className="text-sm font-semibold mt-2">Issue: Word count is below optimal level</p>
-                  <p className="text-sm">Current word count: 19</p>
-                  <p className="text-sm">Suggestion: Consider adding more content to reach a minimum of 300 words for better SEO.</p>
-                </div>
+                
                 <div>
                   <h4 className="font-bold">Images Alt Tags</h4>
                   <p className="text-sm text-gray-600">Score: 0/100</p>
                   <p className="text-sm">Image alt tags are important for accessibility and SEO, providing context for images when they cannot be displayed.</p>
-                  <p className="text-sm">Suggestion: Add descriptive alt tags to images that are missing them to improve accessibility and SEO.</p>
+                  <p className="text-sm font-semibold mt-2">Issue: Images without alt tags found</p>
                 </div>
+                
+                <div>
+                  <h4 className="font-bold">Headings Structure</h4>
+                  <p className="text-sm text-gray-600">Score: 0/100</p>
+                  <p className="text-sm">A proper heading structure is important for SEO and accessibility, helping both users and search engines understand the content hierarchy.</p>
+                  <p className="text-sm font-semibold mt-2">Issues:</p>
+                  <ul className="list-disc list-inside text-sm ml-4">
+                    <li>Heading level skipped. "(Limited early bird prices - Increases to $497 on January 7th)" should be H4 instead of H6</li>
+                    <li>Heading level skipped. "extensive saas database" should be H4 instead of H6</li>
+                    <li>Heading level skipped. "precision targeting" should be H5 instead of H6</li>
+                    <li>Heading level skipped. "More EMAIL TARGETs" should be H5 instead of H6</li>
+                    <li>Heading level skipped. "complete Employee info" should be H5 instead of H6</li>
+                    <li>Heading level skipped. "FUNDING ROUNDS AND COMPANY GROWTH" should be H5 instead of H6</li>
+                    <li>Heading level skipped. "It's all saas" should be H5 instead of H6</li>
+                    <li>Heading level skipped. "UNLIMITED LEADS FOREVER" should be H5 instead of H6</li>
+                    <li>Heading level skipped. "SOLOPRENEURS AND FOUNDERS" should be H4 instead of H6</li>
+                    <li>Multiple H1 headings found</li>
+                  </ul>
+                  <p className="text-sm mt-2">Suggestion: Improve your heading structure by addressing the issues listed above.</p>
+                </div>
+                
                 <div>
                   <h4 className="font-bold">Structured Data</h4>
                   <p className="text-sm text-gray-600">Score: 0/100</p>
                   <p className="text-sm">Structured data helps search engines understand your content better and can lead to rich results in search engine results pages.</p>
-                  <p className="text-sm font-semibold mt-2">Issue: No structured data found. No JSON-LD structured data detected</p>
+                  <p className="text-sm font-semibold mt-2">Issue: No structured data found. No JSON-LD structured data detected.</p>
                   <p className="text-sm">Suggestion: Consider adding structured data to enhance how your content appears in search results.</p>
                 </div>
               </div>
             </div>
-            <div className="mt-6 bg-orange-100 border-2 border-orange-500 rounded-lg p-6">
-              <h4 className="font-bold text-xl mb-4 text-orange-600">SEO Improvement Suggestions</h4>
-              <ul className="list-disc list-inside space-y-2">
-                <li><strong>Add Internal Links:</strong> Create a clear site structure with internal linking to improve navigation and SEO.</li>
-                <li><strong>Update Robots.txt:</strong> Ensure the robots.txt file is not blocking important pages from being crawled.</li>
-                <li><strong>Implement Canonical URLs:</strong> Add canonical tags to prevent duplicate content issues.</li>
-                <li><strong>Optimize Title Tag:</strong> Expand the title to 50-60 characters, including relevant keywords.</li>
-                <li><strong>Enhance Meta Description:</strong> Extend the meta description to 120-160 characters, making it more descriptive and compelling.</li>
-                <li><strong>Add Open Graph Tags:</strong> Implement og:title and og:description tags for better social media sharing.</li>
-                <li><strong>Increase Word Count:</strong> Aim for at least 300 words of high-quality, relevant content on the page.</li>
-                <li><strong>Add Alt Tags to Images:</strong> Ensure all images have descriptive alt tags for better accessibility and SEO.</li>
-                <li><strong>Implement Structured Data:</strong> Add JSON-LD structured data to provide more context to search engines.</li>
-              </ul>
-            </div>
 
-            <div className="col-span-full mt-6 bg-orange-100 border-2 border-orange-500 rounded-lg p-6">
-              <div className="flex items-center gap-2 mb-4">
-                <FiEdit className="text-orange-500 w-8 h-8" />
-                <h4 className="font-bold text-2xl text-orange-600">Boost Your SEO with Our Blog Service</h4>
+            <div className="col-span-full mt-6 bg-orange-100 border border-orange-300 rounded-lg p-4">
+              <div className="flex items-center gap-2 mb-3">
+                <FiEdit className="text-orange-500" />
+                <h4 className="font-bold text-lg">Boost Your SEO with Our Blog Service</h4>
               </div>
-              <p className="text-lg mb-4">
+              <p className="text-sm mb-2">
                 <strong>Blogs are crucial for SEO success.</strong> They help you:
               </p>
-              <ul className="list-disc list-inside text-lg space-y-2 mb-6">
+              <ul className="list-disc list-inside text-sm space-y-1 mb-4">
                 <li>Increase organic traffic</li>
                 <li>Improve search engine rankings</li>
                 <li>Establish your brand as an industry authority</li>
                 <li>Create opportunities for backlinks</li>
                 <li>Engage your audience and increase time on site</li>
               </ul>
-              <p className="text-xl font-bold mb-4">We offer a premium blog service to supercharge your SEO efforts:</p>
-              <ul className="list-none text-lg space-y-3 mb-6">
-                <li className="flex items-center"><span className="text-green-500 mr-2 text-2xl">✅</span> 10 high-quality, SEO-optimized blog posts per month</li>
-                <li className="flex items-center"><span className="text-green-500 mr-2 text-2xl">✅</span> Tailored content strategy aligned with your business goals</li>
-                <li className="flex items-center"><span className="text-green-500 mr-2 text-2xl">✅</span> Expert writers with industry knowledge</li>
-                <li className="flex items-center"><span className="text-green-500 mr-2 text-2xl">✅</span> Only $499/month</li>
+              <p className="text-sm font-bold mb-2">We offer a premium blog service to supercharge your SEO efforts:</p>
+              <ul className="list-none text-sm space-y-1 mb-4">
+                <li>✅ 10 high-quality, SEO-optimized blog posts per month</li>
+                <li>✅ Tailored content strategy aligned with your business goals</li>
+                <li>✅ Expert writers with industry knowledge</li>
+                <li>✅ Only $499/month</li>
               </ul>
-              <p className="text-xl font-bold">
-                Ready to elevate your SEO game? 
-                <a className='text-orange-600 hover:underline ml-2' href="https://x.com/KrissmannGupta" target="_blank" rel="noopener noreferrer">
-                  DM us on Twitter to get started! </a>
-                or  
-                <a className='text-orange-600 hover:underline ml-2' href="https://www.paypal.com/ncp/payment/GRRU84QL2C7QS" target="_blank" rel="noopener noreferrer">
-                   Pay us Here Directly. We will get in touch with you!
-                </a>
+              <p className="text-sm font-bold">
+                Ready to elevate your SEO game? DM us on <a className='text-orange-600' href="https://x.com/KrissmannGupta">Twitter</a> to get started!
               </p>
             </div>
 
@@ -374,7 +312,7 @@ export default function ReportPage() {
             <div className="bg-white rounded-lg border border-gray-200 overflow-hidden">
               <div className="relative h-[400px]">
                 <Image 
-                  src="/bansearch1.png" 
+                  src="/rundown.png" 
                   alt="Startupanz.com confirmation"
                   fill
                   className="object-contain"
@@ -387,7 +325,7 @@ export default function ReportPage() {
             <div className="bg-white rounded-lg border border-gray-200 overflow-hidden">
               <div className="relative h-[400px]">
                 <Image 
-                  src="/bansearch2.png" 
+                  src="/microlaunch.png" 
                   alt="ProductHunt submission"
                   fill
                   className="object-contain"
@@ -399,7 +337,7 @@ export default function ReportPage() {
             <div className="bg-white rounded-lg border border-gray-200 overflow-hidden">
               <div className="relative h-[400px]">
                 <Image 
-                  src="/bansearch3.png" 
+                  src="/chrisss.png" 
                   alt="BetaList confirmation"
                   fill
                   className="object-contain"
@@ -411,7 +349,7 @@ export default function ReportPage() {
             <div className="bg-white rounded-lg border border-gray-200 overflow-hidden">
               <div className="relative h-[400px]">
                 <Image 
-                  src="/bansearch4.png" 
+                  src="/betalist.png" 
                   alt="HackerNews submission"
                   fill
                   className="object-contain"
@@ -423,7 +361,7 @@ export default function ReportPage() {
             <div className="bg-white rounded-lg border border-gray-200 overflow-hidden">
               <div className="relative h-[400px]">
                 <Image 
-                  src="/bansearch5.png" 
+                  src="/verytin.png" 
                   alt="TechCrunch pitch"
                   fill
                   className="object-contain"
@@ -435,7 +373,7 @@ export default function ReportPage() {
             <div className="bg-white rounded-lg border border-gray-200 overflow-hidden">
               <div className="relative h-[400px]">
                 <Image 
-                  src="/bansearch6.png" 
+                  src="/doneexact.png" 
                   alt="AngelList listing"
                   fill
                   className="object-contain"
@@ -443,11 +381,19 @@ export default function ReportPage() {
               </div>
               
             </div>
+
+           
+
+            
           </div>
         </section>
+
+       
       </main>
 
       <Footer/>
+
+     
     </div>
   )
 }
