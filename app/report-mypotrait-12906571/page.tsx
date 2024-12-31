@@ -25,6 +25,7 @@ export default function ReportPage() {
       </header>
 
       <main className="container mx-auto py-12 px-4">
+        {/* Report Overview Section */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">
           <section className="bg-gray-50/80 border border-gray-200 rounded-lg p-6">
             <h2 className="text-2xl font-bold mb-4">
@@ -61,21 +62,21 @@ export default function ReportPage() {
           </section>
         </div>
 
+        {/* Submitted Websites Section */}
         <section className="bg-gray-50/80 border border-gray-200 rounded-lg p-6 mb-12">
           <h2 className="text-2xl font-bold mb-6">
             <span className="text-orange-500">Submitted</span> Websites
           </h2>
           <p className="mb-6">Your startup has been submitted to {websiteList.length} websites. This extensive list covers a wide range of platforms, increasing your chances of visibility and success.</p>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mb-6">
-            <div className="bg-gray-50/80 border border-gray-200 rounded-lg p-4">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-6">
+            <div className="col-span-full bg-gray-50/80 border border-gray-200 rounded-lg p-4">
               <div className="flex items-start justify-between">
                 <div>
-                  <h3 className="font-bold text-lg mb-2">SaasyDB</h3>
-                  <p className="text-sm text-gray-600 mb-2">Comprehensive SaaS company lead database</p>
+                  <h3 className="font-bold text-lg mb-2">MyPortrait</h3>
                 </div>
                 <a 
-                  href="https://saasydb.com/"
+                  href="https://www.myportrait.studio/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-black"
@@ -89,55 +90,33 @@ export default function ReportPage() {
             </div>
             
             <div className="col-span-full bg-gray-50/80 border border-gray-200 rounded-lg p-4">
-              <h3 className="font-bold text-lg mb-2">Landing Page Analysis</h3>
-              <p className="text-sm text-gray-600 mb-2">Overall Score: 68/100</p>
-              <div className="space-y-2">
-                <div className="flex justify-between">
-                  <span>Messaging</span>
-                  <span className="font-bold">60/100</span>
-                </div>
-                <div className="flex justify-between">
-                  <span>Readability</span>
-                  <span className="font-bold">65/100</span>
-                </div>
-                <div className="flex justify-between">
-                  <span>Structure</span>
-                  <span className="font-bold">75/100</span>
-                </div>
-                <div className="flex justify-between">
-                  <span>Actionability</span>
-                  <span className="font-bold">55/100</span>
-                </div>
-                <div className="flex justify-between">
-                  <span>Design</span>
-                  <span className="font-bold">50/100</span>
-                </div>
-                <div className="flex justify-between">
-                  <span>Credibility</span>
-                  <span className="font-bold">80/100</span>
-                </div>
-              </div>
-              <h4 className="font-bold mt-4 mb-2">Summary</h4>
-              <p className="text-sm mb-2">The website aims to capture the attention of marketers seeking a comprehensive SaaS database. The strong offer of "Get the Leads of a Whole Company" is eye-catching and bold. However, the visual hierarchy feels somewhat scattered with inconsistent usage of colors and fonts, which can make navigation a bit cumbersome. The call-to-action buttons, while present, lack urgency and don't stand out enough against the background.</p>
-              <h4 className="font-bold mt-4 mb-2">Main Recommendations</h4>
-              <ul className="list-disc list-inside text-sm">
-                <li>Add more testimonials or customer reviews to build trust.</li>
-                <li>Improve CTA visibility by using contrasting colors and more specific action verbs.</li>
-                <li>Enhance section breaks with more whitespace and visual cues to guide reading flow.</li>
-              </ul>
-            </div>
-
-            <div className="col-span-full bg-gray-50/80 border border-gray-200 rounded-lg p-4">
               <h3 className="font-bold text-lg mb-4">SEO Analysis</h3>
               <div className="space-y-6">
                 <div>
-                  <h4 className="font-bold">Canonical URL</h4>
-                  <p className="text-sm text-gray-600">Score: 50/100</p>
-                  <p className="text-sm">Canonical URLs help prevent duplicate content issues by specifying the preferred version of a page.</p>
-                  <p className="text-sm font-semibold mt-2">Issue: Canonical URL differs from current URL (https://www.saasydb.com/)</p>
-                  <p className="text-sm">Suggestion: The canonical URL differs from the current URL. Ensure this is intentional.</p>
+                  <h4 className="font-bold">Links & Navigation</h4>
+                  <p className="text-sm text-gray-600">Score: 33/100</p>
                 </div>
-                
+                <div>
+                  <h4 className="font-bold">Internal Links</h4>
+                  <p className="text-sm text-gray-600">Score: 0/100</p>
+                  <p className="text-sm">Internal links are crucial for SEO, helping search engines understand your site structure and distributing page authority.</p>
+                  <p className="text-sm font-semibold mt-2">Issue: No internal links found</p>
+                  <p className="text-sm">Suggestion: Add more internal links to improve site structure and help search engines understand your content hierarchy.</p>
+                </div>
+                <div>
+                  <h4 className="font-bold">Sitemap</h4>
+                  <p className="text-sm text-gray-600">Score: 0/100</p>
+                  <p className="text-sm">A sitemap is a file that lists all the pages on a website, making it easier for search engines to crawl and index the site.</p>
+                  <p className="text-sm font-semibold mt-2">Error: Failed to check sitemap: Invalid sitemap content type</p>
+                  <p className="text-sm">Suggestion: There was an error checking the sitemap. Please ensure the domain is accessible and try again.</p>
+                </div>
+                <div>
+                  <h4 className="font-bold">Canonical URL</h4>
+                  <p className="text-sm text-gray-600">Score: 0/100</p>
+                  <p className="text-sm">Canonical URLs help prevent duplicate content issues by specifying the preferred version of a page.</p>
+                  <p className="text-sm font-semibold mt-2">Issue: No canonical URL found</p>
+                  <p className="text-sm">Suggestion: Add a canonical URL to specify the preferred version of this page.</p>
+                </div>
                 <div>
                   <h4 className="font-bold">Hreflang Tags</h4>
                   <p className="text-sm text-gray-600">Score: 0/100</p>
@@ -145,68 +124,107 @@ export default function ReportPage() {
                   <p className="text-sm font-semibold mt-2">Issue: No hreflang tags found</p>
                   <p className="text-sm">Suggestion: Consider adding hreflang tags if your content is available in multiple languages.</p>
                 </div>
-                
+                <div>
+                  <h4 className="font-bold">Title</h4>
+                  <p className="text-sm text-gray-600">Score: 0/100</p>
+                  <p className="text-sm">The title tag is one of the most important elements for SEO and appears in search results.</p>
+                  <p className="text-sm font-semibold mt-2">Issue: No title found</p>
+                  <p className="text-sm">Suggestion: Add a title tag to improve your page visibility in search results.</p>
+                </div>
+                <div>
+                  <h4 className="font-bold">Meta Description</h4>
+                  <p className="text-sm text-gray-600">Score: 0/100</p>
+                  <p className="text-sm">The meta description provides a brief summary of the page content for search results.</p>
+                  <p className="text-sm font-semibold mt-2">Issue: No meta description found</p>
+                  <p className="text-sm">Suggestion: Add a meta description to improve your search result appearance.</p>
+                </div>
+                <div>
+                  <h4 className="font-bold">Open Graph</h4>
+                  <p className="text-sm text-gray-600">Score: 0/100</p>
+                  <p className="text-sm">The og:title, og:description and og:image tags are used to define the title, description and image of your content when shared on social media platforms.</p>
+                  <p className="text-sm font-semibold mt-2">Issues:</p>
+                  <ul className="list-disc list-inside text-sm">
+                    <li>No Open Graph title found</li>
+                    <li>No Open Graph description found</li>
+                    <li>No Open Graph image found</li>
+                  </ul>
+                  <p className="text-sm">Suggestion: Add Open Graph tags to optimize how your content appears when shared on social media.</p>
+                </div>
+                <div>
+                  <h4 className="font-bold">Word Count</h4>
+                  <p className="text-sm text-gray-600">Score: 0/100</p>
+                  <p className="text-sm">The word count is used to determine the number of words on the page, which can impact SEO and user engagement.</p>
+                  <p className="text-sm font-semibold mt-2">Issue: Word count is below optimal level</p>
+                  <p className="text-sm">Suggestion: Consider adding more content to reach a minimum of 300 words for better SEO.</p>
+                </div>
                 <div>
                   <h4 className="font-bold">Images Alt Tags</h4>
                   <p className="text-sm text-gray-600">Score: 0/100</p>
                   <p className="text-sm">Image alt tags are important for accessibility and SEO, providing context for images when they cannot be displayed.</p>
-                  <p className="text-sm font-semibold mt-2">Issue: Images without alt tags found</p>
+                  <p className="text-sm">Suggestion: Add descriptive alt tags to images that are missing them to improve accessibility and SEO.</p>
                 </div>
-                
-                <div>
-                  <h4 className="font-bold">Headings Structure</h4>
-                  <p className="text-sm text-gray-600">Score: 0/100</p>
-                  <p className="text-sm">A proper heading structure is important for SEO and accessibility, helping both users and search engines understand the content hierarchy.</p>
-                  <p className="text-sm font-semibold mt-2">Issues:</p>
-                  <ul className="list-disc list-inside text-sm ml-4">
-                    <li>Heading level skipped. "(Limited early bird prices - Increases to $497 on January 7th)" should be H4 instead of H6</li>
-                    <li>Heading level skipped. "extensive saas database" should be H4 instead of H6</li>
-                    <li>Heading level skipped. "precision targeting" should be H5 instead of H6</li>
-                    <li>Heading level skipped. "More EMAIL TARGETs" should be H5 instead of H6</li>
-                    <li>Heading level skipped. "complete Employee info" should be H5 instead of H6</li>
-                    <li>Heading level skipped. "FUNDING ROUNDS AND COMPANY GROWTH" should be H5 instead of H6</li>
-                    <li>Heading level skipped. "It's all saas" should be H5 instead of H6</li>
-                    <li>Heading level skipped. "UNLIMITED LEADS FOREVER" should be H5 instead of H6</li>
-                    <li>Heading level skipped. "SOLOPRENEURS AND FOUNDERS" should be H4 instead of H6</li>
-                    <li>Multiple H1 headings found</li>
-                  </ul>
-                  <p className="text-sm mt-2">Suggestion: Improve your heading structure by addressing the issues listed above.</p>
-                </div>
-                
                 <div>
                   <h4 className="font-bold">Structured Data</h4>
                   <p className="text-sm text-gray-600">Score: 0/100</p>
                   <p className="text-sm">Structured data helps search engines understand your content better and can lead to rich results in search engine results pages.</p>
-                  <p className="text-sm font-semibold mt-2">Issue: No structured data found. No JSON-LD structured data detected.</p>
+                  <p className="text-sm font-semibold mt-2">Issue: No structured data found. No JSON-LD structured data detected</p>
                   <p className="text-sm">Suggestion: Consider adding structured data to enhance how your content appears in search results.</p>
+                </div>
+                <div>
+                  <h4 className="font-bold">Keywords</h4>
+                  <p className="text-sm text-gray-600">Score: 0/100</p>
+                  <p className="text-sm">Keywords are crucial for SEO, ensuring a smooth user experience and proper page indexing.</p>
+                  <p className="text-sm font-semibold mt-2">Issue: No keywords found</p>
+                  <p className="text-sm">Suggestion: Add keywords to ensure a smooth user experience and proper page indexing.</p>
                 </div>
               </div>
             </div>
+            <div className="mt-6 bg-orange-100 border-2 border-orange-500 rounded-lg p-6">
+              <h4 className="font-bold text-xl mb-4 text-orange-600">SEO Improvement Suggestions</h4>
+              <ul className="list-disc list-inside space-y-2">
+                <li><strong>Add Internal Links:</strong> Create a clear site structure with internal linking to improve navigation and SEO.</li>
+                <li><strong>Create a Sitemap:</strong> Generate and submit a sitemap to help search engines crawl and index your site more effectively.</li>
+                <li><strong>Implement Canonical URLs:</strong> Add canonical tags to prevent duplicate content issues.</li>
+                <li><strong>Add Title and Meta Description:</strong> Create compelling and relevant title tags and meta descriptions for better search result appearance.</li>
+                <li><strong>Implement Open Graph Tags:</strong> Add og:title, og:description, and og:image tags for better social media sharing.</li>
+                <li><strong>Increase Content:</strong> Add more high-quality, relevant content to reach at least 300 words per page.</li>
+                <li><strong>Optimize Images:</strong> Add descriptive alt tags to all images for better accessibility and SEO.</li>
+                <li><strong>Add Structured Data:</strong> Implement JSON-LD structured data to provide more context to search engines.</li>
+                <li><strong>Keyword Optimization:</strong> Research and incorporate relevant keywords throughout your content.</li>
+              </ul>
+            </div>
 
-            <div className="col-span-full mt-6 bg-orange-100 border border-orange-300 rounded-lg p-4">
-              <div className="flex items-center gap-2 mb-3">
-                <FiEdit className="text-orange-500" />
-                <h4 className="font-bold text-lg">Boost Your SEO with Our Blog Service</h4>
+            <div className="col-span-full mt-6 bg-orange-100 border-2 border-orange-500 rounded-lg p-6">
+              <div className="flex items-center gap-2 mb-4">
+                <FiEdit className="text-orange-500 w-8 h-8" />
+                <h4 className="font-bold text-2xl text-orange-600">Boost Your SEO with Our Indexation and Landing Page Strategy Service</h4>
               </div>
-              <p className="text-sm mb-2">
-                <strong>Blogs are crucial for SEO success.</strong> They help you:
+              <p className="text-lg mb-4">
+                <strong>Improve your SEO score and online visibility with our expert service:</strong>
               </p>
-              <ul className="list-disc list-inside text-sm space-y-1 mb-4">
-                <li>Increase organic traffic</li>
-                <li>Improve search engine rankings</li>
-                <li>Establish your brand as an industry authority</li>
-                <li>Create opportunities for backlinks</li>
-                <li>Engage your audience and increase time on site</li>
+              <ul className="list-disc list-inside text-lg space-y-2 mb-6">
+                <li>Comprehensive site audit and indexation strategy</li>
+                <li>Custom landing page optimization plan</li>
+                <li>Keyword research and implementation</li>
+                <li>Technical SEO improvements</li>
+                <li>Content strategy recommendations</li>
               </ul>
-              <p className="text-sm font-bold mb-2">We offer a premium blog service to supercharge your SEO efforts:</p>
-              <ul className="list-none text-sm space-y-1 mb-4">
-                <li>✅ 10 high-quality, SEO-optimized blog posts per month</li>
-                <li>✅ Tailored content strategy aligned with your business goals</li>
-                <li>✅ Expert writers with industry knowledge</li>
-                <li>✅ Only $499/month</li>
+              <p className="text-xl font-bold mb-4">Get a tailored SEO strategy to boost your online presence:</p>
+              <ul className="list-none text-lg space-y-3 mb-6">
+                <li className="flex items-center"><span className="text-green-500 mr-2 text-2xl">✅</span> In-depth SEO analysis and recommendations</li>
+                <li className="flex items-center"><span className="text-green-500 mr-2 text-2xl">✅</span> Customized indexation and landing page strategy</li>
+                <li className="flex items-center"><span className="text-green-500 mr-2 text-2xl">✅</span> Expert SEO consultants with proven track record</li>
+                <li className="flex items-center"><span className="text-green-500 mr-2 text-2xl">✅</span> Only $200 for a comprehensive strategy</li>
               </ul>
-              <p className="text-sm font-bold">
-                Ready to elevate your SEO game? DM us on <a className='text-orange-600' href="https://x.com/KrissmannGupta">Twitter</a> to get started!
+              <p className="text-xl font-bold">
+                Ready to improve your SEO and boost your online visibility? 
+                <a className='text-orange-600 hover:underline ml-2' href="https://x.com/KrissmannGupta" target="_blank" rel="noopener noreferrer">
+                  DM us on Reddit to get started! </a>
+                or
+                <a className='text-orange-600 hover:underline ml-2' href="https://www.paypal.com/ncp/payment/Z48JAMBWTYQCW" target="_blank" rel="noopener noreferrer">
+                   Pay us Directly Here and we will get in touch with you
+                </a>
+
               </p>
             </div>
 
@@ -312,7 +330,7 @@ export default function ReportPage() {
             <div className="bg-white rounded-lg border border-gray-200 overflow-hidden">
               <div className="relative h-[400px]">
                 <Image 
-                  src="/rundown.png" 
+                  src="/mypotrait1.png" 
                   alt="Startupanz.com confirmation"
                   fill
                   className="object-contain"
@@ -325,7 +343,7 @@ export default function ReportPage() {
             <div className="bg-white rounded-lg border border-gray-200 overflow-hidden">
               <div className="relative h-[400px]">
                 <Image 
-                  src="/microlaunch.png" 
+                  src="/mypotrait2.png" 
                   alt="ProductHunt submission"
                   fill
                   className="object-contain"
@@ -334,66 +352,12 @@ export default function ReportPage() {
              
             </div>
 
-            <div className="bg-white rounded-lg border border-gray-200 overflow-hidden">
-              <div className="relative h-[400px]">
-                <Image 
-                  src="/chrisss.png" 
-                  alt="BetaList confirmation"
-                  fill
-                  className="object-contain"
-                />
-              </div>
-              
-            </div>
-
-            <div className="bg-white rounded-lg border border-gray-200 overflow-hidden">
-              <div className="relative h-[400px]">
-                <Image 
-                  src="/betalist.png" 
-                  alt="HackerNews submission"
-                  fill
-                  className="object-contain"
-                />
-              </div>
-            
-            </div>
-
-            <div className="bg-white rounded-lg border border-gray-200 overflow-hidden">
-              <div className="relative h-[400px]">
-                <Image 
-                  src="/verytin.png" 
-                  alt="TechCrunch pitch"
-                  fill
-                  className="object-contain"
-                />
-              </div>
-              
-            </div>
-
-            <div className="bg-white rounded-lg border border-gray-200 overflow-hidden">
-              <div className="relative h-[400px]">
-                <Image 
-                  src="/doneexact.png" 
-                  alt="AngelList listing"
-                  fill
-                  className="object-contain"
-                />
-              </div>
-              
-            </div>
-
            
-
-            
           </div>
         </section>
-
-       
       </main>
 
       <Footer/>
-
-     
     </div>
   )
 }
