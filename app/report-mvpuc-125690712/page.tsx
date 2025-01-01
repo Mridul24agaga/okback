@@ -25,6 +25,7 @@ export default function ReportPage() {
       </header>
 
       <main className="container mx-auto py-12 px-4">
+        {/* Report Overview Section */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">
           <section className="bg-gray-50/80 border border-gray-200 rounded-lg p-6">
             <h2 className="text-2xl font-bold mb-4">
@@ -61,21 +62,21 @@ export default function ReportPage() {
           </section>
         </div>
 
+        {/* Submitted Websites Section */}
         <section className="bg-gray-50/80 border border-gray-200 rounded-lg p-6 mb-12">
           <h2 className="text-2xl font-bold mb-6">
             <span className="text-orange-500">Submitted</span> Websites
           </h2>
-          <p className="mb-6">Your startup has been submitted to 50+ websites. This extensive list covers a wide range of platforms, increasing your chances of visibility and success.</p>
+          <p className="mb-6">Your startup has been submitted to 80+ websites. This extensive list covers a wide range of platforms, increasing your chances of visibility and success.</p>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mb-6">
-            <div className="bg-gray-50/80 border border-gray-200 rounded-lg p-4">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-6">
+            <div className="col-span-full bg-gray-50/80 border border-gray-200 rounded-lg p-4">
               <div className="flex items-start justify-between">
                 <div>
-                  <h3 className="font-bold text-lg mb-2">Thibault</h3>
-                  <p className="text-sm text-gray-600 mb-2">A free Set of Tools</p>
+                  <h3 className="font-bold text-lg mb-2">mvpuc</h3>
                 </div>
                 <a 
-                  href="https://thibault.sh/tools"
+                  href="https://mvpuc.com/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-black"
@@ -89,111 +90,89 @@ export default function ReportPage() {
             </div>
             
             <div className="col-span-full bg-gray-50/80 border border-gray-200 rounded-lg p-4">
-              <h3 className="font-bold text-lg mb-2">Landing Page Analysis</h3>
-              <p className="text-sm text-gray-600 mb-2">Overall Score: 59/100</p>
-              <div className="space-y-2">
-                <div className="flex justify-between">
-                  <span>Messaging</span>
-                  <span className="font-bold">90/100</span>
-                </div>
-                <div className="flex justify-between">
-                  <span>Readability</span>
-                  <span className="font-bold">70/100</span>
-                </div>
-                <div className="flex justify-between">
-                  <span>Structure</span>
-                  <span className="font-bold">40/100</span>
-                </div>
-                <div className="flex justify-between">
-                  <span>Actionability</span>
-                  <span className="font-bold">65/100</span>
-                </div>
-                <div className="flex justify-between">
-                  <span>Design</span>
-                  <span className="font-bold">30/100</span>
-                </div>
-                <div className="flex justify-between">
-                  <span>Credibility</span>
-                  <span className="font-bold">60/100</span>
-                </div>
-              </div>
-              <h4 className="font-bold mt-4 mb-2">Summary</h4>
-              <p className="text-sm mb-2">The landing page for this toolbox of online tools is straightforward, with a minimalist design and functional layout. It efficiently categorizes tools, making browsing through them fairly simple. However, the lack of a strong visual hierarchy makes finding specific tools a bit more challenging than it should be. The CTA elements are almost non-existent, which could deter user engagement and interaction. On the brighter side, the simplicity of the text aids readability, though it could be more engaging. The lack of social proof or trust indicators is a glaring omission, especially for users unfamiliar with this service. In terms of design, while the consistent use of colors and fonts contributes to a unified appearance, more emphasis on visual hierarchy could enhance usability. The structure could also be improved by providing clearer navigation and headings to guide users more effectively.</p>
-              <h4 className="font-bold mt-4 mb-2">Main Recommendations</h4>
-              <ul className="list-disc list-inside text-sm">
-                <li>Enhance visual hierarchy with varied font sizes and colors.</li>
-                <li>Add CTAs to encourage engagement with the tools.</li>
-                <li>Incorporate social proof elements like testimonials or user reviews.</li>
-              </ul>
-              <div className="mt-6 bg-orange-100 border border-orange-300 rounded-lg p-4">
-                <div className="flex items-center gap-2 mb-3">
-                  <FiEdit className="text-orange-500" />
-                  <h4 className="font-bold text-lg">Boost Your SEO with Our Blog Service</h4>
-                </div>
-                <p className="text-sm mb-2">
-                  <strong>Blogs are crucial for SEO success.</strong> They help you:
-                </p>
-                <ul className="list-disc list-inside text-sm space-y-1 mb-4">
-                  <li>Increase organic traffic</li>
-                  <li>Improve search engine rankings</li>
-                  <li>Establish your brand as an industry authority</li>
-                  <li>Create opportunities for backlinks</li>
-                  <li>Engage your audience and increase time on site</li>
-                </ul>
-                <p className="text-sm font-bold mb-2">We offer a premium blog service to supercharge your SEO efforts:</p>
-                <ul className="list-none text-sm space-y-1 mb-4">
-                  <li>✅ SEO-optimized blog posts tailored to your needs</li>
-                  <li>✅ Customized content strategy aligned with your business goals</li>
-                  <li>✅ Expert writers with industry knowledge</li>
-                  <li>✅ Plans starting from just $9/month</li>
-                </ul>
-                <p className="text-sm font-bold">
-                  Ready to elevate your SEO game? <a className="text-orange-600 hover:underline" href="https://x.com/KrissmannGupta">DM us on Twitter</a> to get started!
-                </p>
-              </div>
-              <h4 className="font-bold mt-4 mb-2">SEO Analysis</h4>
-              <div className="space-y-4">
+              <h3 className="font-bold text-lg mb-4">Priority SEO Actions</h3>
+              <p className="mb-4">Improvement suggestions for sections with a score below 100%</p>
+
+              <div className="space-y-6">
                 <div>
-                  <div className="flex items-center gap-2 mb-1">
-                    <FiAlertCircle className="text-orange-500" />
-                    <h4 className="font-bold">Indexation & Robots.txt</h4>
-                  </div>
+                  <h4 className="font-bold">Links & Navigation</h4>
+                  <p className="text-sm text-gray-600">Score: 0/100</p>
+                  <p className="text-sm">Add more internal links to improve site structure and help search engines understand your content hierarchy.</p>
+                </div>
+
+                <div>
+                  <h4 className="font-bold">Indexation & Robots.txt</h4>
+                  <p className="text-sm text-gray-600">Score: 0/100</p>
+                  <p className="text-sm">There was an error checking the robots.txt file. Please ensure your site has a valid robots.txt file to guide search engine crawlers and improve your site's indexing.</p>
+                </div>
+
+                <div>
+                  <h4 className="font-bold">Indexation & Robots.txt</h4>
                   <p className="text-sm text-gray-600">Score: 0/100</p>
                   <p className="text-sm">Consider adding hreflang tags if your content is available in multiple languages.</p>
                 </div>
+
                 <div>
-                  <div className="flex items-center gap-2 mb-1">
-                    <FiCheckCircle className="text-orange-500" />
-                    <h4 className="font-bold">Content Structure & Accessibility</h4>
-                  </div>
+                  <h4 className="font-bold">Content Structure & Accessibility</h4>
+                  <p className="text-sm text-gray-600">Score: 0/100</p>
+                  <p className="text-sm">Consider adding more content to reach a minimum of 300 words for better SEO.</p>
+                </div>
+
+                <div>
+                  <h4 className="font-bold">Content Structure & Accessibility</h4>
                   <p className="text-sm text-gray-600">Score: 0/100</p>
                   <p className="text-sm">Add descriptive alt tags to images that are missing them to improve accessibility and SEO.</p>
                 </div>
+
                 <div>
-                  <div className="flex items-center gap-2 mb-1">
-                    <FiCheckCircle className="text-orange-500" />
-                    <h4 className="font-bold">Structured Data</h4>
-                  </div>
+                  <h4 className="font-bold">Keywords</h4>
                   <p className="text-sm text-gray-600">Score: 0/100</p>
-                  <p className="text-sm">Consider adding structured data to enhance how your content appears in search results.</p>
+                  <p className="text-sm">Add keywords to ensure a smooth user experience and proper page indexing.</p>
                 </div>
+
                 <div>
-                  <div className="flex items-center gap-2 mb-1">
-                    <FiCheckCircle className="text-orange-500" />
-                    <h4 className="font-bold">Meta & SEO Tags</h4>
-                  </div>
-                  <p className="text-sm text-gray-600">Score: 67/100</p>
-                  <p className="text-sm">Ensure your og:title accurately represents your content for social sharing.</p>
-                </div>
-                <div>
-                  <div className="flex items-center gap-2 mb-1">
-                    <FiCheckCircle className="text-orange-500" />
-                    <h4 className="font-bold">Meta & SEO Tags</h4>
-                  </div>
-                  <p className="text-sm text-gray-600">Score: 77/100</p>
-                  <p className="text-sm">Title is too short. Aim for 50-60 characters.</p>
+                  <h4 className="font-bold">Content Structure & Accessibility</h4>
+                  <p className="text-sm text-gray-600">Score: 80/100</p>
+                  <p className="text-sm">Improve your heading structure: No H1 heading found</p>
                 </div>
               </div>
+            </div>
+            <div className="col-span-full mt-6 bg-gray-50/80 border border-gray-200 rounded-lg p-6">
+              <h4 className="font-bold text-xl mb-4">SEO Improvement Suggestions</h4>
+              <ul className="list-disc list-inside space-y-2">
+                <li><strong>Improve Internal Linking:</strong> Add more internal links to enhance site structure and help search engines understand your content hierarchy.</li>
+                <li><strong>Optimize Robots.txt:</strong> Ensure your site has a valid robots.txt file to guide search engine crawlers and improve indexing.</li>
+                <li><strong>Implement Hreflang Tags:</strong> If your content is available in multiple languages, add hreflang tags to specify language and regional URLs.</li>
+                <li><strong>Expand Content:</strong> Aim for a minimum of 300 words per page to provide more context for search engines and users.</li>
+                <li><strong>Enhance Image Accessibility:</strong> Add descriptive alt tags to all images to improve both accessibility and SEO.</li>
+                <li><strong>Keyword Optimization:</strong> Research and incorporate relevant keywords throughout your content to improve search visibility.</li>
+                <li><strong>Improve Heading Structure:</strong> Ensure each page has a clear H1 heading and a logical hierarchy of subheadings.</li>
+              </ul>
+            </div>
+
+            <div className="col-span-full mt-6 bg-orange-100 border-2 border-orange-500 rounded-lg p-6">
+              <h4 className="font-bold text-2xl text-orange-600 mb-4">Boost Your SEO with Our Blog Service</h4>
+              <p className="text-lg mb-4">Blogs are crucial for SEO success. They help you:</p>
+              <ul className="list-disc list-inside text-lg space-y-2 mb-6">
+                <li>Increase organic traffic</li>
+                <li>Improve search engine rankings</li>
+                <li>Establish your brand as an industry authority</li>
+                <li>Create opportunities for backlinks</li>
+                <li>Engage your audience and increase time on site</li>
+              </ul>
+              <p className="text-xl font-bold mb-4">We offer a premium blog service to supercharge your SEO efforts:</p>
+              <ul className="list-none text-lg space-y-3 mb-6">
+                <li className="flex items-center"><span className="text-green-500 mr-2 text-2xl">✅</span> SEO-optimized blog posts tailored to your needs</li>
+                <li className="flex items-center"><span className="text-green-500 mr-2 text-2xl">✅</span> Customized content strategy aligned with your business goals</li>
+                <li className="flex items-center"><span className="text-green-500 mr-2 text-2xl">✅</span> Expert writers with industry knowledge</li>
+                <li className="flex items-center"><span className="text-green-500 mr-2 text-2xl">✅</span> Plans starting from just $9/month</li>
+              </ul>
+              <p className="text-xl font-bold">
+                Ready to elevate your SEO game? 
+                <a className='text-orange-600 hover:underline ml-2' href="https://twitter.com/KrissmannGupta" target="_blank" rel="noopener noreferrer">
+                  DM us on Twitter to get started!
+                </a>
+              </p>
             </div>
 
             {/* Website list with load more */}
@@ -298,7 +277,7 @@ export default function ReportPage() {
             <div className="bg-white rounded-lg border border-gray-200 overflow-hidden">
               <div className="relative h-[400px]">
                 <Image 
-                  src="/thibault1.png" 
+                  src="/mvp1.png" 
                   alt="Startupanz.com confirmation"
                   fill
                   className="object-contain"
@@ -307,33 +286,14 @@ export default function ReportPage() {
               
             </div>
 
-            {/* Additional Evidence Cards */}
-            <div className="bg-white rounded-lg border border-gray-200 overflow-hidden">
-              <div className="relative h-[400px]">
-                <Image 
-                  src="/thibault2.png" 
-                  alt="ProductHunt submission"
-                  fill
-                  className="object-contain"
-                />
-              </div>
-             
-            </div>
-
-          
+            
 
            
-
-            
           </div>
         </section>
-
-       
       </main>
 
       <Footer/>
-
-     
     </div>
   )
 }

@@ -153,7 +153,7 @@ export default function Footer() {
         {/* Footer Bottom */}
         <div className="mt-16 pt-8 border-t border-gray-200 flex flex-col sm:flex-row justify-between items-center space-y-4 sm:space-y-0">
           <div className="text-sm text-gray-500">
-            © 2024 Get More Backlinks. All rights reserved. Licensed under MarkupX Technologies.
+            © 2025 Get More Backlinks. All rights reserved. Licensed under MarkupX Technologies.
           </div>
           <div className="flex items-center space-x-2 text-sm">
             <span className="inline-block w-2 h-2 bg-green-500 rounded-full"></span>
