@@ -145,7 +145,7 @@ export default function ReportPage() {
                   <li>✅ SEO-optimized blog posts tailored to your needs</li>
                   <li>✅ Customized content strategy aligned with your business goals</li>
                   <li>✅ Expert writers with industry knowledge</li>
-                  <li>✅ Plans starting from just $9/month</li>
+                  <li>✅ Plans starting from just $14/month</li>
                 </ul>
                 <p className="text-sm font-bold">
                   Ready to elevate your SEO game? <a className="text-orange-600 hover:underline" href="https://x.com/KrissmannGupta">DM us on Twitter</a> to get started!
