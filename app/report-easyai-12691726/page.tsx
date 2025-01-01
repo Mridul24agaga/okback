@@ -67,17 +67,16 @@ export default function ReportPage() {
           <h2 className="text-2xl font-bold mb-6">
             <span className="text-orange-500">Submitted</span> Websites
           </h2>
-          <p className="mb-6">Your startup has been submitted to {websiteList.length} websites. This extensive list covers a wide range of platforms, increasing your chances of visibility and success.</p>
+          <p className="mb-6">Your startup has been submitted to 200+ websites. This extensive list covers a wide range of platforms, increasing your chances of visibility and success.</p>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mb-6">
-            <div className="bg-gray-50/80 border border-gray-200 rounded-lg p-4">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-6">
+            <div className="col-span-full bg-gray-50/80 border border-gray-200 rounded-lg p-4">
               <div className="flex items-start justify-between">
                 <div>
-                  <h3 className="font-bold text-lg mb-2">LeadPipe</h3>
-                  <p className="text-sm text-gray-600 mb-2">Capture over 35% of your website visitors by name</p>
+                  <h3 className="font-bold text-lg mb-2">EazyAI</h3>
                 </div>
                 <a 
-                  href="https://www.leadpipe.com/"
+                  href="https://eazyai.co/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-black"
@@ -91,103 +90,71 @@ export default function ReportPage() {
             </div>
             
             <div className="col-span-full bg-gray-50/80 border border-gray-200 rounded-lg p-4">
-              <h3 className="font-bold text-lg mb-2">Landing Page Analysis</h3>
-              <p className="text-sm text-gray-600 mb-2">Overall Score: 60/100</p>
-              <div className="space-y-2">
-                <div className="flex justify-between">
-                  <span>Messaging</span>
-                  <span className="font-bold">60/100</span>
-                </div>
-                <div className="flex justify-between">
-                  <span>Readability</span>
-                  <span className="font-bold">55/100</span>
-                </div>
-                <div className="flex justify-between">
-                  <span>Structure</span>
-                  <span className="font-bold">60/100</span>
-                </div>
-                <div className="flex justify-between">
-                  <span>Actionability</span>
-                  <span className="font-bold">50/100</span>
-                </div>
-                <div className="flex justify-between">
-                  <span>Design</span>
-                  <span className="font-bold">70/100</span>
-                </div>
-                <div className="flex justify-between">
-                  <span>Credibility</span>
-                  <span className="font-bold">70/100</span>
-                </div>
-              </div>
-              <h4 className="font-bold mt-4 mb-2">Summary</h4>
-              <p className="text-sm mb-2">The landing page for Leadpipe does a decent job of showcasing its service, but there are areas that scream for improvement. The hero section effectively communicates the primary value proposition, emphasizing "Person-Level Website Visitor Identification." However, the plain black background with electric blue accents might serve as a helpful contrast with CTAs but doesn't necessarily scream professional or premium. The CTAs are clear but perhaps a bit too abundant, leading to possible decision fatigue. Testimonials add credibility but are somewhat overcrowded on the page, potentially overwhelming the visitor. The imagery used could be stronger and more relevant, as some images appear generic and unrelated to website visitor identification. The overall design adheres to consistent fonts and color schemes, but sections often feel cluttered. The information flow could be more logical and needs a cleaner structure to guide the user experience more effectively.</p>
-              <h4 className="font-bold mt-4 mb-2">Main Recommendations</h4>
-              <ul className="list-disc list-inside text-sm">
-                <li>Reduce the number of CTAs to streamline user focus.</li>
-                <li>Enhance imagery to be more relevant and engaging.</li>
-                <li>Improve spacing and layout to reduce the cluttered feel.</li>
-              </ul>
-            </div>
+              <h3 className="font-bold text-lg mb-4">Priority SEO Actions</h3>
+              <p className="mb-4">Improvement suggestions for sections with a score below 100%</p>
 
-            <div className="col-span-full bg-gray-50/80 border border-gray-200 rounded-lg p-4">
-              <h3 className="font-bold text-lg mb-4">SEO Analysis</h3>
               <div className="space-y-6">
                 <div>
-                  <h4 className="font-bold">Robots.txt</h4>
+                  <h4 className="font-bold">Links & Navigation</h4>
                   <p className="text-sm text-gray-600">Score: 0/100</p>
-                  <p className="text-sm">A robots.txt file is used to tell search engine crawlers which pages they can or cannot access on your site.</p>
-                  <p className="text-sm font-semibold mt-2">Error: Failed to check robots.txt: All proxy attempts failed</p>
-                  <p className="text-sm">Suggestion: There was an error checking the robots.txt file. Please ensure your site has a valid robots.txt file to guide search engine crawlers and improve your site's indexing.</p>
+                  <p className="text-sm">Add more internal links to improve site structure and help search engines understand your content hierarchy.</p>
                 </div>
+
                 <div>
-                  <h4 className="font-bold">Canonical URL</h4>
+                  <h4 className="font-bold">Indexation & Robots.txt</h4>
                   <p className="text-sm text-gray-600">Score: 0/100</p>
-                  <p className="text-sm">Canonical URLs help prevent duplicate content issues by specifying the preferred version of a page.</p>
-                  <p className="text-sm font-semibold mt-2">Issue: No canonical URL found</p>
-                  <p className="text-sm">Suggestion: Add a canonical URL to specify the preferred version of this page</p>
+                  <p className="text-sm">There was an error checking the robots.txt file. Please ensure your site has a valid robots.txt file to guide search engine crawlers and improve your site's indexing.</p>
                 </div>
+
                 <div>
-                  <h4 className="font-bold">Hreflang Tags</h4>
+                  <h4 className="font-bold">Indexation & Robots.txt</h4>
                   <p className="text-sm text-gray-600">Score: 0/100</p>
-                  <p className="text-sm">Hreflang tags tell search engines which language versions of a page are available.</p>
-                  <p className="text-sm font-semibold mt-2">Issue: No hreflang tags found</p>
-                  <p className="text-sm">Suggestion: Consider adding hreflang tags if your content is available in multiple languages.</p>
+                  <p className="text-sm">Consider adding hreflang tags if your content is available in multiple languages.</p>
                 </div>
+
                 <div>
-                  <h4 className="font-bold">Images Alt Tags</h4>
+                  <h4 className="font-bold">Content Structure & Accessibility</h4>
                   <p className="text-sm text-gray-600">Score: 0/100</p>
-                  <p className="text-sm">Image alt tags are important for accessibility and SEO, providing context for images when they cannot be displayed.</p>
-                  <p className="text-sm font-semibold mt-2">Issue: Images without alt tags found</p>
-                  <p className="text-sm">Suggestion: Add descriptive alt tags to images that are missing them to improve accessibility and SEO.</p>
+                  <p className="text-sm">Consider adding more content to reach a minimum of 300 words for better SEO.</p>
                 </div>
+
                 <div>
-                  <h4 className="font-bold">Headings Structure</h4>
-                  <p className="text-sm text-gray-600">Score: 60/100</p>
-                  <p className="text-sm">A proper heading structure is important for SEO and accessibility, helping both users and search engines understand the content hierarchy.</p>
-                  <p className="text-sm font-semibold mt-2">Issues:</p>
-                  <ul className="list-disc list-inside text-sm">
-                    <li>Heading level skipped. "Ridiculously Easy Way to Build Your Email List. Get Started Now." should be H2 instead of H4</li>
-                    <li>Multiple H1 headings found</li>
-                  </ul>
-                </div>
-                <div>
-                  <h4 className="font-bold">Structured Data</h4>
+                  <h4 className="font-bold">Content Structure & Accessibility</h4>
                   <p className="text-sm text-gray-600">Score: 0/100</p>
-                  <p className="text-sm">Structured data helps search engines understand your content better and can lead to rich results in search engine results pages.</p>
-                  <p className="text-sm font-semibold mt-2">Issue: No structured data found. No JSON-LD structured data detected</p>
-                  <p className="text-sm">Suggestion: Consider adding structured data to enhance how your content appears in search results.</p>
+                  <p className="text-sm">Add descriptive alt tags to images that are missing them to improve accessibility and SEO.</p>
+                </div>
+
+                <div>
+                  <h4 className="font-bold">Keywords</h4>
+                  <p className="text-sm text-gray-600">Score: 0/100</p>
+                  <p className="text-sm">Add keywords to ensure a smooth user experience and proper page indexing.</p>
+                </div>
+
+                <div>
+                  <h4 className="font-bold">Content Structure & Accessibility</h4>
+                  <p className="text-sm text-gray-600">Score: 80/100</p>
+                  <p className="text-sm">Improve your heading structure: No H1 heading found</p>
                 </div>
               </div>
+            </div>
+            <div className="col-span-full mt-6 bg-gray-50/80 border border-gray-200 rounded-lg p-6">
+              <h4 className="font-bold text-xl mb-4">SEO Improvement Suggestions</h4>
+              <p className="mb-4">Based on the analysis, here are the key areas to focus on:</p>
+              <ul className="list-disc list-inside space-y-2">
+                <li><strong>Internal Linking:</strong> Add more internal links to improve site structure and help search engines understand your content hierarchy.</li>
+                <li><strong>Robots.txt:</strong> Ensure your site has a valid robots.txt file to guide search engine crawlers and improve indexing.</li>
+                <li><strong>Multilingual SEO:</strong> If applicable, implement hreflang tags for better international targeting.</li>
+                <li><strong>Content Length:</strong> Aim to add more content to reach a minimum of 300 words per page for better SEO performance.</li>
+                <li><strong>Image Optimization:</strong> Add descriptive alt tags to all images to improve accessibility and SEO.</li>
+                <li><strong>Keyword Strategy:</strong> Implement a comprehensive keyword strategy to improve user experience and page indexing.</li>
+                <li><strong>Heading Structure:</strong> Ensure each page has a clear H1 heading and maintain a logical heading hierarchy.</li>
+              </ul>
+              <p className="mt-4">By addressing these areas, you can significantly improve your website's SEO performance and visibility in search results.</p>
             </div>
 
             <div className="col-span-full mt-6 bg-orange-100 border-2 border-orange-500 rounded-lg p-6">
-              <div className="flex items-center gap-2 mb-4">
-                <FiEdit className="text-orange-500 w-8 h-8" />
-                <h4 className="font-bold text-2xl text-orange-600">Boost Your SEO with Our Blog Service</h4>
-              </div>
-              <p className="text-lg mb-4">
-                <strong>Blogs are crucial for SEO success.</strong> They help you:
-              </p>
+              <h4 className="font-bold text-2xl text-orange-600 mb-4">Boost Your SEO with Our Blog Service</h4>
+              <p className="text-lg mb-4">Blogs are crucial for SEO success. They help you:</p>
               <ul className="list-disc list-inside text-lg space-y-2 mb-6">
                 <li>Increase organic traffic</li>
                 <li>Improve search engine rankings</li>
@@ -197,18 +164,15 @@ export default function ReportPage() {
               </ul>
               <p className="text-xl font-bold mb-4">We offer a premium blog service to supercharge your SEO efforts:</p>
               <ul className="list-none text-lg space-y-3 mb-6">
-                <li className="flex items-center"><span className="text-green-500 mr-2 text-2xl">✅</span> 10 high-quality, SEO-optimized blog posts per month</li>
-                <li className="flex items-center"><span className="text-green-500 mr-2 text-2xl">✅</span> Tailored content strategy aligned with your business goals</li>
+                <li className="flex items-center"><span className="text-green-500 mr-2 text-2xl">✅</span> SEO-optimized blog posts tailored to your needs</li>
+                <li className="flex items-center"><span className="text-green-500 mr-2 text-2xl">✅</span> Customized content strategy aligned with your business goals</li>
                 <li className="flex items-center"><span className="text-green-500 mr-2 text-2xl">✅</span> Expert writers with industry knowledge</li>
-                <li className="flex items-center"><span className="text-green-500 mr-2 text-2xl">✅</span> Only $499/month</li>
+                <li className="flex items-center"><span className="text-green-500 mr-2 text-2xl">✅</span> Plans starting from just $9/month</li>
               </ul>
               <p className="text-xl font-bold">
                 Ready to elevate your SEO game? 
-                <a className='text-orange-600 hover:underline ml-2' href="https://x.com/KrissmannGupta" target="_blank" rel="noopener noreferrer">
-                  DM us on Twitter to get started! </a>
-                or  
-                <a className='text-orange-600 hover:underline ml-2' href="https://www.paypal.com/ncp/payment/GRRU84QL2C7QS" target="_blank" rel="noopener noreferrer">
-                   Pay us Here Directly. We will get in touch with you!
+                <a className='text-orange-600 hover:underline ml-2' href="https://twitter.com/KrissmannGupta" target="_blank" rel="noopener noreferrer">
+                  DM us on Twitter to get started!
                 </a>
               </p>
             </div>
@@ -315,7 +279,7 @@ export default function ReportPage() {
             <div className="bg-white rounded-lg border border-gray-200 overflow-hidden">
               <div className="relative h-[400px]">
                 <Image 
-                  src="/leadpipe1.png" 
+                  src="/eazyai1.png" 
                   alt="Startupanz.com confirmation"
                   fill
                   className="object-contain"
@@ -328,7 +292,7 @@ export default function ReportPage() {
             <div className="bg-white rounded-lg border border-gray-200 overflow-hidden">
               <div className="relative h-[400px]">
                 <Image 
-                  src="/leadpipe2.png" 
+                  src="/eazyai2.png" 
                   alt="ProductHunt submission"
                   fill
                   className="object-contain"
@@ -336,54 +300,57 @@ export default function ReportPage() {
               </div>
              
             </div>
-
-            <div className="bg-white rounded-lg border border-gray-200 overflow-hidden">
+             {/* Additional Evidence Cards */}
+             <div className="bg-white rounded-lg border border-gray-200 overflow-hidden">
               <div className="relative h-[400px]">
                 <Image 
-                  src="/leadpipe3.png" 
-                  alt="BetaList confirmation"
+                  src="/eazyai3.png" 
+                  alt="ProductHunt submission"
                   fill
                   className="object-contain"
                 />
               </div>
-              
+             
             </div>
-
-            <div className="bg-white rounded-lg border border-gray-200 overflow-hidden">
+             {/* Additional Evidence Cards */}
+             <div className="bg-white rounded-lg border border-gray-200 overflow-hidden">
               <div className="relative h-[400px]">
                 <Image 
-                  src="/leadpipe4.png" 
-                  alt="HackerNews submission"
+                  src="/eazyai4.png" 
+                  alt="ProductHunt submission"
                   fill
                   className="object-contain"
                 />
               </div>
-            
+             
             </div>
-
-            <div className="bg-white rounded-lg border border-gray-200 overflow-hidden">
+             {/* Additional Evidence Cards */}
+             <div className="bg-white rounded-lg border border-gray-200 overflow-hidden">
               <div className="relative h-[400px]">
                 <Image 
-                  src="/leadpipe5.png" 
-                  alt="TechCrunch pitch"
+                  src="/eazyai5.png" 
+                  alt="ProductHunt submission"
                   fill
                   className="object-contain"
                 />
               </div>
-              
+             
             </div>
-
-            <div className="bg-white rounded-lg border border-gray-200 overflow-hidden">
+             {/* Additional Evidence Cards */}
+             <div className="bg-white rounded-lg border border-gray-200 overflow-hidden">
               <div className="relative h-[400px]">
                 <Image 
-                  src="/leadpipe6.png" 
-                  alt="AngelList listing"
+                  src="/eazyai6.png" 
+                  alt="ProductHunt submission"
                   fill
                   className="object-contain"
                 />
               </div>
-              
+             
             </div>
+             
+
+           
           </div>
         </section>
       </main>
