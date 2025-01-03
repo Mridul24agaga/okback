@@ -3,356 +3,222 @@
 import { useState, useEffect } from "react"
 import Link from "next/link"
 import Image from "next/image"
-import { ChevronRight, ArrowRight, Globe, Search, AlertCircle, Menu, X } from 'lucide-react'
-import { OpenAI } from 'openai'
+import { ArrowRight, ArrowUpRight } from 'lucide-react'
+import { motion, useAnimation } from 'framer-motion'
+import { Header } from "./header"
+import { SearchIcon, LinkIcon, GraphIcon, GlobeIcon, RocketIcon } from "./icons"
 
-const openai = new OpenAI({
-  apiKey: process.env.NEXT_PUBLIC_OPENAI_API_KEY,
-  dangerouslyAllowBrowser: true
-})
+type MotionDivProps = {
+  children: React.ReactNode;
+  className?: string;
+  initial?: any;
+  animate?: any;
+  whileHover?: any;
+  transition?: {
+    duration?: number;
+    delay?: number;
+    ease?: string | number[];
+  };
+}
 
-const analyzeWebsite = async (url: string) => {
-  try {
-    const completion = await openai.chat.completions.create({
-      messages: [
-        { role: "system", content: "You are an SEO expert. Analyze the given website URL and provide an SEO score from 0 to 100, where 0 is extremely poor and 100 is perfect. Only respond with a number." },
-        { role: "user", content: `Analyze this website for SEO: ${url}` }
-      ],
-      model: "gpt-3.5-turbo",
-      max_tokens: 10,
-    });
+const MotionDiv: React.FC<MotionDivProps> = ({ 
+  children, 
+  className, 
+  initial, 
+  animate,
+  whileHover,
+  transition,
+  ...props 
+}) => {
+  return (
+    <motion.div
+      className={className}
+      initial={initial}
+      animate={animate}
+      whileHover={whileHover}
+      transition={transition}
+      {...props}
+    >
+      {children}
+    </motion.div>
+  )
+}
 
-    const response = completion.choices[0].message.content;
-    if (!response) {
-      throw new Error("No response from OpenAI");
-    }
-    const score = parseInt(response.trim());
-    if (isNaN(score) || score < 0 || score > 100) {
-      throw new Error("Invalid score received from OpenAI");
-    }
-    return { seoScore: score };
-  } catch (error) {
-    console.error('Error in analyzeWebsite:', error);
-    throw error;
-  }
-};
-
-export default function Hero() {
-  const [isVisible, setIsVisible] = useState(false)
-  const [url, setUrl] = useState('')
-  const [isScanning, setIsScanning] = useState(false)
-  const [scanProgress, setScanProgress] = useState(0)
-  const [analysisResult, setAnalysisResult] = useState<{ seoScore: number } | { error: string } | null>(null)
-  //const [isDarkMode, setIsDarkMode] = useState(false)
-  const [isMenuOpen, setIsMenuOpen] = useState(false)
+const FloatingIcon = ({ Icon, delay, size }: { Icon: React.FC<React.SVGProps<SVGSVGElement>>, delay: number, size: number }) => {
+  const controls = useAnimation()
 
   useEffect(() => {
-    setIsVisible(true)
-  }, [])
-
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault()
-    setIsScanning(true)
-    setScanProgress(0)
-    setAnalysisResult(null)
-
-    // Simulate loading time
-    const loadingTime = Math.floor(Math.random() * (7000 - 5000 + 1)) + 5000; // Random time between 5-7 seconds
-    
-    setTimeout(async () => {
-      try {
-        const result = await analyzeWebsite(url);
-        setAnalysisResult(result);
-      } catch (error) {
-        setAnalysisResult({ 
-          error: error instanceof Error ? error.message : 'An unexpected error occurred. Please try again.' 
-        });
-      } finally {
-        setIsScanning(false);
+    controls.start({
+      y: [0, -10, 0],
+      transition: {
+        duration: 4 + Math.random() * 2,
+        repeat: Infinity,
+        repeatType: "reverse",
+        ease: "easeInOut",
+        delay: delay
       }
-    }, loadingTime);
-  }
-
-  const scrollToPricing = () => {
-    const pricingSection = document.getElementById('pricing-section')
-    if (pricingSection) {
-      pricingSection.scrollIntoView({ behavior: 'smooth' })
-    }
-  }
-
-  //const toggleDarkMode = () => {
-  //  setIsDarkMode(!isDarkMode)
-  //}
-
-  const toggleMenu = () => {
-    setIsMenuOpen(!isMenuOpen)
-  }
-
-  useEffect(() => {
-    let interval: NodeJS.Timeout;
-    if (isScanning) {
-      interval = setInterval(() => {
-        setScanProgress((prevProgress) => {
-          if (prevProgress >= 100) {
-            clearInterval(interval);
-            return 100;
-          }
-          return prevProgress + 1;
-        });
-      }, 50); // Update every 50ms for smooth animation
-    }
-    return () => clearInterval(interval);
-  }, [isScanning]);
+    })
+  }, [controls, delay])
 
   return (
-    <div className="min-h-screen font-sans flex flex-col">
-      <div className="bg-[#F97316] text-black py-2 px-4 text-center">
-        <p className="text-sm font-medium">
-          🎉 New Year Special Offer! 🎆 Get your 2 startups listed to 200+ directories at just $87.5 each! 🚀 Plan valid for 1 year. ⌛ 
-          <Link href="https://www.paypal.com/ncp/payment/P7DNHRX74TF22" className="ml-2 bg-black text-white px-3 py-1 rounded-md text-sm hover:bg-gray-900 transition-colors">
-            Click Here
-          </Link>
-        </p>
-      </div>
-      {/* Navigation */}
-      <nav className="sticky top-0 z-50 transition-all duration-300 bg-white shadow-sm">
-        <div className="container mx-auto px-4 sm:px-6 py-4">
-          <div className="flex items-center justify-between">
-            <Image
-              src="/getmorepacklinks.png"
-              alt="Logo"
-              width={180}
-              height={40}
-              className="h-8 w-auto"
-            />
-            <div className="hidden md:flex items-center justify-center gap-4 sm:gap-8">
-              <Link href="/blogs" className="text-[15px] text-black transition-colors">
-                Blogs
-              </Link>
-              <Link href="/submit" className="text-[15px] text-black transition-colors">
-                Submit my Directory
-              </Link>
-              <Link
-                href="/#pricing-section"
-                className="px-6 py-2.5 bg-[#F97316] text-white text-[15px] rounded-full hover:bg-[#EA580C] transition-colors"
-              >
-                Submit my Product
-              </Link>
-            </div>
-            <button className="md:hidden" onClick={toggleMenu}>
-              {isMenuOpen ? (
-                <X className="h-6 w-6 text-gray-900" />
-              ) : (
-                <Menu className="h-6 w-6 text-gray-900" />
-              )}
-            </button>
-          </div>
-        </div>
-        {/* Mobile menu */}
-        {isMenuOpen && (
-          <div className="md:hidden bg-white py-2">
-            <div className="container mx-auto px-4 flex flex-col gap-2">
-              <Link href="/blogs" className="text-[15px] text-black transition-colors py-2">
-                Blogs
-              </Link>
-              <Link href="/submit" className="text-[15px] text-black transition-colors py-2">
-                Submit my Directory
-              </Link>
-              <Link
-                href="/#pricing-section"
-                className="px-6 py-2.5 bg-[#F97316] text-white text-[15px] rounded-full hover:bg-[#EA580C] transition-colors text-center"
-              >
-                Submit my Product
-              </Link>
-            </div>
-          </div>
-        )}
-      </nav>
+    <motion.div
+      className="absolute text-blue-500 opacity-20 hover:opacity-100 transition-opacity duration-300"
+      style={{
+        left: `${Math.random() * 100}%`,
+        top: `${Math.random() * 100}%`,
+      }}
+      initial={{ scale: 0, opacity: 0 }}
+      animate={{ scale: 1, opacity: 0.2 }}
+      whileHover={{ scale: 1.2, opacity: 1 }}
+      transition={{ duration: 0.5, delay }}
+    >
+      <motion.div animate={controls}>
+        <Icon width={size} height={size} />
+      </motion.div>
+    </motion.div>
+  )
+}
 
-      {/* Hero Content */}
-      <div className="flex-grow relative overflow-hidden bg-white">
-        {/* Grid Background */}
+export default function Hero() {
+  const [email, setEmail] = useState('')
+  const [website, setWebsite] = useState('')
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault()
+    // Handle form submission
+    console.log('Form submitted:', { email, website })
+  }
+
+  return (
+    <div className="min-h-screen bg-white text-black flex flex-col">
+      <Header />
+      
+      {/* Background Elements */}
+      <div className="fixed inset-0 pointer-events-none overflow-hidden">
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-blue-100/30 via-transparent to-transparent" />
         <div 
           className="absolute inset-0"
           style={{
             backgroundImage: `
-              linear-gradient(to right, rgba(249, 115, 22, 0.05) 1px, transparent 1px),
-              linear-gradient(to bottom, rgba(249, 115, 22, 0.05) 1px, transparent 1px)
+              linear-gradient(to right, rgba(59, 130, 246, 0.05) 1px, transparent 1px),
+              linear-gradient(to bottom, rgba(59, 130, 246, 0.05) 1px, transparent 1px)
             `,
-            backgroundSize: '2rem 2rem',
+            backgroundSize: '4rem 4rem',
           }}
         />
+        {/* Floating SEO and Backlink related icons */}
+        <FloatingIcon Icon={SearchIcon} delay={0} size={32} />
+        <FloatingIcon Icon={LinkIcon} delay={0.5} size={40} />
+        <FloatingIcon Icon={GraphIcon} delay={1} size={36} />
+        <FloatingIcon Icon={GlobeIcon} delay={1.5} size={48} />
+        <FloatingIcon Icon={RocketIcon} delay={2} size={44} />
+        <FloatingIcon Icon={SearchIcon} delay={2.5} size={28} />
+        <FloatingIcon Icon={LinkIcon} delay={3} size={38} />
+        <FloatingIcon Icon={GraphIcon} delay={3.5} size={34} />
+      </div>
 
-        {/* Radial Gradient */}
-        <div 
-          className="absolute inset-0"
-          style={{
-            background: 'radial-gradient(circle at 50% 50%, rgba(249, 115, 22, 0.1) 0%, transparent 70%)',
-          }}
-        />
-
-        <div className="container mx-auto px-4 py-12 sm:py-24 relative">
-          <div className={`text-center max-w-4xl mx-auto transition-opacity duration-1000 ${isVisible ? 'opacity-100' : 'opacity-0'}`}>
-            <div className="inline-flex items-center justify-center bg-white rounded-full px-4 py-2 mb-8 sm:mb-12 border border-gray-200 shadow-sm group relative">
-              <span className="bg-[#FF6B35] text-white text-xs font-semibold px-2 py-0.5 rounded-full mr-2">HOT</span>
-              <span className="text-gray-800 text-sm tracking-wide font-medium">
-                One Click to SEO Success and Authority
-              </span>
-            </div>
-            <h1 className="text-4xl sm:text-6xl font-bold leading-tight mb-6 sm:mb-8 tracking-tight text-gray-900">
-              BOOST YOUR <span className="text-[#F97316]">SEO</span><br />
-              & GET MORE <span className="text-[#F97316]">SALES</span>
-            </h1>
-
-            <p className="text-gray-700 text-lg sm:text-xl mb-8 sm:mb-12 max-w-2xl mx-auto">
-              Get instant traffic on your site, save days of manual work with just one click.
-              Submit Your AI Startup To 100+ Platforms in 7 Days
+      <div className="flex-grow flex items-center justify-center px-4 py-16 sm:px-6 lg:px-8 mt-16">
+        <div className="w-full max-w-3xl mx-auto text-center relative">
+          <MotionDiv
+            initial={{ opacity: 0, y: 10 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5 }}
+          >
+            <p className="text-blue-600 text-sm sm:text-base font-medium mb-6">
+              Boost Your Website's Authority with High-Quality Backlinks
             </p>
+          </MotionDiv>
 
-            <div className="flex gap-4 justify-center">
-              <Link
-                href="/#pricing-section"
-                className="px-6 sm:px-8 py-3 bg-[#F97316] text-white rounded-md hover:bg-[#EA580C] transition-colors font-semibold text-base sm:text-lg"
-              >
-                Submit my Product
-              </Link>
-              <button
-                className="px-6 sm:px-8 py-3 bg-white text-gray-900 rounded-md border border-gray-200 hover:bg-gray-50 transition-colors font-semibold text-base sm:text-lg"
-              >
-                Learn more
-              </button>
-            </div>
+          <MotionDiv
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.1 }}
+            className="mb-6"
+          >
+            <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight text-black">
+              Skyrocket Your SEO Rankings with{' '}
+              <span className="text-blue-600">Backlink AI</span>
+            </h1>
+          </MotionDiv>
 
-            {/* Browser Window Mockup */}
-            <div className="mt-12 sm:mt-16 relative w-full max-w-4xl mx-auto bg-gray-900 rounded-lg shadow-2xl overflow-hidden">
-              <div className="bg-gray-800 border-b border-gray-700 p-2 sm:p-4">
-                <div className="flex items-center">
-                  <div className="flex gap-1.5 ml-3 sm:ml-4">
-                    <div className="w-2.5 h-2.5 sm:w-3 sm:h-3 rounded-full bg-[#FF5F57]"></div>
-                    <div className="w-2.5 h-2.5 sm:w-3 sm:h-3 rounded-full bg-[#FFBD2E]"></div>
-                    <div className="w-2.5 h-2.5 sm:w-3 sm:h-3 rounded-full bg-[#28C840]"></div>
-                  </div>
-                  <div className="flex-1 flex justify-center">
-                    <div className="bg-gray-700 rounded-md px-2 sm:px-3 py-1 text-gray-300 text-xs sm:text-sm flex items-center gap-2 w-full sm:w-96 border border-gray-600">
-                      <Globe className="w-3 h-3 sm:w-4 sm:h-4 text-gray-500" />
-                      getmorebacklinks.org
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div className="p-4 sm:p-8 bg-gradient-to-br from-gray-900 to-gray-800">
-                <div className="inline-block px-4 py-1 mb-4 text-sm text-white bg-gray-800 rounded-full border border-gray-700 whitespace-nowrap overflow-hidden text-ellipsis max-w-full">
-                  Note: This tool is in beta and may occasionally make mistakes.
-                </div>
-                <h2 className="text-2xl sm:text-3xl font-bold text-white mb-4 text-center">Welcome to GetMoreBacklinks</h2>
-                <p className="text-gray-300 max-w-2xl mx-auto text-center mb-6 sm:mb-8 text-sm sm:text-base">
-                  Boost your SEO with one click. Submit your website and get high-quality backlinks from 100+ platforms.
-                </p>
-                <div className="flex justify-center">
-                  <div className="w-full max-w-md bg-gray-800 rounded-lg shadow-md p-4 sm:p-6">
-                    <form onSubmit={handleSubmit} className="space-y-4">
-                      <div className="relative">
-                        <input
-                          type="url"
-                          value={url}
-                          onChange={(e) => setUrl(e.target.value)}
-                          className="w-full px-3 sm:px-4 py-2 border border-gray-600 rounded-md focus:outline-none focus:ring-2 focus:ring-[#F97316] bg-gray-700 text-gray-100 text-sm sm:text-base"
-                          placeholder="Enter your website URL"
-                          required
-                        />
-                        <Globe className="absolute right-3 top-1/2 transform -translate-y-1/2 w-4 h-4 sm:w-5 sm:h-5 text-gray-500" />
-                      </div>
-                      <button
-                        type="submit"
-                        className="w-full bg-[#F97316] text-white py-2 px-4 rounded-md hover:bg-[#EA580C] transition-colors flex items-center justify-center text-sm sm:text-base"
-                        disabled={isScanning}
-                      >
-                        {isScanning ? (
-                          <>
-                            <Search className="animate-spin mr-2 w-4 h-4 sm:w-5 sm:h-5" />
-                            Analyzing...
-                          </>
-                        ) : (
-                          <>
-                            Analyze My Website
-                            <ArrowRight className="ml-2 w-4 h-4 sm:w-5 sm:h-5" />
-                          </>
-                        )}
-                      </button>
-                    </form>
-                    {isScanning && (
-                      <div className="mt-4">
-                        <div className="w-full bg-gray-700 rounded-full h-2">
-                          <div 
-                            className="bg-[#F97316] h-2 rounded-full transition-all duration-200 ease-out"
-                            style={{ width: `${scanProgress}%` }}
-                          ></div>
-                        </div>
-                        <p className="text-xs sm:text-sm text-gray-400 mt-2">Analyzing your website...</p>
-                      </div>
-                    )}
-                    {analysisResult && (
-                      <div className="mt-6 bg-gray-700 border border-gray-600 rounded-lg p-4">
-                        <h3 className="text-base sm:text-lg font-semibold text-white mb-2">Analysis Report</h3>
-                        {'error' in analysisResult ? (
-                          <div className="flex items-center text-red-500">
-                            <AlertCircle className="w-4 h-4 sm:w-5 sm:h-5 mr-2" />
-                            <p className="text-sm sm:text-base">{analysisResult.error}</p>
-                          </div>
-                        ) : (
-                          <>
-                            <div className="flex items-center justify-center mb-4">
-                              <div className="text-4xl sm:text-6xl font-bold text-[#F97316]">{analysisResult.seoScore}</div>
-                              <div className="ml-4 text-gray-300">
-                                <div className="text-lg sm:text-xl font-semibold">SEO Score</div>
-                                <div className="text-xs sm:text-sm">out of 100</div>
-                              </div>
-                            </div>
-                            <div className="text-center mb-4">
-                              {analysisResult.seoScore < 50 ? (
-                                <p className="text-red-600 font-semibold text-sm sm:text-base">Your SEO needs immediate attention!</p>
-                              ) : analysisResult.seoScore < 80 ? (
-                                <p className="text-yellow-600 font-semibold text-sm sm:text-base">Your SEO has room for improvement.</p>
-                              ) : (
-                                <p className="text-green-600 font-semibold text-sm sm:text-base">Great job! Let's make it even better.</p>
-                              )}
-                            </div>
-                            <div className="bg-gray-700 p-4 rounded-md shadow-sm">
-                              <h4 className="font-semibold text-base sm:text-lg mb-2 text-white">Boost Your SEO Now!</h4>
-                              <p className="text-xs sm:text-sm text-gray-300 mb-4">
-                                Our expert team can help you improve your SEO score and drive more traffic to your website.
-                              </p>
-                              <ul className="text-xs sm:text-sm text-gray-300 mb-4 list-disc list-inside">
-                                <li>Comprehensive SEO audit</li>
-                                <li>Customized optimization strategy</li>
-                                <li>High-quality backlink building</li>
-                                <li>Regular performance reports</li>
-                              </ul>
-                            </div>
-                          </>
-                        )}
-                        <button
-                          onClick={scrollToPricing}
-                          className="mt-4 w-full bg-[#F97316] text-white py-2 sm:py-3 px-4 rounded-md hover:bg-[#EA580C] transition-colors flex items-center justify-center font-semibold text-sm sm:text-lg"
-                        >
-                          Get Your Personalized SEO Plan
-                          <ArrowRight className="ml-2 w-4 h-4 sm:w-5 sm:h-5" />
-                        </button>
-                      </div>
-                    )}
-                  </div>
-                </div>
+          <MotionDiv
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.2 }}
+            className="mb-12"
+          >
+            <p className="text-gray-600 text-lg sm:text-xl max-w-2xl mx-auto">
+              Backlink AI - Acquire powerful, relevant backlinks to boost your website's 
+              authority, improve search engine rankings, and drive organic traffic. Save time 
+              and resources while our expert team builds your backlink profile.
+            </p>
+          </MotionDiv>
+
+          <MotionDiv
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.3 }}
+          >
+            <form onSubmit={handleSubmit} className="space-y-4 sm:space-y-0 sm:flex sm:gap-4 max-w-2xl mx-auto">
+              <input
+                type="email"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+                placeholder="email@me.com"
+                className="w-full sm:w-auto flex-1 px-4 py-3 bg-gray-100 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent text-black placeholder-gray-500"
+                required
+              />
+              <input
+                type="url"
+                value={website}
+                onChange={(e) => setWebsite(e.target.value)}
+                placeholder="mysite.com"
+                className="w-full sm:w-auto flex-1 px-4 py-3 bg-gray-100 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent text-black placeholder-gray-500"
+                required
+              />
+              <motion.button
+                whileHover={{ scale: 1.02 }}
+                whileTap={{ scale: 0.98 }}
+                className="w-full sm:w-auto px-6 py-3 bg-blue-600 text-white font-medium rounded-lg flex items-center justify-center gap-2 hover:bg-blue-700 transition-colors"
+              >
+                Boost My SEO
+                <ArrowRight className="w-4 h-4" />
+              </motion.button>
+            </form>
+          </MotionDiv>
+
+          <MotionDiv
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.4 }}
+            className="mt-12"
+          >
+            <div className="inline-flex items-center gap-4">
+              <Image
+                src="/peter.jpeg"
+                alt="Profile"
+                width={40}
+                height={40}
+                className="rounded-full"
+              />
+              <div className="flex items-center gap-2 text-sm text-gray-600">
+                <span>Questions about backlinks?</span>
+                <ArrowUpRight className="w-4 h-4" />
+                <span className="text-gray-500">Contact us on</span>
+                <Link href="https://linkedin.com" className="text-blue-600 hover:text-blue-800 transition-colors">
+                  LinkedIn
+                </Link>
+                <span className="text-gray-500">or</span>
+                <Link href="https://twitter.com" className="text-blue-600 hover:text-blue-800 transition-colors">
+                  Twitter
+                </Link>
+                <span className="text-gray-500">or by</span>
+                <Link href="mailto:example@email.com" className="text-blue-600 hover:text-blue-800 transition-colors">
+                  Email
+                </Link>
               </div>
             </div>
-
-            {/* Reflection/Shadow Effect */}
-            <div 
-              className="absolute -bottom-12 left-1/2 -translate-x-1/2 w-[90%] h-12 blur-xl"
-              style={{
-                background: 'linear-gradient(to bottom, rgba(249, 115, 22, 0.15), transparent)',
-              }}
-            ></div>
-          </div>
+          </MotionDiv>
         </div>
       </div>
     </div>
