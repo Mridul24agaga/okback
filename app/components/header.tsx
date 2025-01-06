@@ -26,10 +26,10 @@ export function Header() {
           <div className="hidden md:flex items-center gap-5">
             <nav className="flex items-center gap-5">
               <Link 
-                href="/blog-service" 
+                href="/#whyus?" 
                 className="text-gray-400 hover:text-white transition-colors text-sm"
               >
-                Blog Service
+                Why Us?
               </Link>
               <Link 
                 href="/faqs" 
@@ -53,49 +53,56 @@ export function Header() {
           </div>
 
           <button 
-            className="md:hidden text-white"
+            className="md:hidden text-white relative z-50 w-6 h-6"
             onClick={() => setIsMenuOpen(!isMenuOpen)}
+            aria-label="Toggle menu"
           >
-            {isMenuOpen ? (
-              <X className="h-6 w-6" />
-            ) : (
-              <Menu className="h-6 w-6" />
-            )}
+            <span className={`block absolute h-0.5 w-6 bg-white transform transition duration-300 ease-in-out ${isMenuOpen ? 'rotate-45 translate-y-0' : '-translate-y-2'}`}></span>
+            <span className={`block absolute h-0.5 w-6 bg-white transform transition duration-300 ease-in-out ${isMenuOpen ? 'opacity-0' : 'opacity-100'}`}></span>
+            <span className={`block absolute h-0.5 w-6 bg-white transform transition duration-300 ease-in-out ${isMenuOpen ? '-rotate-45 translate-y-0' : 'translate-y-2'}`}></span>
           </button>
         </div>
       </div>
 
       {/* Mobile menu */}
-      {isMenuOpen && (
-        <div className="md:hidden absolute top-full left-0 right-0 bg-[#0a0a0a] border border-gray-800 mt-3 rounded-lg p-4">
-          <nav className="flex flex-col gap-4">
-            <Link 
-              href="/blog-service" 
-              className="text-gray-400 hover:text-white transition-colors text-sm"
-            >
-              Blog Service
-            </Link>
-            <Link 
-              href="/faqs" 
-              className="text-gray-400 hover:text-white transition-colors text-sm"
-            >
-              FAQs
-            </Link>
-            <Link 
-              href="/blogs" 
-              className="text-gray-400 hover:text-white transition-colors text-sm"
-            >
-              Blogs
-            </Link>
-            <Link
-              href="/get-started"
-              className="bg-white text-black px-4 py-2 rounded-full text-sm hover:bg-gray-100 transition-colors inline-block text-center"
-            >
-              Get Started
-            </Link>
-          </nav>
-        </div>
-      )}
+      <div 
+  className={`md:hidden absolute top-full left-3 right-3 bg-[#0a0a0a] border border-gray-800 transition-all duration-300 ease-in-out rounded-2xl ${
+    isMenuOpen 
+      ? 'opacity-100 translate-y-3 pointer-events-auto' 
+      : 'opacity-0 -translate-y-4 pointer-events-none'
+  }`}
+>
+  <nav className="flex flex-col p-6 gap-6">
+    <Link 
+      href="/blog-service" 
+      className="text-gray-400 hover:text-white transition-colors text-base"
+      onClick={() => setIsMenuOpen(false)}
+    >
+      Blog Service
+    </Link>
+    <Link 
+      href="/faqs" 
+      className="text-gray-400 hover:text-white transition-colors text-base"
+      onClick={() => setIsMenuOpen(false)}
+    >
+      FAQs
+    </Link>
+    <Link 
+      href="/blogs" 
+      className="text-gray-400 hover:text-white transition-colors text-base"
+      onClick={() => setIsMenuOpen(false)}
+    >
+      Blogs
+    </Link>
+    <Link
+      href="/get-started"
+      className="bg-white text-black px-4 py-2 rounded-full text-base hover:bg-gray-100 transition-colors inline-block text-center"
+      onClick={() => setIsMenuOpen(false)}
+    >
+      Get Started
+    </Link>
+  </nav>
+</div>
     </header>
   )
 }

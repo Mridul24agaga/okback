@@ -31,7 +31,7 @@ export default function Footer() {
       <div className="absolute top-0 left-0 right-0 h-px bg-gray-200"></div>
       
       {/* Orange to white gradient at the bottom */}
-      <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-orange-50 to-white" style={{ bottom: '-32px' }}></div>
+      <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-blue-200 to-white" style={{ bottom: '-32px' }}></div>
       
       <div className="max-w-7xl mx-auto relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12">
@@ -41,7 +41,7 @@ export default function Footer() {
               {/* Logo */}
               <div className="h-10 w-auto">
                 <Image
-                  src="/getmorepacklinks.png"
+                  src="/backlinkai.png"
                   alt="Company Logo"
                   width={120}
                   height={40}
@@ -50,17 +50,13 @@ export default function Footer() {
               </div>
               
               <p className="text-gray-600 leading-relaxed">
-                Get instant traffic on your site, save days of manual work with just one click. Submit Your AI Startup To 100+ Plaƞorms In 7 Days
+              Drive instant traffic to your site and save days of effort with a single click. Get your AI startup listed on 100+ platforms within just 7 days!
               </p>
 
               <div className="flex space-x-4">
-                <Link href="https://x.com/KrissmannGupta" className="text-gray-600 hover:text-gray-900 transition-colors">
+                <Link href="https://x.com/peterliwin5" className="text-gray-600 hover:text-gray-900 transition-colors">
                   <Twitter className="h-5 w-5" />
                   <span className="sr-only">Twitter</span>
-                </Link>
-                <Link href="https://www.linkedin.com/in/krissmann/" className="text-gray-600 hover:text-gray-900 transition-colors">
-                  <Linkedin className="h-5 w-5" />
-                  <span className="sr-only">LinkedIn</span>
                 </Link>
               </div>
             </div>
@@ -77,72 +73,46 @@ export default function Footer() {
                     <>
                       <li>
                         {pathname === '/' ? (
-                          <button onClick={() => scrollTo('features')} className="hover:text-gray-900 transition-colors">Features</button>
+                          <button onClick={() => scrollTo('boost')} className="hover:text-gray-900 transition-colors">Boost</button>
                         ) : (
-                          <Link href="/#features" className="hover:text-gray-900 transition-colors">Features</Link>
+                          <Link href="/#boost" className="hover:text-gray-900 transition-colors">Boost</Link>
                         )}
                       </li>
                       <li>
                         {pathname === '/' ? (
-                          <button onClick={() => scrollTo('pricing-section')} className="hover:text-gray-900 transition-colors">Pricing</button>
+                          <button onClick={() => scrollTo('pricing')} className="hover:text-gray-900 transition-colors">Pricing</button>
                         ) : (
-                          <Link href="/#pricing-section" className="hover:text-gray-900 transition-colors">Pricing</Link>
+                          <Link href="/#pricing" className="hover:text-gray-900 transition-colors">Pricing</Link>
                         )}
                       </li>
                       <li>
                         {pathname === '/' ? (
-                          <button onClick={() => scrollTo('howitworks')} className="hover:text-gray-900 transition-colors">How it Works</button>
+                          <button onClick={() => scrollTo('whyus?')} className="hover:text-gray-900 transition-colors">Why Us?</button>
                         ) : (
-                          <Link href="/#howitworks" className="hover:text-gray-900 transition-colors">How it Works</Link>
-                        )}
-                      </li>
-                      <li>
-                        {pathname === '/' ? (
-                          <button onClick={() => scrollTo('faq')} className="hover:text-gray-900 transition-colors">FAQ</button>
-                        ) : (
-                          <Link href="/#faq" className="hover:text-gray-900 transition-colors">FAQ</Link>
+                          <Link href="/#whyus" className="hover:text-gray-900 transition-colors">Why Us?</Link>
                         )}
                       </li>
                     </>
                   ) : (
                     <>
-                      <li><Link href="/#features" className="hover:text-gray-900 transition-colors">Features</Link></li>
-                      <li><Link href="/#pricing-section" className="hover:text-gray-900 transition-colors">Pricing</Link></li>
-                      <li><Link href="/#howitworks" className="hover:text-gray-900 transition-colors">How it Works</Link></li>
-                      <li><Link href="/#faq" className="hover:text-gray-900 transition-colors">FAQ</Link></li>
+                      <li><Link href="/#boost" className="hover:text-gray-900 transition-colors">Boost</Link></li>
+                      <li><Link href="/#whyus?" className="hover:text-gray-900 transition-colors">Why Us?</Link></li>
+                      <li><Link href="/#pricing" className="hover:text-gray-900 transition-colors">Pricing</Link></li>
                     </>
                   )}
                 </ul>
               </div>
 
-              {/* Tools Section */}
-              <div>
-                <h3 className="text-gray-900 font-semibold mb-4">Tools</h3>
-                <ul className="space-y-3">
-                  <li><Link href="/ai-content-checker" className="hover:text-gray-900 transition-colors">AI Content Checker</Link></li>
-                  <li><Link href="/paragraph-writer" className="hover:text-gray-900 transition-colors">Paragraph Rewriter</Link></li>
-                  <li><Link href="/backlink-checker" className="hover:text-gray-900 transition-colors">Backlink Checker</Link></li>
-                  <li><Link href="/keyword-rank-tracker" className="hover:text-gray-900 transition-colors">Keyword Rank Tracker</Link></li>
-                  <li><Link href="/seo-scorecard" className="hover:text-gray-900 transition-colors">SEO Scorecard</Link></li>
-                  <li><Link href="/seo-audit" className="hover:text-gray-900 transition-colors">SEO Audit</Link></li>
-                  <li><Link href="/seo-keyword-generator" className="hover:text-gray-900 transition-colors">SEO Keyword Generator</Link></li>
-                  <li><Link href="/seo-content-gap-analysis" className="hover:text-gray-900 transition-colors">SEO Content Gap Analysis</Link></li>
-                </ul>
-              </div>
+              
 
               {/* Company Section */}
               <div>
-                <h3 className="text-gray-900 font-semibold mb-4">Company</h3>
-                <ul className="space-y-3">
-                  <li><Link href="/privacy-policy" className="hover:text-gray-900 transition-colors">Privacy Policy</Link></li>
-                  <li><Link href="/terms" className="hover:text-gray-900 transition-colors">Terms of Service</Link></li>
-                </ul>
+
                 {/* Contact Email Addresses */}
                 <div className="mt-6">
                   <h4 className="text-gray-900 font-semibold mb-2">Contact Us</h4>
                   <ul className="space-y-2">
-                    <li><a href="mailto:hi@mridulthareja.com" className="hover:text-gray-900 transition-colors">hi@mridulthareja.com</a></li>
-                    <li><a href="mailto:founder@markupxbrands.com" className="hover:text-gray-900 transition-colors">founder@markupxbrands.com</a></li>
+                    <li><a href="mailto:lewinpeter07@gmail.com" className="hover:text-gray-900 transition-colors">lewinpeter07@gmail.com</a></li>
                   </ul>
                 </div>
               </div>
@@ -153,7 +123,7 @@ export default function Footer() {
         {/* Footer Bottom */}
         <div className="mt-16 pt-8 border-t border-gray-200 flex flex-col sm:flex-row justify-between items-center space-y-4 sm:space-y-0">
           <div className="text-sm text-gray-500">
-            © 2025 Get More Backlinks. All rights reserved. Licensed under MarkupX Technologies.
+            © 2025 BacklinkAI. All rights reserved.
           </div>
           <div className="flex items-center space-x-2 text-sm">
             <span className="inline-block w-2 h-2 bg-green-500 rounded-full"></span>

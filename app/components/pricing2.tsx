@@ -7,56 +7,52 @@ import Link from 'next/link'
 const plans = [
   {
     name: "Starter",
-    price: "87",
+    price: "75",
     description: "Perfect for small businesses and startups",
     features: [
       "50 Directory Submissions",
-      "Basic SEO Analysis",
+      "Basic AI-Powered Analysis",
       "7-Day Delivery",
-      "24/7 Priority Support",
-    ],
-    paypalLink: "https://www.paypal.com/ncp/payment/BHN3ZYZB8QCJJ"
+      "Standard Support",
+      "Monthly Report"
+    ]
   },
   {
     name: "Growth",
-    price: "119",
+    price: "149",
     description: "Ideal for growing businesses",
     popular: true,
     features: [
-      "100 Directory Submissions",
-      "Advanced Landing Page and SEO Analysis",
-      "7-Day Delivery",
-      "24/7 Priority Support",
-    ],
-    paypalLink: "https://www.paypal.com/ncp/payment/3Z66WQ69TGH6L"
+      "150 Directory Submissions",
+      "Advanced AI Analysis",
+      "5-Day Delivery",
+      "Priority Support",
+      "Weekly Reports",
+      "Social Media Submissions",
+      "Guest Post Opportunities"
+    ]
   },
   {
     name: "Enterprise",
-    price: "147",
+    price: "299",
     description: "For businesses requiring maximum impact",
     features: [
-      "200 Directory Submissions",
-      "Advanced Landing Page and SEO Analysis",
-      "7-Day Delivery",
+      "500+ Directory Submissions",
+      "Premium AI Analysis",
+      "3-Day Delivery",
       "24/7 Priority Support",
-    ],
-    paypalLink: "https://www.paypal.com/ncp/payment/HJSCZPNZRNLEG"
+      "Real-time Reports",
+      "Social Media & Guest Posts",
+      "Custom Link Building Strategy",
+      "Dedicated Account Manager"
+    ]
   }
 ]
 
 export default function PricingSection() {
   return (
-    <section id="pricing" className="py-20 bg-white">
+    <section className="py-20 bg-white">
       <div className="container mx-auto px-4">
-        <div className="text-center max-w-3xl mx-auto mb-16">
-          <h2 className="text-4xl font-bold mb-4 bg-gradient-to-r from-blue-600 to-blue-800 bg-clip-text text-transparent">
-            Simple, Transparent Pricing
-          </h2>
-          <p className="text-gray-600 text-xl">
-            Choose the perfect plan for your business needs
-          </p>
-        </div>
-
         <div className="grid md:grid-cols-3 gap-8 max-w-7xl mx-auto mb-16">
           {plans.map((plan, index) => (
             <div
@@ -87,7 +83,7 @@ export default function PricingSection() {
                     ${plan.price}
                   </span>
                   <span className={`${plan.popular ? 'text-blue-100' : 'text-gray-600'}`}>
-                    / website
+                    /month
                   </span>
                 </div>
                 <ul className="space-y-4 mb-8">
@@ -104,49 +100,21 @@ export default function PricingSection() {
                     </li>
                   ))}
                 </ul>
-                <a
-                  href={plan.paypalLink}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className={`w-full py-3 px-4 rounded-xl font-semibold text-sm md:text-base transition-all duration-200 inline-block text-center ${
+                <button
+                  className={`w-full py-3 px-4 rounded-xl font-semibold text-sm md:text-base transition-all duration-200 ${
                     plan.popular
                       ? 'bg-white text-blue-600 hover:bg-blue-50'
                       : 'bg-blue-600 text-white hover:bg-blue-700'
                   }`}
                 >
                   Get Started
-                </a>
+                </button>
               </div>
             </div>
           ))}
         </div>
 
-        {/* Testimonial Section */}
-        <div className="max-w-3xl mx-auto flex gap-8 items-start bg-white rounded-2xl p-8 border-2 border-gray-100">
-          <div className="w-32 h-32 flex-shrink-0 mt-15">
-            <Image
-              src="/test1.jpeg"
-              alt=""
-              width={988}
-              height={1228}
-              className="rounded-lg"
-              unoptimized
-            />
-          </div>
-          <div>
-            <div className="text-xl md:text-2xl text-gray-800 mb-4">
-              <p className="leading-relaxed">
-                I tried various backlink services before but they were all disappointing. Then I found Backlink AI and{' '}
-                <span className="bg-yellow-100 px-1">
-                  my domain rating increased by 45% in just 3 weeks.
-                </span>
-              </p>
-            </div>
-            <div className="text-gray-600">
-              — Sam Farbur, Founder of SimplifyAI
-            </div>
-          </div>
-        </div>
+        
 
       </div>
     </section>

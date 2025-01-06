@@ -14,6 +14,7 @@ import FAQSection from './components/faq'
 import EarlyBirdFooter from './components/cta'
 import Footer from './components/footer'
 import SenjaWidget from './components/senjawidget'
+import DomainRatingSection from './components/testimonials'
 
 export const metadata: Metadata = {
   title: 'GetMoreBacklinks - Boost Your SEO with 500+ Directory Listings',
@@ -84,16 +85,10 @@ export default function Home() {
       <body>
         <main>
           <Hero/>
+          <DomainRatingSection/>
           <TestimonialsSection/>
-          <DirectoriesSection/>
-          <ListingSection/>
-          <BacklinkFeatures/>
-          <WhyChooseSection/>
           <ComparisonSection/>
-          <SenjaWidget/>
           <PricingSection/>
-          <EarlyBirdFooter/>
-          <TeamStats/>
           <FAQSection/>
           <Footer/>
         </main>
