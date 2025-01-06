@@ -32,16 +32,10 @@ export function Header() {
                 Why Us?
               </Link>
               <Link 
-                href="/faqs" 
+                href="/#pricing" 
                 className="text-gray-400 hover:text-white transition-colors text-sm"
               >
-                FAQs
-              </Link>
-              <Link 
-                href="/blogs" 
-                className="text-gray-400 hover:text-white transition-colors text-sm"
-              >
-                Blogs
+                Pricing
               </Link>
             </nav>
             <Link
