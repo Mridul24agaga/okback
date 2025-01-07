@@ -3,17 +3,10 @@ import Image from "next/image"
 import Script from 'next/script'
 import Hero from "@/app/components/Hero"
 import TestimonialsSection from './components/testimonial'
-import { DirectoriesSection } from './components/directories-section'
-import ListingSection from './components/listing'
-import BacklinkFeatures from './components/backlinkfeatures'
-import WhyChooseSection from './components/whychooseus'
 import ComparisonSection from './components/comparisonsection'
 import PricingSection from './components/pricing'
-import TeamStats from './components/teamstats'
 import FAQSection from './components/faq'
-import EarlyBirdFooter from './components/cta'
 import Footer from './components/footer'
-import SenjaWidget from './components/senjawidget'
 import DomainRatingSection from './components/testimonials'
 
 export const metadata: Metadata = {

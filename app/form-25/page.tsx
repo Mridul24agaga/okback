@@ -73,7 +73,7 @@ export default function SaasForm() {
 
   if (isRedirecting) {
     return (
-      <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-orange-200 via-orange-300 to-orange-400">
+      <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-blue-200 via-blue-300 to-blue-400">
         <div className="bg-white/90 backdrop-blur-sm p-8 rounded-2xl shadow-[0_20px_70px_-15px_rgba(0,0,0,0.3)] w-full max-w-md animate-fade-in relative z-10 border border-white/20 text-center">
           <h2 className="text-2xl font-bold mb-4 text-gray-800">Redirecting...</h2>
           <div className="w-16 h-16 border-t-4 border-orange-500 border-solid rounded-full animate-spin mx-auto"></div>

@@ -31,7 +31,7 @@ export default function SaasForm() {
 
     try {
       const { error } = await supabase
-        .from('saas_submissions')
+        .from('submission_saas')
         .insert([submissionData])
 
       if (error) throw error
@@ -73,7 +73,7 @@ export default function SaasForm() {
 
   if (isRedirecting) {
     return (
-      <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-orange-200 via-orange-300 to-orange-400">
+      <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-blue-200 via-blue-300 to-blue-400">
         <div className="bg-white/90 backdrop-blur-sm p-8 rounded-2xl shadow-[0_20px_70px_-15px_rgba(0,0,0,0.3)] w-full max-w-md animate-fade-in relative z-10 border border-white/20 text-center">
           <h2 className="text-2xl font-bold mb-4 text-gray-800">Redirecting...</h2>
           <div className="w-16 h-16 border-t-4 border-orange-500 border-solid rounded-full animate-spin mx-auto"></div>
@@ -83,7 +83,7 @@ export default function SaasForm() {
   }
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-orange-200 via-orange-300 to-orange-400 p-4 relative">
+    <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-blue-500 via-blue-300 to-blue-800 p-4 relative">
       {/* Pattern overlay */}
       <div className="absolute inset-0 opacity-10 bg-[radial-gradient(circle_at_1px_1px,#000_1px,transparent_0)] bg-[length:40px_40px]" />
       
@@ -96,38 +96,38 @@ export default function SaasForm() {
             name="name"
             placeholder="Name"
             required
-            className="w-full px-4 py-3 border border-orange-100 rounded-xl focus:outline-none focus:ring-2 focus:ring-orange-300 focus:border-transparent text-black bg-white/50 backdrop-blur-sm transition-all placeholder:text-gray-400"
+            className="w-full px-4 py-3 border border-blue-100 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-300 focus:border-transparent text-black bg-white/50 backdrop-blur-sm transition-all placeholder:text-gray-400"
           />
           <input
             name="saas_name"
             placeholder="SaaS Name"
             required
-            className="w-full px-4 py-3 border border-orange-100 rounded-xl focus:outline-none focus:ring-2 focus:ring-orange-300 focus:border-transparent text-black bg-white/50 backdrop-blur-sm transition-all placeholder:text-gray-400"
+            className="w-full px-4 py-3 border border-blue-100 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-300 focus:border-transparent text-black bg-white/50 backdrop-blur-sm transition-all placeholder:text-gray-400"
           />
           <input
             name="saas_link"
             placeholder="SaaS Link"
             type="url"
             required
-            className="w-full px-4 py-3 border border-orange-100 rounded-xl focus:outline-none focus:ring-2 focus:ring-orange-300 focus:border-transparent text-black bg-white/50 backdrop-blur-sm transition-all placeholder:text-gray-400"
+            className="w-full px-4 py-3 border border-blue-100 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-300 focus:border-transparent text-black bg-white/50 backdrop-blur-sm transition-all placeholder:text-gray-400"
           />
           <textarea
             name="description"
             placeholder="Description"
             required
-            className="w-full px-4 py-3 border border-orange-100 rounded-xl focus:outline-none focus:ring-2 focus:ring-orange-300 focus:border-transparent text-black bg-white/50 backdrop-blur-sm transition-all h-24 resize-none placeholder:text-gray-400"
+            className="w-full px-4 py-3 border border-blue-100 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-300 focus:border-transparent text-black bg-white/50 backdrop-blur-sm transition-all h-24 resize-none placeholder:text-gray-400"
           ></textarea>
           <input
             name="email"
             placeholder="Email ID"
             type="email"
             required
-            className="w-full px-4 py-3 border border-orange-100 rounded-xl focus:outline-none focus:ring-2 focus:ring-orange-300 focus:border-transparent text-black bg-white/50 backdrop-blur-sm transition-all placeholder:text-gray-400"
+            className="w-full px-4 py-3 border border-blue-100 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-300 focus:border-transparent text-black bg-white/50 backdrop-blur-sm transition-all placeholder:text-gray-400"
           />
           <textarea
             name="comments"
             placeholder="Comments/Remarks"
-            className="w-full px-4 py-3 border border-orange-100 rounded-xl focus:outline-none focus:ring-2 focus:ring-orange-300 focus:border-transparent text-black bg-white/50 backdrop-blur-sm transition-all h-24 resize-none placeholder:text-gray-400"
+            className="w-full px-4 py-3 border border-blue-100 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-300 focus:border-transparent text-black bg-white/50 backdrop-blur-sm transition-all h-24 resize-none placeholder:text-gray-400"
           ></textarea>
           <div className="space-y-3">
             <p className="font-medium text-gray-700">Choose an option:</p>
@@ -139,26 +139,15 @@ export default function SaasForm() {
                 value="expert"
                 checked={expertChoice === 'expert'}
                 onChange={(e) => setExpertChoice(e.target.value)}
-                className="text-orange-500 focus:ring-orange-400"
+                className="text-blue-500 focus:ring-blue-400"
               />
               <label htmlFor="expert" className="text-gray-700">Let Experts Shortlist For You</label>
             </div>
-            <div className="flex items-center space-x-2">
-              <input
-                type="radio"
-                id="self"
-                name="expertChoice"
-                value="self"
-                checked={expertChoice === 'self'}
-                onChange={(e) => setExpertChoice(e.target.value)}
-                className="text-orange-500 focus:ring-orange-400"
-              />
-              <label htmlFor="self" className="text-gray-700">Want to choose the directories yourself?</label>
-            </div>
+            
           </div>
           <button
             type="submit"
-            className="w-full bg-gradient-to-r from-orange-400 to-orange-500 text-white py-3 px-4 rounded-xl hover:from-orange-500 hover:to-orange-600 focus:outline-none focus:ring-2 focus:ring-orange-300 focus:ring-offset-2 transition-all disabled:opacity-50 relative shadow-lg shadow-orange-500/25 font-medium text-lg"
+            className="w-full bg-gradient-to-r from-blue-400 to-blue-500 text-white py-3 px-4 rounded-xl hover:from-blue-500 hover:to-blue-600 focus:outline-none focus:ring-2 focus:ring-orange-300 focus:ring-offset-2 transition-all disabled:opacity-50 relative shadow-lg shadow-orange-500/25 font-medium text-lg"
             disabled={isLoading || !expertChoice}
           >
             {isLoading ? (
