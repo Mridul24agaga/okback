@@ -107,6 +107,14 @@ export default function Footer() {
 
               {/* Company Section */}
               <div>
+              <div className="mt-6">
+                  <h4 className="text-gray-900 font-semibold mb-2">Company</h4>
+                  <ul className="space-y-2">
+                    <li><a href="/privacy-policy" className="hover:text-gray-900 transition-colors">Privacy Policy</a></li>
+                    <li><a href="/terms" className="hover:text-gray-900 transition-colors">Terms and Conditions</a></li>
+
+                  </ul>
+                </div>
 
                 {/* Contact Email Addresses */}
                 <div className="mt-6">

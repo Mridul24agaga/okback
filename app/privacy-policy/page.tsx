@@ -2,21 +2,22 @@ import Link from "next/link"
 import Image from "next/image"
 import type { Metadata } from 'next'
 import Footer from "../components/footer"
+import { ArrowLeft } from 'lucide-react'
 
 export const metadata: Metadata = {
-  title: 'Privacy Policy | GetMoreBacklinks.org',
-  description: 'Learn about how GetMoreBacklinks.org collects, uses, and protects your personal information.',
+  title: 'Privacy Policy | Backlink AI',
+  description: 'Boost your online presence with Backlink AI, the #1 AI-powered directory submission platform. Automate and optimize your websites directory listings for better SEO and increased traffic. Try it today!',
   openGraph: {
-    title: 'Privacy Policy | GetMoreBacklinks.org',
-    description: 'Our commitment to protecting your privacy and personal information.',
-    url: 'https://www.getmorebacklinks.org/privacy-policy',
-    siteName: 'GetMoreBacklinks.org',
+    title: 'Privacy Policy | Backlink AI',
+    description: 'Boost your online presence with Backlink AI, the #1 AI-powered directory submission platform. Automate and optimize your websites directory listings for better SEO and increased traffic. Try it today!',
+    url: 'https://backlinkai.tech/privacy-policy',
+    siteName: 'Backlink AI',
     images: [
       {
-        url: 'https://www.getmorebacklinks.org/2.png',
+        url: '/ogg.png',
         width: 1200,
         height: 630,
-        alt: 'GetMoreBacklinks.org Privacy Policy',
+        alt: 'Backlink AI Privacy Policy',
       },
     ],
     locale: 'en_US',
@@ -24,12 +25,12 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Privacy Policy | GetMoreBacklinks.org',
-    description: 'Our commitment to protecting your privacy and personal information.',
-    images: ['https://www.getmorebacklinks.org/2.png'],
+    title: 'Privacy Policy | Backlink AI',
+    description: 'Boost your online presence with Backlink AI, the #1 AI-powered directory submission platform. Automate and optimize your websites directory listings for better SEO and increased traffic. Try it today!',
+    images: ['ogg.png'],
   },
   alternates: {
-    canonical: 'https://www.getmorebacklinks.org/privacy-policy',
+    canonical: 'https://backlinkai.tech/privacy-policy',
   },
 }
 
@@ -37,16 +38,16 @@ export default function PrivacyPolicy() {
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "WebPage",
-    "name": "Privacy Policy | GetMoreBacklinks.org",
-    "description": "Learn about how GetMoreBacklinks.org collects, uses, and protects your personal information.",
-    "url": "https://www.getmorebacklinks.org/privacy-policy",
+    "name": "Privacy Policy | Backlink AI",
+    "description": "Boost your online presence with Backlink AI, the #1 AI-powered directory submission platform. Automate and optimize your websites directory listings for better SEO and increased traffic. Try it today!",
+    "url": "https://backlinkai.tech/privacy-policy",
     "inLanguage": "en-US",
     "publisher": {
       "@type": "Organization",
-      "name": "GetMoreBacklinks.org",
+      "name": "Backlink AI",
       "logo": {
         "@type": "ImageObject",
-        "url": "https://www.getmorebacklinks.org/logo.png"
+        "url": "https://backlinkai.tech/logo.png"
       }
     },
     "datePublished": "2024-12-01",
@@ -59,54 +60,25 @@ export default function PrivacyPolicy() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
-      <header className="container mx-auto px-4 py-4 sm:py-6 border-b border-gray-200">
-        <div className="flex items-center justify-between">
-          <div className="flex items-center">
-            <Link href="/">
-              <Image
-                src="/getmorepacklinks.png"
-                alt="GetMoreBacklinks.org Logo"
-                width={532}
-                height={132}
-                className="h-8 sm:h-10 md:h-12 w-auto"
-              />
-            </Link>
-          </div>
-          <div className="flex items-center gap-4">
-            <Link 
-              href="/blogs" 
-              className="text-gray-600 hover:text-black transition-colors text-sm sm:text-base font-bold"
-            >
-              Blogs
-            </Link>
-            <Link 
-              href="/submit" 
-              className="px-3 py-1 sm:px-4 sm:py-2 text-sm sm:text-base rounded-md bg-orange-500 text-white hover:bg-orange-600 transition-colors font-bold"
-            >
-              Submit Your Directory
-            </Link>
-          </div>
-        </div>
-      </header>
-
+      
       <main className="container mx-auto px-4 py-8 sm:py-12 md:py-16">
+        <div className="mb-8">
+          <Link href="/" className="inline-flex items-center text-gray-600 hover:text-black transition-colors">
+            <ArrowLeft className="w-5 h-5 mr-2" />
+            Back to Home
+          </Link>
+        </div>
         <div className="max-w-3xl mx-auto">
           <div className="space-y-8">
             <div className="text-center space-y-4">
               <h1 className="text-3xl sm:text-4xl font-bold text-black">Privacy Policy</h1>
-              <p className="text-gray-600">Effective Date: December 1, 2024</p>
-              <p className="text-gray-600">
-                Owned and operated by MarkupX Brands Technologies Private Limited. Contact:{" "}
-                <a href="mailto:founder@markupxbrands.com" className="text-orange-500 hover:underline">
-                  founder@markupxbrands.com
-                </a>
-              </p>
+              <p className="text-gray-600">Effective Date: January 7, 2025</p>
             </div>
 
             <section className="prose max-w-none">
               <h2 className="text-xl font-semibold text-black">Introduction</h2>
               <p className="text-gray-700">
-                At GetMoreBacklinks.org, we value your trust. This Privacy Policy explains how we collect, use,
+                At Backlink AI, we value your trust. This Privacy Policy explains how we collect, use,
                 disclose, and safeguard your information. By using our services, you agree to the terms outlined
                 herein.
               </p>
@@ -214,8 +186,8 @@ export default function PrivacyPolicy() {
                 <h3 className="text-lg font-medium text-black">3. Data Deletion</h3>
                 <p className="text-gray-700">
                   You may request account deletion by contacting{" "}
-                  <a href="mailto:founder@markupxbrands.com" className="text-orange-500 hover:underline">
-                    founder@markupxbrands.com
+                  <a href="mailto:lewinpeter07@gmail.com" className="text-blue-500 hover:underline">
+                  lewinpeter07@gmail.com
                   </a>
                   .
                 </p>
@@ -254,12 +226,19 @@ export default function PrivacyPolicy() {
             </section>
 
             <section className="space-y-4">
+              <h2 className="text-xl font-semibold text-black">Refund Policy</h2>
+              <p className="text-gray-700">
+                Please note that Backlink AI does not offer refunds for any of its services. All sales are final.
+              </p>
+            </section>
+
+            <section className="space-y-4">
               <h2 className="text-xl font-semibold text-black">Contact Us</h2>
               <p className="text-gray-700">
                 If you have any questions, concerns, or requests regarding this Privacy Policy, please reach out to us
                 at{" "}
-                <a href="mailto:founder@markupxbrands.com" className="text-orange-500 hover:underline">
-                  founder@markupxbrands.com
+                <a href="mailto:lewinpeter07@gmail.com" className="text-blue-500 hover:underline">
+                lewinpeter07@gmail.com
                 </a>
                 .
               </p>

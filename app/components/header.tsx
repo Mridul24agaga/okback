@@ -39,7 +39,7 @@ export function Header() {
               </Link>
             </nav>
             <Link
-              href="/get-started"
+              href="/#pricing"
               className="bg-white text-black px-4 py-2 rounded-full text-sm hover:bg-gray-100 transition-colors"
             >
               Get Started
@@ -68,28 +68,22 @@ export function Header() {
 >
   <nav className="flex flex-col p-6 gap-6">
     <Link 
-      href="/blog-service" 
+      href="/#whyus?" 
       className="text-gray-400 hover:text-white transition-colors text-base"
       onClick={() => setIsMenuOpen(false)}
     >
-      Blog Service
+     Why Us?
     </Link>
     <Link 
-      href="/faqs" 
+      href="/#pricing" 
       className="text-gray-400 hover:text-white transition-colors text-base"
       onClick={() => setIsMenuOpen(false)}
     >
-      FAQs
+      Pricing
     </Link>
-    <Link 
-      href="/blogs" 
-      className="text-gray-400 hover:text-white transition-colors text-base"
-      onClick={() => setIsMenuOpen(false)}
-    >
-      Blogs
-    </Link>
+    
     <Link
-      href="/get-started"
+      href="/#pricing"
       className="bg-white text-black px-4 py-2 rounded-full text-base hover:bg-gray-100 transition-colors inline-block text-center"
       onClick={() => setIsMenuOpen(false)}
     >

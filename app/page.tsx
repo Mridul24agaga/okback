@@ -17,20 +17,20 @@ import SenjaWidget from './components/senjawidget'
 import DomainRatingSection from './components/testimonials'
 
 export const metadata: Metadata = {
-  title: 'GetMoreBacklinks - Boost Your SEO with 500+ Directory Listings',
-  description: 'List your website on 500+ directories to improve SEO, backlinks, ratings, and sales. Get instant traffic on your site, save days of manual work with just one click. Submit Your AI Startup To 100+ Plaƞorms In 7 Days',
+  title: 'Backlink AI - #1 AI powered directory submission site',
+  description: 'Boost your online presence with Backlink AI, the #1 AI-powered directory submission platform. Automate and optimize your websites directory listings for better SEO and increased traffic. Try it today!',
   keywords: ['SEO', 'backlinks', 'directory listings', 'digital marketing', 'website promotion'],
   openGraph: {
-    title: 'GetMoreBacklinks - Boost Your SEO with 500+ Directory Listings',
-    description: 'List your website on 500+ directories to improve SEO, backlinks, ratings, and sales. Get instant traffic on your site, save days of manual work with just one click. Submit Your AI Startup To 100+ Plaƞorms In 7 Days',
-    url: 'https://www.getmorebacklinks.org',
-    siteName: 'GetMoreBacklinks',
+    title: 'Backlink AI - #1 AI powered directory submission site',
+    description: 'Boost your online presence with Backlink AI, the #1 AI-powered directory submission platform. Automate and optimize your websites directory listings for better SEO and increased traffic. Try it today!',
+    url: 'https://backlinkai.tech/',
+    siteName: 'Backlinkai',
     images: [
       {
-        url: '/og.jpg',
+        url: '/ogg.png',
         width: 1200,
         height: 630,
-        alt: 'GetMoreBacklinks - Directory Listing Service',
+        alt: 'Backlink AI - Directory Listing Service',
       },
     ],
     locale: 'en_US',
@@ -38,14 +38,14 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'GetMoreBacklinks - Boost Your SEO with 500+ Directory Listings',
-    description: 'List your website on 500+ directories to improve SEO, backlinks, ratings, and sales. Get instant traffic on your site, save days of manual work with just one click. Submit Your AI Startup To 100+ Plaƞorms In 7 Days',
+    title: 'Backlink AI - #1 AI powered directory submission site',
+    description: 'Boost your online presence with Backlink AI, the #1 AI-powered directory submission platform. Automate and optimize your websites directory listings for better SEO and increased traffic. Try it today!',
     images: ['/og.jpg'],
   },
   alternates: {
-    canonical: 'https://www.getmorebacklinks.org',
+    canonical: 'https://backlinkai.tech/',
     languages: {
-      'en-US': 'https://www.getmorebacklinks.org',
+      'en-US': 'https://backlinkai.tech/',
     },
   },
 }
@@ -54,7 +54,7 @@ export default function Home() {
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "SoftwareApplication",
-    "name": "GetMoreBacklinks",
+    "name": "Backlinkai",
     "applicationCategory": "BusinessApplication",
     "offers": {
       "@type": "Offer",
@@ -66,17 +66,16 @@ export default function Home() {
       "ratingValue": "4.8",
       "ratingCount": "1000"
     },
-    "description": "List your website on 500+ directories to improve SEO, backlinks, ratings, and sales.",
+    "description": "Boost your online presence with Backlink AI, the #1 AI-powered directory submission platform. Automate and optimize your websites directory listings for better SEO and increased traffic. Try it today!",
     "operatingSystem": "Web",
-    "url": "https://www.getmorebacklinks.org",
+    "url": "https://backlinkai.tech/",
     "author": {
       "@type": "Organization",
-      "name": "GetMoreBacklinks",
-      "url": "https://www.getmorebacklinks.org"
+      "name": "Backlinkai",
+      "url": "https://backlinkai.tech/"
     },
     "sameAs": [
-      "https://x.com/Innvisionagency",
-      "https://www.linkedin.com/in/mridulthareja/"
+      "https://x.com/peterliwin5",
     ]
   }
 
@@ -92,17 +91,7 @@ export default function Home() {
           <FAQSection/>
           <Footer/>
         </main>
-        <Script strategy="afterInteractive" src="https://www.googletagmanager.com/gtag/js?id=G-VTWX7GVQ6X"/>
-        <Script id="google-analytics" strategy="afterInteractive">
-          {`
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-
-            gtag('config', 'G-VTWX7GVQ6X');
-          `}
-        </Script>
-        <Script async src="https://scripts.simpleanalyticscdn.com/latest.js"/>
+        
       </body>
     </html>
   )

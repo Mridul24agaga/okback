@@ -14,8 +14,8 @@ const geistMono = localFont({
 });
 
 export const metadata: Metadata = {
-  title: "Get More backlinks - Your AI Powered SEO Partner",
-  description: "Get instant traffic on your site, save days of manual work with just one click. Submit Your AI Startup To 100+ Plaƞorms In 7 Days",
+  title: "Backlink AI - #1 AI powered directory submission site",
+  description: "Boost your online presence with Backlink AI, the #1 AI-powered directory submission platform. Automate and optimize your website's directory listings for better SEO and increased traffic. Try it today!",
 };
 
 export default function RootLayout({

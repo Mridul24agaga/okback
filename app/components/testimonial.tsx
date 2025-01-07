@@ -22,14 +22,14 @@ export default function TestimonialSection() {
             <span className="inline-block text-[40px] text-gray-800 leading-none mb-4">"</span>
             <span className="bg-yellow-100 px-1">Backlinks grew from 50 to over 500,</span>
             <span className="block mt-2">
-              and our organic traffic increased by 300% in just 3 months. The ROI has been incredible @getmorebacklinks
+              and our organic traffic increased by 300% in just 3 months. The ROI has been incredible @BacklinkAI
             </span>
           </div>
-          <div className="mt-4 text-gray-600">— Alex, SAAS Owner</div>
+          <div className="mt-4 text-gray-600">— Ayush, SAAS Owner</div>
           <div className="mt-12 flex items-center gap-2 text-sm text-gray-600">
             <span>Results from</span>
             <Link 
-              href="https://backlinkai.tech" 
+              href="/" 
               className="text-blue-600 hover:underline"
             >
               Backlink AI

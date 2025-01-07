@@ -49,11 +49,11 @@ const DomainCard = ({ url, rating, backlinks, dofollow, increase }: DomainCardPr
 
 export default function DomainRatingSection() {
   const domains = [
-    { url: 'https://www.chipp.ai/', rating: 48, backlinks: '2.8K', dofollow: 85, increase: 28 },
-    { url: 'https://onetask.me/', rating: 56, backlinks: '4.7K', dofollow: 84, increase: 46 },
-    { url: 'https://www.jeudupendu.com/', rating: 30, backlinks: '138', dofollow: 56, increase: 30 },
-    { url: 'https://workhq.com/', rating: 35, backlinks: '577', dofollow: 49, increase: 29 },
-    { url: 'https://mvpwizards.com/', rating: 42, backlinks: '993', dofollow: 97, increase: 42 },
+    { url: 'Skillop', rating: 48, backlinks: '2.8K', dofollow: 85, increase: 28 },
+    { url: 'Cattle Guru', rating: 56, backlinks: '4.7K', dofollow: 84, increase: 46 },
+    { url: 'Kraya', rating: 30, backlinks: '138', dofollow: 56, increase: 30 },
+    { url: 'workhq', rating: 35, backlinks: '577', dofollow: 49, increase: 29 },
+    { url: 'mvpwizards', rating: 42, backlinks: '993', dofollow: 97, increase: 42 },
   ]
 
   return (

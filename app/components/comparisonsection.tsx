@@ -2,7 +2,7 @@
 
 import { Check, X } from 'lucide-react'
 import Image from 'next/image'
-
+import Link from 'next/link';
 export default function ComparisonSection() {
   return (
     <section id="whyus?" className="py-16 bg-white">
@@ -70,7 +70,7 @@ export default function ComparisonSection() {
                 </div>
                 <div>
                   <div className="text-sm text-blue-200 line-through mb-1">$500</div>
-                  <div className="text-4xl font-bold text-white">$75</div>
+                  <div className="text-4xl font-bold text-white">$87</div>
                 </div>
               </div>
               <ul className="space-y-5">
