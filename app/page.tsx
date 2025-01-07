@@ -33,7 +33,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Backlink AI - #1 AI powered directory submission site',
     description: 'Boost your online presence with Backlink AI, the #1 AI-powered directory submission platform. Automate and optimize your websites directory listings for better SEO and increased traffic. Try it today!',
-    images: ['/og.jpg'],
+    images: ['/ogg.png'],
   },
   alternates: {
     canonical: 'https://backlinkai.tech/',
