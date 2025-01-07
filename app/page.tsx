@@ -8,6 +8,7 @@ import PricingSection from './components/pricing'
 import FAQSection from './components/faq'
 import Footer from './components/footer'
 import DomainRatingSection from './components/testimonials'
+import { Analytics } from "@vercel/analytics/react"
 
 export const metadata: Metadata = {
   title: 'Backlink AI - #1 AI powered directory submission site',
@@ -83,6 +84,7 @@ export default function Home() {
           <PricingSection/>
           <FAQSection/>
           <Footer/>
+          <Analytics/>
         </main>
         
       </body>
