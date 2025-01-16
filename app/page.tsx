@@ -9,6 +9,7 @@ import FAQSection from './components/faq'
 import Footer from './components/footer'
 import DomainRatingSection from './components/testimonials'
 import { Analytics } from "@vercel/analytics/react"
+import DirectoryTable from './components/directory-table'
 
 export const metadata: Metadata = {
   title: 'Backlink AI - #1 AI powered directory submission site',
@@ -78,6 +79,7 @@ export default function Home() {
       <body>
         <main>
           <Hero/>
+          <DirectoryTable/>
           <DomainRatingSection/>
           <TestimonialsSection/>
           <ComparisonSection/>
